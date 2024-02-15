@@ -1,0 +1,197 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.buttonGroup {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.boxContainer {
+  border: 1px solid #d8e2f0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 24px;
+}
+
+.editBoxContainer {
+  border: 1px solid #d8e2f0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 30px;
+}
+
+.featuresHeading {
+  align-items: center;
+  background-color: #f1f4f9;
+  color: #0c1e30;
+  display: flex;
+  font-size: 14px;
+  font-weight: 700;
+  height: 35px;
+  justify-content: center;
+  border-bottom: 1px solid #d8e2f0;
+  border-right: 1px solid #d8e2f0;
+  border-top-left-radius: 10px;
+}
+
+.permissionsHeading {
+  align-items: center;
+  background-color: #f1f4f9;
+  color: #0c1e30;
+  display: flex;
+  font-size: 14px;
+  font-weight: 700;
+  height: 35px;
+  justify-content: center;
+  border-bottom: 1px solid #d8e2f0;
+  border-right: 1px solid #d8e2f0;
+  border-top-right-radius: 10px;
+}
+
+.tableData {
+  align-items: center;
+  background-color: var(--cm9);
+  border-bottom: 1px solid #d8e2f0;
+  border-right: 1px solid #d8e2f0;
+  color: #0c1e30;
+  display: flex;
+  font-size: 16px;
+  font-weight: 700;
+  height: 35px;
+  justify-content: start;
+  padding-left: 25px;
+}
+
+.tableDatas {
+  align-items: center;
+  background-color: var(--cm9);
+  border-bottom: 1px solid #d8e2f0;
+  border-right: 1px solid #d8e2f0;
+  color: #0c1e30;
+  display: flex;
+  font-size: 16px;
+  font-weight: 700;
+  height: 35px;
+  justify-content: center;
+}
+
+.editTableData {
+  align-items: center;
+  background-color: #0000;
+  border-bottom: 1px solid #d8e2f0;
+  border-right: 1px solid #d8e2f0;
+  color: #0c1e30;
+  display: flex;
+  font-size: 14px;
+  height: 35px;
+  justify-content: start;
+  padding-left: 48px;
+}
+
+.activityLogContainer {
+  background-color: #fff;
+  border: 1px solid #d8e2f0;
+  border-radius: 10px;
+  box-shadow: 0 0 4px #0003;
+  height: 533px;
+  margin-top: 24px;
+  overflow-y: auto;
+  padding: 22px 23px 22px 24px;
+}
+
+.dot {
+  width: 5px;
+  height: 5px;
+  margin-top: 8px;
+  border-radius: 100px;
+  background-color: black;
+}
+
+.log {
+  align-items: flex-start;
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.logTexts {
+  display: flex;
+  flex-direction: column;
+}
+
+.timeText {
+  color: #0c1e30;
+  font-size: 16px;
+}
+
+.comment {
+  color: #0c1e30;
+  font-size: 14px;
+  line-height: 17px;
+  margin-top: 4px;
+  word-break: break-all;
+}
+
+.cancelButton {
+  display: flex;
+  padding: 7px;
+  font-weight: 500;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+}
+
+.nameAndButton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.editButton {
+  display: flex;
+  align-items: center;
+  padding: 7px;
+  gap: 2px;
+  background-color: transparent;
+  font-size: 12px;
+  font-weight: 600;
+  outline: none;
+  border: none;
+  color: #767676;
+  &:hover {
+    color: #404040;
+    text-decoration: underline;
+  }
+}
+
+.description {
+  line-height: 17px;
+  word-break: break-all;
+  margin-top: 16px;
+  font-size: 14px;
+  color: #0c1e30;
+}
+
+.roleName {
+  width: calc(1fr - 10px);
+  word-break: break-all;
+  font-size: 24px;
+  font-weight: bold;
+  color: #0c1e30;
+}

@@ -1,0 +1,103 @@
+.headerName {
+    display: flex;
+    align-items: center;
+    color: #0c1e30;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.topBar {
+    margin-top: 50px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contactNameEllipsis {
+    max-width: 340px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.labelName {
+    max-width: 350px !important;
+    word-break: break-all;
+    white-space: normal;
+}
+
+.headerTop {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px 0px 30px;
+}
+
+.rightPane {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.statusKey {
+    width: 734px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #000;
+    box-shadow: 23;
+}
+
+.statusHeader {
+    text-align: center;
+    font-size: 24px;
+    color: #0c1e30;
+    font-weight: 700;
+    margin-top: 20px;
+    line-height: 33px;
+}
+
+.statusBody {
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    border: 1px solid #e1eafb;
+    margin: 32px 0 6px 0;
+    margin: 40px;
+}
+
+.statusPosition {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 81px;
+}
+
+.activeChipBody {
+    color: #0c1e30;
+    font-size: 14px;
+    line-height: 19px;
+    padding: 24px 0;
+    width: 448px;
+    letter-spacing: -0.2px;
+}
+
+.statusFullWidth {
+    padding: 0 24px 0 24px;
+    border-bottom: 1px solid #e1eafb;
+}
+
+.noBorder {
+    border-bottom: none;
+}
+
+.chipTop {
+    margin: 24px 0;
+    width: 124.5px !important;
+    height: 25px;
+}
