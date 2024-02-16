@@ -1,0 +1,125 @@
+module.exports = {
+  content: ['./src/**/*.{js,jsx,ts,tsx,scss}', './public/index.html'],
+  theme: {
+    screens: {
+      xs: '400px',
+      sm: '793px',
+      md: '893px',
+      lg: '1123px',
+      xl: '1297px',
+      '.5xl': '1298px',
+      '1xl': '1362px',
+      '1.5xl': '1366px',
+      '2xl': '1416px',
+      '13mac': '1440px',
+      '3xl': '1616px',
+      '4xl': '1920px',
+
+      //added new resolutions for sidebar
+      '5xl': '878px',
+      '6xl': '990px',
+      '6.5xl': '991px',
+      '7xl': '1260px',
+      '7.5xl': '1261px',
+      '8xl': '1433px',
+      '8.5xl': '1434px',
+      '9xl': '1504px',
+      '9.5xl': '1505px',
+      '10xl': '1804px'
+    },
+    colors: {
+      // 'c' refers to coyni, 'gy' refers to Gray color
+      cgy1: '#CCCCCC',
+      cgy2: '#ADADAD',
+      cgy3: '#767676',
+      cgy4: '#0C1E30',
+      cgy5: '#4D4D4D',
+      cgy6: '#00000026',
+      cgy7: '#0000001A',
+      cgy8: '#4c4c4c',
+      cgy9: '#828282',
+      cgy10: '#E5F6F6',
+      cgy11: '#f8f8f8',
+      cgy12: '#e5e5e5',
+      cgy13: '#747474',
+      cgy14: '#000000B3',
+      cgy15: '#363636',
+      cgy16: '#0C3C3B',
+      cgy17: '#6A6A6A',
+      cgy18: '#E8E8E8',
+      cgy19: '#383838',
+      cgy20: '#E2E2E2',
+      cgy21: '#00000033',
+      cgy22: '#EFF2F8',
+      cgy23: '#707070',
+      cgy26: '#404040',
+      // 'c' refers to coyni, 'm' refers to Main color
+      cm0: '#E5F6F6',
+      cm1: '#F1F4F9',
+      cm2: '#D8E2F0',
+      cm3: '#0460E3',
+      cm4: '#295ED2',
+      cm5: '#55749A',
+      cm6: '#EBF2FD',
+      cm7: '#F6F9FE',
+      cm8: '#d7e2f0',
+      cm9: '#D1DEEE1A',
+      cm19: '#5299ff',
+      cm20: '#2d81f8',
+      cm21: '#d5deeb',
+      // c refers to coyni, 'gn' refers to green color
+      cgn1: '#E5F3E5',
+      cgn2: '#00cc6e',
+      cgn5: '#008A05',
+      cgn6: '#007B04',
+      cgn7: '#00cc6e10',
+      cgn8: '#E2F1E2',
+      cgn9: '#117E1C',
+      cgn11: '#008a0580',
+      // c refers to coyni, 'rd' refers to red color
+      crd1: '#FCE9E8',
+      crd2: '#d45858',
+      crd5: '#E32B25',
+      crd6: '#D54848',
+      crd7: '#CE1A14',
+      crd8: '#e32b250d',
+      crd9: '#FBE6E5',
+      crd10: '#e32b2580',
+      // c refers to coyni, 'or' refers to orange color
+      cor1: '#FFEFD8',
+      cor5: '#FFA701',
+      cor12: '#fef4ef',
+      // c refers to coyni, 'bl' refers to blue color
+      cbl1: '#E8F3F9',
+      cbl2: '#f2f5f8',
+      cbl3: '#d3deed',
+      cbl5: '#1D86BE',
+      cbl6: '#4587E3',
+      cbl7: '#1D7CB3',
+      cbl8: '#E1EAFB',
+      cbl9: '#1755e0',
+      cbl11: '#295ED280',
+      // c refers to coyni, 'cy  refers to cyan color
+      ccy1: '#35BAB6',
+      ccy2: '#129C97',
+      ccy3: '#25B9DD',
+      // c refers to coyni, 'bc  refers to black color
+      cbc1: '#000000',
+      cbc4: '#4D4D4D',
+      cbc5: '#1d1e2e',
+      cbc6: '#000000B3',
+      cbc7: '#00000041',
+
+      cwhitesmoke: '#efefef',
+      cwhite: '#fff',
+      // c refers to coyni, 'bc  refers to purple color
+      cpl1: '#9641CB'
+    },
+
+    extend: {}
+  },
+  variants: {
+    extend: {}
+  },
+  plugins: []
+};

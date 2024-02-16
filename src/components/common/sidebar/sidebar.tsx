@@ -2,18 +2,17 @@ import { Fragment, useEffect, useRef, useState } from "react";
 import { connect } from "react-redux";
 import { Link, useLocation } from "react-router-dom";
 import RSC from "react-scrollbars-custom";
-import logo3 from "../../../assets/images/brand-logos/desktop-dark.png";
-import logo1 from "../../../assets/images/brand-logos/desktop-logo.png";
-import logo5 from "../../../assets/images/brand-logos/desktop-white.png";
-import logo4 from "../../../assets/images/brand-logos/toggle-dark.png";
-import logo2 from "../../../assets/images/brand-logos/toggle-logo.png";
-import logo6 from "../../../assets/images/brand-logos/toggle-white.png";
-import { ThemeChanger } from "../../../redux/action";
-import store from "../../../redux/store";
+import logo3 from "../../../assets/desktop-dark.png";
+import logo1 from "../../../assets/desktop-logo.png";
+import logo5 from "../../../assets/desktop-white.png";
+import logo4 from "../../../assets/toggle-dark.png";
+import logo2 from "../../../assets/toggle-logo.png";
+import logo6 from "../../../assets/toggle-white.png";
 import { MENUITEMS } from "./sidemenu/sidemenu";
+import store from "../../../Store";
 const history: any = [];
 
-const Sidebar = ({ local_varaiable, ThemeChanger }: any) => {
+const Sidebar = ({ local_varaiable }: any) => {
   const location = useLocation();
   const [menuitems, setMenuitems] = useState<any>(MENUITEMS);
 
@@ -78,33 +77,7 @@ const Sidebar = ({ local_varaiable, ThemeChanger }: any) => {
     setMenuitems((arr: any) => [...arr]);
   }
 
-  function Onhover() {
-    const theme = store.getState();
-    if (
-      (theme.toggled == "icon-overlay-close" ||
-        theme.toggled == "detached-close") &&
-      theme.iconOverlay != "open"
-    ) {
-      ThemeChanger({ ...theme, iconOverlay: "open" });
-    }
-  }
-
-  function Outhover() {
-    const theme = store.getState();
-    if (
-      (theme.toggled == "icon-overlay-close" ||
-        theme.toggled == "detached-close") &&
-      theme.iconOverlay == "open"
-    ) {
-      ThemeChanger({ ...theme, iconOverlay: "" });
-    }
-  }
-
   function menuClose() {
-    const theme = store.getState();
-    if (window.innerWidth <= 992) {
-      ThemeChanger({ ...theme, toggled: "close" });
-    }
     const overlayElement = document.querySelector("#responsive-overlay");
     if (overlayElement) {
       overlayElement.classList.remove("active");
@@ -211,13 +184,6 @@ const Sidebar = ({ local_varaiable, ThemeChanger }: any) => {
         setMenuitems((arr: any) => [...arr]);
         return mainlevel;
       });
-    }
-
-    if (localStorage.getItem("ynexverticalstyles") == "icontext") {
-      // ThemeChanger({...local_varaiable,"iconText":"open"})
-    }
-    if (local_varaiable.dataVerticalStyle == "doublemenu") {
-      // ThemeChanger({...local_varaiable,"toggled":"double-menu-open"})
     }
   }
 
@@ -332,12 +298,10 @@ const Sidebar = ({ local_varaiable, ThemeChanger }: any) => {
       <aside
         className="app-sidebar sticky"
         id="sidebar"
-        onMouseEnter={() => Onhover()}
-        onMouseLeave={() => Outhover()}
       >
         <div className="main-sidebar-header">
           <Link
-            to={`${import.meta.env.BASE_URL}dashboards/crm/`}
+            to={`/dashboards/crm/`}
             className="header-logo"
           >
             <img src={logo1} alt="logo" className="desktop-logo" />
@@ -410,4 +374,4 @@ const Sidebar = ({ local_varaiable, ThemeChanger }: any) => {
 const mapStateToProps = (state: any) => ({
   local_varaiable: state,
 });
-export default connect(mapStateToProps, { ThemeChanger })(Sidebar);
+export default connect(mapStateToProps)(Sidebar);

@@ -1,19 +1,17 @@
 import { Fragment, useEffect, useState } from "react";
 import { Dropdown } from "react-bootstrap";
 import { connect, useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { logout } from "../../../Store/ducks/auth";
-import desktopdark from "../../../assets/images/brand-logos/desktop-dark.png";
-import desktoplogo from "../../../assets/images/brand-logos/desktop-logo.png";
-import desktopwhite from "../../../assets/images/brand-logos/desktop-white.png";
-import toggledark from "../../../assets/images/brand-logos/toggle-dark.png";
-import togglelogo from "../../../assets/images/brand-logos/toggle-logo.png";
-import togglewhite from "../../../assets/images/brand-logos/toggle-white.png";
-import { ThemeChanger } from "../../../redux/action";
-import { useNavigate } from "react-router-dom";
-import store from "../../../redux/store";
+import desktopdark from "../../../assets/desktop-dark.png";
+import desktoplogo from "../../../assets/desktop-logo.png";
+import desktopwhite from "../../../assets/desktop-white.png";
+import toggledark from "../../../assets/toggle-dark.png";
+import togglelogo from "../../../assets/toggle-logo.png";
+import togglewhite from "../../../assets/toggle-white.png";
+import store from "../../../Store";
 
-const Header = ({ ThemeChanger }: any) => {
+const Header = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [fullScreen, setFullScreen] = useState(false);
@@ -39,150 +37,10 @@ const Header = ({ ThemeChanger }: any) => {
     };
   }, []);
 
-  function menuClose() {
-    const theme = store.getState();
-    ThemeChanger({ ...theme, toggled: "close" });
-  }
 
   const toggleSidebar = () => {
     const theme = store.getState();
     const sidemenuType = theme.dataNavLayout;
-    if (window.innerWidth >= 992) {
-      if (sidemenuType === "vertical") {
-        const verticalStyle = theme.dataVerticalStyle;
-        const navStyle = theme.dataNavStyle;
-        switch (verticalStyle) {
-          // closed
-          case "closed":
-            ThemeChanger({ ...theme, dataNavStyle: "" });
-            if (theme.toggled === "close-menu-close") {
-              ThemeChanger({ ...theme, toggled: "" });
-            } else {
-              ThemeChanger({ ...theme, toggled: "close-menu-close" });
-            }
-            break;
-          // icon-overlay
-          case "overlay":
-            ThemeChanger({ ...theme, dataNavStyle: "" });
-            if (theme.toggled === "icon-overlay-close") {
-              ThemeChanger({ ...theme, toggled: "" });
-            } else {
-              if (window.innerWidth >= 992) {
-                ThemeChanger({ ...theme, toggled: "icon-overlay-close" });
-              }
-            }
-            break;
-          // icon-text
-          case "icontext":
-            ThemeChanger({ ...theme, dataNavStyle: "" });
-            if (theme.toggled === "icon-text-close") {
-              ThemeChanger({ ...theme, toggled: "" });
-            } else {
-              ThemeChanger({ ...theme, toggled: "icon-text-close" });
-            }
-            break;
-          // doublemenu
-          case "doublemenu":
-            ThemeChanger({ ...theme, dataNavStyle: "" });
-            if (theme.toggled === "double-menu-open") {
-              ThemeChanger({ ...theme, toggled: "double-menu-close" });
-            } else {
-              const sidemenu = document.querySelector(
-                ".side-menu__item.active"
-              );
-              if (sidemenu) {
-                ThemeChanger({ ...theme, toggled: "double-menu-open" });
-                if (sidemenu.nextElementSibling) {
-                  sidemenu.nextElementSibling.classList.add(
-                    "double-menu-active"
-                  );
-                } else {
-                  ThemeChanger({ ...theme, toggled: "" });
-                }
-              }
-            }
-
-            // doublemenu(ThemeChanger);
-            break;
-          // detached
-          case "detached":
-            if (theme.toggled === "detached-close") {
-              ThemeChanger({ ...theme, toggled: "" });
-            } else {
-              ThemeChanger({ ...theme, toggled: "detached-close" });
-            }
-            break;
-          // default
-          case "default":
-            ThemeChanger({ ...theme, toggled: "" });
-        }
-        switch (navStyle) {
-          case "menu-click":
-            if (theme.toggled === "menu-click-closed") {
-              ThemeChanger({ ...theme, toggled: "" });
-            } else {
-              ThemeChanger({ ...theme, toggled: "menu-click-closed" });
-            }
-            break;
-          // icon-overlay
-          case "menu-hover":
-            if (theme.toggled === "menu-hover-closed") {
-              ThemeChanger({ ...theme, toggled: "" });
-            } else {
-              ThemeChanger({ ...theme, toggled: "menu-hover-closed" });
-            }
-            break;
-          case "icon-click":
-            if (theme.toggled === "icon-click-closed") {
-              ThemeChanger({ ...theme, toggled: "" });
-            } else {
-              ThemeChanger({ ...theme, toggled: "icon-click-closed" });
-            }
-            break;
-          case "icon-hover":
-            if (theme.toggled === "icon-hover-closed") {
-              ThemeChanger({ ...theme, toggled: "" });
-            } else {
-              ThemeChanger({ ...theme, toggled: "icon-hover-closed" });
-            }
-            break;
-        }
-      }
-    } else {
-      if (theme.toggled === "close") {
-        ThemeChanger({ ...theme, toggled: "open" });
-
-        setTimeout(() => {
-          if (theme.toggled == "open") {
-            const overlay = document.querySelector("#responsive-overlay");
-
-            if (overlay) {
-              overlay.classList.add("active");
-              overlay.addEventListener("click", () => {
-                const overlay = document.querySelector("#responsive-overlay");
-
-                if (overlay) {
-                  overlay.classList.remove("active");
-                  menuClose();
-                }
-              });
-            }
-          }
-
-          window.addEventListener("resize", () => {
-            if (window.screen.width >= 992) {
-              const overlay = document.querySelector("#responsive-overlay");
-
-              if (overlay) {
-                overlay.classList.remove("active");
-              }
-            }
-          });
-        }, 100);
-      } else {
-        ThemeChanger({ ...theme, toggled: "close" });
-      }
-    }
   };
 
   const handleLogout = (e: any) => {
@@ -201,7 +59,7 @@ const Header = ({ ThemeChanger }: any) => {
             <div className="header-element">
               <div className="horizontal-logo">
                 <Link
-                  to={`${import.meta.env.BASE_URL}dashboards/crm/`}
+                  to={`/dashboards/crm/`}
                   className="header-logo"
                 >
                   <img src={desktoplogo} alt="logo" className="desktop-logo" />
@@ -284,4 +142,4 @@ const Header = ({ ThemeChanger }: any) => {
 const mapStateToProps = (state: any) => ({
   local_varaiable: state,
 });
-export default connect(mapStateToProps, { ThemeChanger })(Header);
+export default connect(mapStateToProps)(Header);

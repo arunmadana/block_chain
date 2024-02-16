@@ -2,11 +2,11 @@ import axios from "axios";
 import { Buffer } from "buffer";
 import Moment from "moment";
 import uuid from "react-uuid";
-import ENV from "../../EnvironmentVariables.json";
+import ENV from "./EnvironmentVariables.json";
+import { getStorage } from "./Storage";
 import { LocalStorageKeysEnum } from "../Enums/LocalStorageKeysEnum";
 import store from "../Store";
 import { logout } from "../Store/ducks/auth";
-import { getStorage } from "./Storage";
 
 const shouldEncrypt = (url: any) => {
   let encrypt = true;

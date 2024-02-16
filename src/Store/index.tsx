@@ -1,6 +1,6 @@
 import { applyMiddleware, combineReducers, createStore } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension";
-import thunk from "redux-thunk";
+import { thunk } from "redux-thunk";
 import accountLockedModal from "./ducks/accountLockedModal";
 import activateAccount from "./ducks/activateAccount";
 import adminUserDetails from "./ducks/adminUserDetails";
@@ -17,7 +17,7 @@ const reducers = combineReducers({
   loginDetails,
 });
 
-const rootReducer = (state, action) => {
+const rootReducer = (state: any, action: any) => {
   if (action.type === "greenbox-admin/auth/logout") {
     return reducers(undefined, action);
   }
