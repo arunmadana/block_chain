@@ -21,6 +21,7 @@ import {
 } from "../../services/customerProfiles/customerProfiles";
 import { getPhoneCountryList } from "../../services/profiles/poc";
 import styles from "./BusinessProfiles.module.scss";
+import './BusinessProfiles.styles.scss'
 
 const BusinessProfiles: FC = () => {
   const [data, setData] = useState([]);
@@ -437,7 +438,7 @@ const StatusKey = ({ show, handleClose = () => {} }) => {
               >
                 <div className={styles.statusPosition}>
                   <div className={`chips--${data?.color} ${styles.chipTop}`}>
-                    <div className={`chips__text--${data?.color} `}>
+                    <div className={`chips__text--${data?.color}`}>
                       {data?.status}
                     </div>
                   </div>
@@ -504,7 +505,7 @@ const Export = ({ show, handleClose = () => {} }) => {
               >
                 <div className={styles.statusPosition}>
                   <div className={`chips--${data?.color} ${styles.chipTop}`}>
-                    <div className={`chips__text--${data?.color} `}>
+                    <div className={`chips__text--${data?.color}`}>
                       {data?.status}
                     </div>
                   </div>
