@@ -1,13 +1,14 @@
 import { Fragment, useEffect, useRef, useState } from "react";
+import { Scrollbars } from "react-custom-scrollbars-2";
 import { connect } from "react-redux";
 import { Link, useLocation } from "react-router-dom";
-import { Scrollbar } from "react-scrollbars-custom";
 import logo3 from "../../../assets/desktop-dark.png";
 import logo1 from "../../../assets/desktop-logo.png";
 import logo5 from "../../../assets/desktop-white.png";
 import logo4 from "../../../assets/toggle-dark.png";
 import logo2 from "../../../assets/toggle-logo.png";
 import logo6 from "../../../assets/toggle-white.png";
+
 import { ThemeChanger } from "../../../redux/action";
 import store from "../../../redux/store";
 import { MENUITEMS } from "./sidemenu/sidemenu";
@@ -330,7 +331,7 @@ const Sidebar = ({ local_varaiable, ThemeChanger }: any) => {
     <Fragment>
       <div id="responsive-overlay" onClick={() => menuClose()}></div>
       <aside
-        className="app-sidebar sticky"
+        className="sticky app-sidebar"
         id="sidebar"
         onMouseEnter={() => Onhover()}
         onMouseLeave={() => Outhover()}
@@ -348,6 +349,8 @@ const Sidebar = ({ local_varaiable, ThemeChanger }: any) => {
 
         <div className="main-sidebar" id="sidebar-scroll">
           {/* <RSC style={{ width: "100%", height: "100vh" }} noScrollX={false}>
+          </RSC> */}
+          <Scrollbars style={{ width: 250, height: 250 }}>
             <nav className="main-menu-container nav nav-pills flex-column sub-open">
               <div className="slide-left" id="slide-left">
                 <svg
@@ -397,11 +400,8 @@ const Sidebar = ({ local_varaiable, ThemeChanger }: any) => {
                   </Fragment>
                 ))}
               </ul>
-            </nav>
-          </RSC> */}
-          <Scrollbar style={{ width: 250, height: 250 }}>
-            <p>Hello world!</p>
-          </Scrollbar>
+            </nav>{" "}
+          </Scrollbars>
         </div>
       </aside>
     </Fragment>

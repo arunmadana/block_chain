@@ -8,6 +8,7 @@ import Header from "../components/common/header/header";
 import Loader from "../components/common/loader/loader";
 import Sidebar from "../components/common/sidebar/sidebar";
 import TabToTop from "../components/common/tabtotop/tabtotop";
+import Switcher from "../components/common/switcher/switcher";
 
 function Base() {
   const [MyclassName, setMyClass] = useState("");
@@ -46,7 +47,7 @@ function Base() {
               "data-icon-text": MyclassName,
             }}
           />
-          {/* <Switcher /> */}
+          <Switcher />
           <div className="page">
             <Header />
             <Sidebar />
