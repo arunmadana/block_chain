@@ -1,0 +1,301 @@
+.pocTitle {
+  color: var(--rgy1);
+  font-size: 24px;
+  line-height: 33px;
+  margin-right: 67px;
+  font-weight: 700;
+}
+.pocParaHeading {
+  color: var(--cgy3);
+  font-size: 14px;
+  line-height: 19px;
+  margin-top: 16px;
+}
+.contactsClassName {
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--cm2);
+  &:last-child {
+    border: none;
+  }
+  &_lastContact {
+    padding-bottom: 16px;
+  }
+}
+.contactsHeadingClassName {
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 700;
+  width: 39.2%;
+  color: var(--rgy1);
+}
+.addContactButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  border: 1px solid var(--rbl2);
+  border-radius: 10px;
+  height: 40px;
+  width: 140px;
+  color: var(--rbl1) !important;
+  padding: 11px 12px;
+  &:hover {
+    background-color: var(--rbl9);
+  }
+  &_buttonDetails {
+    margin-top: 8px;
+  }
+  &_openState {
+    &:hover {
+      background-color: var(
+        --cm6
+      ) !important; // here based on open state we are maintaining hover state
+    }
+  }
+}
+.addNewContactDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+.formFieldContainer {
+  margin-top: 48px;
+  margin-right: 67px;
+  width: 59%; // Here i am giving width in percentage it will adjust in all resolutions
+  &_fieldsDetails {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 16px;
+  }
+}
+.cancelButton {
+  color: var(--cgy3);
+  font-size: 12px;
+  font-weight: 600;
+  &:hover {
+    text-decoration: underline;
+    color: var(--rgy1);
+  }
+}
+.addingButton {
+  padding: 6px 22px;
+  border-radius: 50px !important;
+  font-size: 12px;
+  font-weight: 700;
+  &:hover {
+    background-color: var(--cm4);
+  }
+}
+.disableClassName {
+  color: var(--gray-200) !important;
+}
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+.multipleButtonContainer {
+  width: 235px;
+  min-height: 102px;
+  background: var(--cwhite) 0% 0% no-repeat padding-box;
+  box-shadow: 0px 4px 10px var(--cgy21);
+  border: 1px solid var(--cm2);
+  position: absolute;
+  z-index: 999;
+  border-radius: 10px;
+  margin-top: 8px;
+  left: -47px;
+  opacity: 1;
+  padding: 16px 19px 16px 17px;
+  top: 50px;
+}
+.ContactName {
+  font-size: 14px;
+  line-height: 19px;
+  width: 174px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--cgy3);
+  font-weight: 600;
+}
+.tickMark {
+  width: 16px;
+  height: 11px;
+}
+.nameContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 8px;
+  padding-bottom: 16px;
+}
+.contactsContainer {
+  max-height: 175px;
+  width: 212px;
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--gray-300);
+    border-radius: 12px;
+  }
+}
+.nameContainerHover {
+  font-size: 14px;
+  font-weight: 600;
+  width: 174px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 19px;
+  color: var(--cgy4);
+  &:hover {
+    cursor: pointer;
+  }
+}
+.hBarClassName {
+  border-bottom: 1px solid var(--cm2);
+}
+.createButtonContainer {
+  display: flex;
+  justify-content: center;
+  color: var(--cm3);
+  margin-top: 16px;
+}
+.plusIcon {
+  font-size: 15px;
+  margin-right: 8px;
+}
+.createContactText {
+  font-size: 14px;
+  font-weight: 700;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.createContactButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contactInputField {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  margin-bottom: 16px;
+  align-items: center;
+  width: 418px;
+  height: 52px;
+  background: var(--cwhite) 0% 0% no-repeat padding-box;
+  border: 1px solid var(--cm2);
+  border-radius: 10px;
+  opacity: 1;
+}
+.pointOfContactContainer {
+  display: flex;
+  flex-direction: column;
+}
+.addButtonContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+}
+.editContactName {
+  color: var(--rgy1);
+  line-height: 19px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: default;
+}
+.contactNameEllipsis {
+  width: 288px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.edit-class {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  margin-left: 5px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  .edit-text {
+    color: var(--cgy9);
+  }
+  .edit-icon {
+    font-size: 10px;
+    margin-top: 5px;
+  }
+}
+.editIcon {
+  font-size: 12px;
+  color: var(--rgy1);
+  width: 22px;
+  height: 22px;
+  display: flex;
+  justify-content: center;
+  margin-left: 18px;
+  align-items: center;
+  border-radius: 9999px;
+  &:hover {
+    background-color: var(--cm1);
+  }
+  &_edit {
+    &:hover {
+      color: var(--cm4);
+    }
+  }
+}
+.exitButtonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pocContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 658px;
+}
+.backButtonContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 48px;
+}
+.cancel {
+  color: var(--cgy3);
+  font-size: 14px;
+  cursor: pointer;
+  line-height: 19px;
+  font-weight: bold;
+  &:hover {
+    color: var(--cgy26);
+  }
+}
+.nextButton {
+  width: 170px;
+}
+.iconContainer {
+  display: flex;
+}
+.loadingClass {
+  height: 658px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

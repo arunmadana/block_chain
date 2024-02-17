@@ -1,0 +1,4 @@
+<svg id="success_green_circle_icon" data-name="success green circle icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
+  <circle id="Back_circle" data-name="Back circle" cx="7" cy="7" r="7" fill="#008a05" />
+  <path id="Icon_awesome-check" data-name="Icon awesome-check" d="M2.4,9.744.1,7.447a.353.353,0,0,1,0-.5l.5-.5a.353.353,0,0,1,.5,0L2.65,7.995,5.964,4.681a.353.353,0,0,1,.5,0l.5.5a.353.353,0,0,1,0,.5L2.9,9.744A.353.353,0,0,1,2.4,9.744Z" transform="translate(3.467 0.066)" fill="#fff" />
+</svg>

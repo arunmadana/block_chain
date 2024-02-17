@@ -1,0 +1,80 @@
+.form_file {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 389px;
+  height: 58px;
+  position: relative;
+  background-color: #fff;
+  border: 2px dashed var(--cm2);
+  border-radius: 10px;
+  margin-bottom: 26px;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  &:hover {
+    background-color: #eff2f8;
+  }
+}
+
+.isFile:hover {
+  background-color: var(--cm13);
+}
+
+.file_cross {
+  position: absolute;
+  top: 5.57px;
+  right: 5.5px;
+  font-size: 8px;
+  transform: rotate(45deg);
+  color: var(--cgy3);
+
+  &:hover {
+    width: 11px;
+    height: 11px;
+    border-radius: 100%;
+    background-color: var(--crd5);
+    color: var(--cwhite);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-out;
+  }
+}
+
+.file_selected {
+  border: 2px solid #008a0580;
+  &:hover {
+    background-color: var(--cwhite);
+  }
+}
+
+.slideUp {
+  opacity: 1;
+  transition: all 0.3s ease-out;
+  animation: slideUpAnimation 0.3s;
+}
+
+@keyframes slideUpAnimation {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 17px;
+  }
+}
+
+.slideDown {
+  height: 0;
+  opacity: 0;
+  transition: all 0.3s ease-out;
+  animation: slideDownAnimation 0.3s;
+}
+
+@keyframes slideDownAnimation {
+  from {
+    height: 12px;
+  }
+  to {
+    height: 0px;
+  }
+}

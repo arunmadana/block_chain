@@ -1,0 +1,92 @@
+.businessStep {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 40px;
+  &:last-child {
+    .vertical {
+      display: none;
+    }
+  }
+}
+.bullet {
+  width: 20px;
+  height: 20px;
+  border-radius: 9999px;
+  background-color: var(--cm2);
+  &_active {
+    border: 3px solid var(--rbl1);
+    background-color: var(--cwhite);
+  }
+  &_completed {
+    background-color: var(--rbl1);
+  }
+}
+.bulletText {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 19px;
+  color: var(--cgy2);
+  transition: ease-in;
+  transition-duration: 300ms;
+  white-space: nowrap;
+  &_active {
+    color: var(--rgy1);
+  }
+  &_completed {
+    color: var(--cgy3);
+  }
+  &_hoverAction {
+    &:hover {
+      cursor: pointer;
+      color: var(--cgy4);
+    }
+  }
+}
+.activateBulletText {
+  color: var(--rgy1);
+}
+.trackerDetailsPage {
+  flex-grow: 1;
+}
+.headerText {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22px;
+  color: var(--rgy1);
+}
+.trackerDetails {
+  position: relative;
+  margin-top: 32px;
+}
+.trackerPage {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 37px;
+  padding: 32px 24px 48px 24px;
+  border-radius: 10px;
+  box-shadow: 0px 8px 20px var(--cgy7);
+  background-color: var(--cwhite);
+}
+.vertical {
+  position: absolute;
+  left: 8px;
+  top: 24px;
+  width: 4px;
+  height: 52px;
+  background-color: var(--cm2);
+  transition: all 0.3s ease-out;
+
+  &_active {
+    background-color: var(--rbl1);
+  }
+}
+.detailsScreen {
+  border-left: 1px solid var(--cm2);
+  min-height: 658px;
+  width: 78.75%;
+  padding-left: 32px;
+}

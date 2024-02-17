@@ -1,0 +1,100 @@
+.custom-checkbox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  min-height: 20px;
+  cursor: pointer;
+  input[type='checkbox'] {
+    display: block;
+    position: relative;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 1px solid var(--cgy2);
+    border-radius: 5px;
+    background-color: var(--cwhite);
+    outline: none;
+    margin: 0 8px 0 0;
+    cursor: pointer;
+
+    //Removed hover effect for checkbox in present wireframe we don't  have hover effects
+    // &:hover {
+    //   border-color: var(--cm3);
+    //   box-shadow: 0 0 0 1px var(--cm3);
+    // }
+    &:checked {
+      border-color: var(--cm3);
+      box-shadow: 0 0 0 1px var(--cm3);
+      background-color: var(--cm3);
+    }
+    &:checked::before {
+      content: '\ea92';
+      position: absolute;
+      top: calc(63% - 5px);
+      left: calc(48% - 5px);
+      font-size: 8px;
+      font-family: 'icomoon', sans-serif;
+      color: var(--cwhite);
+    }
+
+    &:indeterminate {
+      box-shadow: 0 0 0 1px var(--cm3);
+      background-color: var(--cm3) !important;
+    }
+
+    &:indeterminate::before {
+      content: '';
+      position: absolute;
+      top: 6px;
+      left: 2px;
+      height: 4px;
+      width: 10px;
+      background-color: var(--cwhite) !important;
+    }
+    &:disabled {
+      background-color: var(--cgy2);
+      &:hover {
+        cursor: default;
+        border-color: var(--cgy2);
+        box-shadow: none;
+      }
+    }
+  }
+
+  &.disabled {
+    color: var(--cgy3);
+    cursor: default;
+  }
+}
+
+.green-checkbox {
+  input[type='checkbox'] {
+    border: 1px solid var(--cm3);
+  }
+}
+
+.texts {
+  width: 104px;
+  word-break: break-word;
+  color: var(--cgy3);
+}
+
+.custom-filter-checkbox {
+  input[type='checkbox'] {
+    &:checked {
+      border-color: var(--rbl1);
+      background-color: var(--rbl1);
+    }
+    &:checked::before {
+      content: '\ea92';
+      position: absolute;
+      left: 2px;
+      top: 4px;
+      font-weight: bold;
+      font-size: 9px;
+      font-family: 'icomoon';
+      color: var(--cwhite);
+    }
+  }
+}

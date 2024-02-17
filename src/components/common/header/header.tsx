@@ -214,17 +214,6 @@ const Header = ({ ThemeChanger }: any) => {
                 </Link>
               </div>
             </div>
-            <div className="header-element">
-              <Link
-                aria-label="Hide Sidebar"
-                onClick={() => toggleSidebar()}
-                className="sidemenu-toggle header-link animated-arrow hor-toggle horizontal-navtoggle"
-                data-bs-toggle="sidebar"
-                to="#"
-              >
-                <span></span>
-              </Link>
-            </div>
           </div>
 
           <div className="header-content-right">

@@ -1,0 +1,132 @@
+// @import 'Styles/_mixins';
+
+.form_input {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--cgy4);
+  font-family: "Open Sans", sans-serif;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  transition: all 0.1s ease;
+  cursor: pointer;
+  &:focus {
+    cursor: default;
+  }
+
+  &:disabled {
+    @media only screen and (-webkit-min-device-pixel-ratio: 0) {
+      color: var(--cgy3);
+    }
+    @media only screen and (-webkit-min-device-pixel-ratio: 0.75) {
+      color: var(--cgy3);
+    }
+    @media only screen and (-webkit-min-device-pixel-ratio: 1) {
+      color: var(--cgy3);
+    }
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
+      color: var(--cgy3);
+    }
+    @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+      color: var(--cgy3);
+    }
+    color: var(--cgy3);
+    pointer-events: none;
+  }
+}
+.form_input_normal {
+  &::placeholder {
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--cgy2);
+    @media (max-width: 1440px) {
+      font-size: 13px;
+    }
+  }
+}
+.form_input_small {
+  &::placeholder {
+    font-size: 11px;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--cgy2);
+  }
+}
+
+.form_chargeBack {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--cgy4);
+  font-family: "Open Sans", sans-serif;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  transition: all 0.1s ease;
+
+  &:disabled {
+    @media only screen and (-webkit-min-device-pixel-ratio: 0) {
+      color: var(--cgy2);
+    }
+    @media only screen and (-webkit-min-device-pixel-ratio: 0.75) {
+      color: var(--cgy2);
+    }
+    @media only screen and (-webkit-min-device-pixel-ratio: 1) {
+      color: var(--cgy2);
+    }
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
+      color: var(--cgy2);
+    }
+    @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+      color: var(--cgy2);
+    }
+    color: var(--cgy2);
+    pointer-events: none;
+  }
+  &::placeholder {
+    font-size: 14px;
+    font-style: normal !important;
+    font-weight: 400;
+    color: var(--cgy2);
+  }
+}
+
+input.form-input:-webkit-autofill,
+input.form-input:-webkit-autofill:hover,
+input.form-input:-webkit-autofill:focus,
+input.form-input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+// for mac showing key icon
+input::-webkit-contacts-auto-fill-button {
+  visibility: hidden;
+  display: none !important;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+}
+
+input::-webkit-contacts-auto-fill-button {
+  position: absolute;
+  right: 32px;
+}
+
+textarea.form-input {
+  padding: 8px;
+  //// @include custom-scroll;
+}
+
+input.form-input::placeholder {
+  color: #e8e8e8;
+}

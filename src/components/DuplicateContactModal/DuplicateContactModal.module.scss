@@ -1,0 +1,50 @@
+.duplicateContactModal {
+  width: 440px;
+  height: 434px;
+}
+.contactModalContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8px;
+}
+.containerHeading {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 33px;
+  color: var(--cgy4);
+  margin-bottom: 32px;
+}
+.ContentPara {
+  font-size: 14px;
+  line-height: 19px;
+  color: var(--cgy4);
+  width: 354px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+.duplicateText {
+  margin-top: 32px;
+  height: 79px;
+  width: 354px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+.emailText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--cgy4);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 19px;
+}
+.labelEmail {
+  word-break: break-all;
+  width: 384px;
+}

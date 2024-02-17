@@ -9,21 +9,23 @@ import {
   Modal,
   Select,
 } from "@mui/material";
-import { DataGrid, GridColDef } from "@mui/x-data-grid";
+import { DataGrid, GridColDef, GridEventListener } from "@mui/x-data-grid";
 import { FC, Fragment, useEffect, useState } from "react";
+import { useNavigate } from "react-router";
 import { APIKeyEnum } from "../../Enums/APIKeyEnum";
 import { PhoneCountryListEnum } from "../../Enums/PhoneCountryListEnum";
 import formatPhoneNumber from "../../helpers/formatPhoneNumber";
+import { internationalPhoneFormat } from "../../helpers/internationalPhoneFormat";
 import {
   businessProfiles,
   profileListCount,
 } from "../../services/customerProfiles/customerProfiles";
 import { getPhoneCountryList } from "../../services/profiles/poc";
 import styles from "./BusinessProfiles.module.scss";
-import './BusinessProfiles.styles.scss'
-import { internationalPhoneFormat } from "../../helpers/internationalPhoneFormat";
+import "./BusinessProfiles.styles.scss";
 
 const BusinessProfiles: FC = () => {
+  const navigate = useNavigate();
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [profileCountries, setProfileCountries] = useState([]);
@@ -266,11 +268,29 @@ const BusinessProfiles: FC = () => {
     handleSearchApi([dataT[0].id]);
   };
 
+  const handleRowClick: GridEventListener<"rowClick"> = (params) => {
+    localStorage.setItem("businessDetails", JSON.stringify(params.row));
+    if (params.row?.status === 2) {
+      navigate(`/dashboards/profiles/add-business`, {
+        state: params.row,
+      });
+    } else {
+      navigate(
+        `/dashboards/profiles/business-details/${params.row?.id}/business-info`,
+        {
+          state: params.row,
+        }
+      );
+    }
+  };
+
   return (
     <Fragment>
       <div className={styles.topBar}>
         <div className={styles.headerName}>Business Profiles</div>
-        <Button>{"Add Business"}</Button>
+        <Button onClick={() => navigate("/dashboards/profiles/add-business")}>
+          {"Add Business"}
+        </Button>
       </div>
       <Box sx={{ height: "100%", width: "100%", backgroundColor: "#FFF" }}>
         <div className={styles.headerTop}>
@@ -355,6 +375,7 @@ const BusinessProfiles: FC = () => {
             pageSizeOptions={[25]}
             checkboxSelection={false}
             disableRowSelectionOnClick
+            onRowClick={handleRowClick}
           />
         </Box>
       </Box>

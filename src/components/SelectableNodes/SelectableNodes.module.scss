@@ -1,0 +1,49 @@
+.nodeContainer {
+  width: 194px;
+  height: 54px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  padding: 16px 0px 16px 15px;
+  cursor: pointer;
+  &:hover {
+    background-color: var(--rbl4);
+    border-color: var(--rbl2);
+  }
+}
+.isSelected {
+  background: var(--cbc8) 0% 0% no-repeat padding-box;
+  border: 1px solid var(--rbl2);
+  &:hover {
+    background: var(--cbc8) 0% 0% no-repeat padding-box;
+  }
+}
+.notSelected {
+  background: var(--cwhite) 0% 0% no-repeat padding-box;
+  border: 1px solid var(--cm2);
+}
+
+.nodeLabelClass {
+  font-size: 14px;
+  color: var(--rgy1);
+  font-weight: 600;
+  margin-left: 16px;
+}
+.unSelected {
+  width: 22px;
+  height: 22px;
+  background-color: var(--cwhite);
+  border: 1px solid var(--cm2);
+  border-radius: 100%;
+}
+.emptyCircle {
+  width: 22px;
+  height: 22px;
+  border: 1px solid var(--cm2);
+  background-color: var(--cwhite);
+  border-radius: 100%;
+}
+.checkIcon {
+  color: var(--cm3);
+  font-size: 22px;
+}

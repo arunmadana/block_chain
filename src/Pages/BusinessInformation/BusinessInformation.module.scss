@@ -1,0 +1,257 @@
+.container {
+  min-height: 679px;
+  display: flex;
+  direction: column;
+}
+.subContainer {
+  display: flex;
+  align-items: center;
+}
+.content {
+  color: var(--cgy3);
+  font-size: 14px;
+  margin-top: 14px;
+  line-height: 20px;
+}
+.bInfoName {
+  color: var(--cgy4);
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+.barAlign {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 23px;
+}
+.company {
+  color: var(--cgy4);
+  font-size: 14px;
+  font-weight: 700;
+  width: 217px;
+}
+.bar {
+  border-color: var(--cm2);
+  width: 100%;
+  margin-top: 8px;
+}
+.toolTip {
+  height: 22px;
+  width: 22px;
+  border: 1px solid #d8e2f0;
+  opacity: 1;
+  border-radius: 50%;
+}
+.toolTipWidth {
+  text-align: center;
+  width: fit-content;
+  font-size: 16px !important;
+  font-weight: 600;
+}
+.BusinessInfo {
+  width: 432px;
+  min-height: 180px;
+  border-radius: 10px;
+  border: 1px solid var(--cgn11);
+}
+.inputFiledsAlign {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  // @include media("width<=1260px") {
+  //   grid-template-columns: repeat(2, minmax(0, 1fr));
+  // }
+}
+
+.inputStyles {
+  width: 100%;
+}
+
+.buttonFlex {
+  display: flex;
+}
+
+.radioButton {
+  margin-top: 10px;
+  margin-right: 10px;
+  width: 125px;
+  height: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.radioButtonLower {
+  display: flex;
+  width: 185px;
+  height: 10px;
+  margin-top: 15px;
+  gap: 20px;
+}
+
+.addressStyle {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 16px;
+}
+
+.placeHolderFont {
+  ::placeholder {
+    font-style: italic;
+    font-weight: 400;
+  }
+}
+
+.formAddressWidth {
+  width: 100%;
+}
+
+.ein {
+  ::placeholder {
+    font-style: normal;
+    color: var(--cgy3);
+    font-size: 14px;
+    font-weight: 600;
+  }
+}
+
+.state {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  column-gap: 16px;
+}
+
+.dbaInfo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 7px;
+}
+
+.dbaInfoText {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--cgy4);
+}
+
+.bars {
+  display: flex;
+  flex-grow: 1;
+}
+
+.buttonAlign {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  justify-content: flex-end;
+  margin-top: 20px !important;
+  position: absolute;
+  bottom: 48px;
+  right: 24px;
+}
+
+// .paswordInput {
+//   width: fit-content;
+// }
+
+.dbaName {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 22px;
+}
+
+.dbaCheckBox {
+  font-size: 14px;
+  margin-top: 3px;
+  color: var(--cgy4) !important;
+}
+
+.checkBox {
+  height: 17px;
+  width: fit-content;
+}
+.dbaText {
+  font-size: 14px;
+  margin-top: 3px;
+  color: var(--cgy3) !important;
+}
+.open {
+  z-index: 30;
+}
+.close {
+  z-index: 10;
+}
+.view_password {
+  position: absolute;
+  top: 11px;
+  right: 16px;
+}
+.entityTypeRadioBtn {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+.formTop {
+  z-index: 25;
+}
+.placeHolderStyle {
+  ::placeholder {
+    font-style: italic;
+  }
+}
+.errormessage {
+  margin-top: 45px;
+}
+.radioswitch {
+  width: 145px;
+}
+.rdButton {
+  width: 83px;
+}
+.viewIcon {
+  position: absolute;
+  margin-right: -10px;
+}
+.buttonRd {
+  width: 100%;
+}
+.entityAlign {
+  display: flex;
+  gap: 10px;
+}
+.formSelectIndex {
+  z-index: 20;
+}
+.selectStyles {
+  ::placeholder {
+    font-style: normal !important;
+    font-weight: 400;
+  }
+}
+
+.spinnerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 679px;
+}
+.checkClass {
+  height: 17px !important ;
+}
+.exitClass {
+  color: var(--cgy3);
+  font-style: italic;
+  font-size: 14px;
+  margin-top: 5px;
+}
+.exit {
+  font-style: normal;
+  font-weight: 600;
+  color: var(--cm3);
+  margin-left: 4px;
+  &:hover {
+    text-decoration: underline;
+    color: var(--cm4);
+  }
+}

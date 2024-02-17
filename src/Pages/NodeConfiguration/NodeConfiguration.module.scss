@@ -1,0 +1,49 @@
+.nodeContainer {
+  min-height: 658px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.header {
+  font-size: 24px;
+  color: var(--cgy4);
+  font-weight: bold;
+  line-height: 33px;
+}
+.disclaimerClass {
+  margin-top: 16px;
+  font-size: 14px;
+  color: var(--cgy3);
+  line-height: 19px;
+}
+.nodesClass {
+  margin-top: 32px;
+}
+.navigationButtons {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 32px;
+}
+
+.backButton {
+  font-size: 14px;
+  color: var(--cgy3);
+  font-weight: bold;
+  &:hover {
+    color: var(--cgy4);
+  }
+}
+.loadingClass {
+  height: 658px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.exitRow {
+  display: flex;
+  align-items: center;
+}
