@@ -1,18 +1,19 @@
 import { Fragment, useEffect, useRef, useState } from "react";
 import { connect } from "react-redux";
 import { Link, useLocation } from "react-router-dom";
-import RSC from "react-scrollbars-custom";
+import { Scrollbar } from "react-scrollbars-custom";
 import logo3 from "../../../assets/desktop-dark.png";
 import logo1 from "../../../assets/desktop-logo.png";
 import logo5 from "../../../assets/desktop-white.png";
 import logo4 from "../../../assets/toggle-dark.png";
 import logo2 from "../../../assets/toggle-logo.png";
 import logo6 from "../../../assets/toggle-white.png";
+import { ThemeChanger } from "../../../redux/action";
+import store from "../../../redux/store";
 import { MENUITEMS } from "./sidemenu/sidemenu";
-import store from "../../../Store";
 const history: any = [];
 
-const Sidebar = ({ local_varaiable }: any) => {
+const Sidebar = ({ local_varaiable, ThemeChanger }: any) => {
   const location = useLocation();
   const [menuitems, setMenuitems] = useState<any>(MENUITEMS);
 
@@ -77,7 +78,33 @@ const Sidebar = ({ local_varaiable }: any) => {
     setMenuitems((arr: any) => [...arr]);
   }
 
+  function Onhover() {
+    const theme = store.getState();
+    if (
+      (theme.toggled == "icon-overlay-close" ||
+        theme.toggled == "detached-close") &&
+      theme.iconOverlay != "open"
+    ) {
+      ThemeChanger({ ...theme, iconOverlay: "open" });
+    }
+  }
+
+  function Outhover() {
+    const theme = store.getState();
+    if (
+      (theme.toggled == "icon-overlay-close" ||
+        theme.toggled == "detached-close") &&
+      theme.iconOverlay == "open"
+    ) {
+      ThemeChanger({ ...theme, iconOverlay: "" });
+    }
+  }
+
   function menuClose() {
+    const theme = store.getState();
+    if (window.innerWidth <= 992) {
+      ThemeChanger({ ...theme, toggled: "close" });
+    }
     const overlayElement = document.querySelector("#responsive-overlay");
     if (overlayElement) {
       overlayElement.classList.remove("active");
@@ -184,6 +211,13 @@ const Sidebar = ({ local_varaiable }: any) => {
         setMenuitems((arr: any) => [...arr]);
         return mainlevel;
       });
+    }
+
+    if (localStorage.getItem("ynexverticalstyles") == "icontext") {
+      // ThemeChanger({...local_varaiable,"iconText":"open"})
+    }
+    if (local_varaiable.dataVerticalStyle == "doublemenu") {
+      // ThemeChanger({...local_varaiable,"toggled":"double-menu-open"})
     }
   }
 
@@ -298,12 +332,11 @@ const Sidebar = ({ local_varaiable }: any) => {
       <aside
         className="app-sidebar sticky"
         id="sidebar"
+        onMouseEnter={() => Onhover()}
+        onMouseLeave={() => Outhover()}
       >
         <div className="main-sidebar-header">
-          <Link
-            to={`/dashboards/crm/`}
-            className="header-logo"
-          >
+          <Link to={`/dashboards/crm/`} className="header-logo">
             <img src={logo1} alt="logo" className="desktop-logo" />
             <img src={logo2} alt="logo" className="toggle-logo" />
             <img src={logo3} alt="logo" className="desktop-dark" />
@@ -314,7 +347,7 @@ const Sidebar = ({ local_varaiable }: any) => {
         </div>
 
         <div className="main-sidebar" id="sidebar-scroll">
-          <RSC style={{ width: "100%", height: "100vh" }} noScrollX={false}>
+          {/* <RSC style={{ width: "100%", height: "100vh" }} noScrollX={false}>
             <nav className="main-menu-container nav nav-pills flex-column sub-open">
               <div className="slide-left" id="slide-left">
                 <svg
@@ -365,7 +398,10 @@ const Sidebar = ({ local_varaiable }: any) => {
                 ))}
               </ul>
             </nav>
-          </RSC>
+          </RSC> */}
+          <Scrollbar style={{ width: 250, height: 250 }}>
+            <p>Hello world!</p>
+          </Scrollbar>
         </div>
       </aside>
     </Fragment>
@@ -374,4 +410,4 @@ const Sidebar = ({ local_varaiable }: any) => {
 const mapStateToProps = (state: any) => ({
   local_varaiable: state,
 });
-export default connect(mapStateToProps)(Sidebar);
+export default connect(mapStateToProps, { ThemeChanger })(Sidebar);

@@ -46,6 +46,7 @@ function Base() {
               "data-icon-text": MyclassName,
             }}
           />
+          {/* <Switcher /> */}
           <div className="page">
             <Header />
             <Sidebar />

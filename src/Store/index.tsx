@@ -1,5 +1,4 @@
-import { applyMiddleware, combineReducers, createStore } from "redux";
-import { composeWithDevTools } from "redux-devtools-extension";
+import { applyMiddleware, combineReducers, compose, createStore } from "redux";
 import { thunk } from "redux-thunk";
 import accountLockedModal from "./ducks/accountLockedModal";
 import activateAccount from "./ducks/activateAccount";
@@ -24,9 +23,6 @@ const rootReducer = (state: any, action: any) => {
   return reducers(state, action);
 };
 
-const store = createStore(
-  rootReducer,
-  composeWithDevTools(applyMiddleware(thunk))
-);
+const store = createStore(rootReducer, compose(applyMiddleware(thunk)));
 
 export default store;
