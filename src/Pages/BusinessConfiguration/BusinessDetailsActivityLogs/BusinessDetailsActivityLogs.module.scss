@@ -1,0 +1,119 @@
+.mainActivity {
+  display: flex;
+  flex-direction: row;
+  height: 400px;
+  margin: 31px 0px 8px 32px !important;
+
+  .sideText {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 16px;
+    .arrowStyles {
+      color: var(--cm3) !important;
+      font-size: 6.5px;
+      rotate: -90deg;
+    }
+
+    .mainLabel {
+      display: flex;
+      flex-direction: column;
+      row-gap: 12px;
+      width: 116px;
+      .keysLog {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+      }
+      .sideLabel {
+        color: var(--cgy3);
+        line-height: 19px;
+        &:hover {
+          color: var(--rbl1);
+          cursor: pointer;
+        }
+      }
+      .activeLabel {
+        font-weight: 600;
+        line-height: 19px;
+        color: var(--rbl1);
+        cursor: pointer;
+      }
+    }
+  }
+
+  .mainLog {
+    margin-left: 24px;
+    padding: 16px !important;
+    border: 1px solid var(--cm2);
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 4px var(--cgy21);
+    height: 400px;
+    width: 629px;
+    .log {
+      display: flex;
+      flex-direction: column;
+      row-gap: 24px;
+      height: 366px;
+      width: 600px;
+      overflow-y: scroll;
+      .employeeDetail {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        line-height: 19px;
+        .bullet {
+          height: 6px;
+          width: 6px;
+          border-radius: 50%;
+          margin: 5px 12px 0px 0px;
+          background-color: var(--rbl5);
+        }
+        .employee {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          color: var(--rgy1);
+          font-size: 14px;
+          padding-right: 5px;
+          .name {
+            font-weight: 600;
+          }
+          .date {
+            font-weight: normal;
+          }
+        }
+        .key {
+          color: var(--rgy1);
+          font-size: 12px;
+          margin-top: 6px;
+          margin-left: 20px;
+          word-break: break-all;
+          white-space: normal;
+          padding-right: 24px;
+
+          span {
+            width: 400px;
+          }
+        }
+      }
+      .noLogs {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--cgy3);
+        cursor: default;
+      }
+    }
+  }
+}
+
+.roundedIcon {
+  padding-left: 1px;
+  font-size: 6px;
+  color: var(--rbl5) !important;
+  margin-right: 12px;
+}

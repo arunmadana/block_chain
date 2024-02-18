@@ -1,0 +1,352 @@
+.container {
+  padding-top: 32px;
+  padding-left: 32px;
+  height: 504px;
+}
+// Generate New Key Button Styling
+.plus {
+  font-size: 18px;
+}
+.generateKey {
+  display: flex;
+  gap: 10px;
+  height: 40px;
+  width: 197px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border: 1px solid var(--rbl2);
+  background-color: var(--rbl3) !important;
+  color: var(--rbl1);
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.22px;
+  margin-bottom: 24px;
+  &:hover {
+    background-color: var(--rbl4) !important;
+    box-shadow: 0px 1px 3px var(--cgy21);
+    color: var(--cm4);
+    transition: all 0.3 ease-in;
+  }
+}
+.tooltip {
+  width: 278px !important;
+  max-height: fit-content;
+  font-size: 12px !important;
+  font-weight: bold;
+  text-align: center;
+}
+.disableKey {
+  display: flex;
+  gap: 10px;
+  height: 40px;
+  width: 197px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border: 1px solid var(--cwhitesmoke);
+  background-color: var(--cwhitesmoke) !important;
+  color: var(--cm15);
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.22px;
+  margin-bottom: 24px;
+  cursor: default;
+}
+.subContainer {
+  display: flex;
+}
+.lableContainer {
+  margin-right: 16px;
+}
+// keyButton styling below
+.keyContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  height: 19px;
+  width: 116px;
+}
+.keyButton {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.22px;
+  color: var(--cgy3);
+  &:hover {
+    color: var(--rbl1);
+  }
+}
+.keyActive {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--rbl1);
+  letter-spacing: 0.22px;
+  cursor: default;
+}
+.verticalBar {
+  height: 400px;
+  margin-right: 24px;
+}
+.arrow {
+  color: var(--rbl1);
+  font-size: 6.62px;
+  transform: rotate(270deg);
+}
+// Styling for Active Key -> Public key
+.public {
+  font-weight: 700;
+  font-size: 14px;
+  height: 19px;
+  color: var(--rgy1);
+}
+.publicKey {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 5px;
+  max-width: 673px;
+}
+.publicKeyData {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 14px;
+  height: 19px;
+  padding-top: 2px;
+  color: var(--rgy1);
+  font-weight: 400;
+  margin-right: 8px;
+  width: fit-content;
+}
+.activeKey {
+  width: 108px;
+  height: 25px;
+  // margin-left: 83px;
+}
+
+.dateField {
+  margin-top: 13px;
+  display: flex;
+  height: 17px;
+  color: var(--cgy4);
+  font-size: 12px;
+  gap: 64px;
+}
+.dateKey {
+  font-weight: 600;
+}
+.dateValue {
+  font-weight: normal;
+  margin-left: 4px;
+}
+.hBar {
+  margin: 24px 0;
+}
+.hideKey {
+  font-size: 12px;
+  margin-bottom: 3px;
+  font-weight: 600;
+  color: var(--cgy3);
+  &:hover {
+    color: var(--cgy4);
+    text-decoration: underline;
+    transition: all 0.3s ease-in;
+  }
+}
+.secretKey {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  position: relative;
+}
+.secretKeyData {
+  user-select: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 14px;
+  height: 19px;
+  filter: blur(3px);
+  padding-top: 2px;
+  color: var(--rgy1);
+  font-weight: 400;
+  margin-right: 8px;
+  width: 454px;
+}
+.revealButton {
+  font-size: 14px;
+  position: absolute;
+  background-color: var(--cwhite) !important;
+  right: 155px;
+  height: 40px;
+  width: 146px;
+  font-weight: bold;
+  color: var(--cgy4);
+  border: 1px solid var(--gray-200);
+  border-radius: 10px;
+  &:hover {
+    color: var(--cm4);
+    box-shadow: 0px 2px 6px var(--cgy21);
+    border: 1px solid var(--cm16);
+    transition: all 0.3s ease-in;
+  }
+}
+.secretKeyChip {
+  width: 108px;
+  height: 25px;
+  margin-left: 103px;
+}
+.statusMessage {
+  font-style: italic;
+  font-size: 14px;
+  color: var(--cgy4);
+  margin-top: 8px;
+}
+.generateLink {
+  font-weight: 600;
+  font-style: italic;
+  color: var(--cm3);
+  &:hover {
+    color: var(--cm4);
+    text-decoration: underline;
+    transition: all 0.3s ease-in;
+  }
+}
+.notActiveContainer {
+  overflow: auto;
+  max-height: 400px;
+  padding-right: 24px;
+
+  /* width */
+  &::-webkit-scrollbar {
+    width: 6px;
+    border-radius: 10px;
+  }
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: var(--cwhitesmoke);
+    border-radius: 10px;
+  }
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: var(--cgy2);
+    border-radius: 10px;
+  }
+}
+.message {
+  font-style: italic;
+  font-size: 14px;
+  color: var(--cgy4);
+}
+.secretKeyContainer {
+  width: 673px;
+}
+.modal {
+  width: 450px;
+  height: 309px;
+  text-align: center;
+}
+.modalImage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: -8px 22px 0px;
+}
+.modalContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.modalTitle {
+  margin: 32px 0;
+  font-weight: bold;
+  font-size: 24px;
+  padding: 0 22px;
+  color: var(--cgy4);
+  line-height: 28px;
+  height: 61px;
+}
+.modalSubTitle {
+  margin-bottom: 32px;
+  padding: 0 22px;
+  font-size: 14px;
+  font-weight: normal;
+  color: var(--cgy4);
+  line-height: 20px;
+  height: 39px;
+}
+.flexContainer {
+  display: flex;
+}
+.loadingContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.revealModalContainer {
+  width: 512px;
+  height: 432px;
+  // display: flex;
+  // flex-direction: column;
+  // text-align: center;
+}
+.revealModalTitle {
+  font-weight: bold;
+  font-size: 24px;
+  color: var(--cgy4);
+  margin-top: 8px;
+  height: 33px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.revealModalSubTitle {
+  font-weight: normal;
+  font-size: 14px;
+  color: var(--cgy4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 19px;
+  margin: 48px 0;
+}
+.revealModalText {
+  font-weight: bold;
+  font-size: 14px;
+  color: var(--cgy4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 19px;
+}
+.revealModalInput {
+  margin-top: 16px;
+  padding: 0 54px;
+}
+.issueLabelClass {
+  margin-top: 24px;
+  font-weight: normal;
+  font-size: 14px;
+  color: var(--cgy3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 19px;
+}
+.getSmsClass {
+  margin-left: 4px;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--cm3);
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+    color: var(--cm4);
+    transition: all 0.3s ease-in;
+  }
+}
+.indexMargin {
+  margin-top: 10px;
+}

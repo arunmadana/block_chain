@@ -1,0 +1,521 @@
+.mainIpList {
+  margin: 33px 0px 0px 32px;
+}
+
+.noData {
+  margin: 80px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .noIPAddressData {
+    color: var(--cgy3);
+    font-weight: 600;
+    font-size: 20px;
+  }
+  :nth-child(2) {
+    margin-top: 32px;
+  }
+}
+
+.addIPModal {
+  width: 563px;
+  min-height: 494px;
+}
+
+.AddIPModal1 {
+  width: 563px;
+  min-height: 550px;
+}
+
+.sucessModal {
+  width: 506px;
+  min-height: 204px;
+}
+
+.ipBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 16px;
+}
+
+.title {
+  font-size: 24px;
+  color: var(--cm17);
+  font-weight: 700;
+  margin-top: 8px;
+  line-height: 33px;
+  text-align: center;
+}
+
+.subtitle {
+  color: var(--cgy3);
+  font-size: 14px;
+}
+
+.details {
+  padding: 0px 32px;
+}
+.businessName {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 14px;
+  color: var(--cm17);
+  line-height: 19px;
+  margin-top: 32px;
+}
+.businessNameBorder {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 14px;
+  color: var(--cm17);
+  line-height: 19px;
+  margin-top: 32px;
+}
+
+.businessName span:first-child {
+  font-weight: 600;
+}
+
+.business_name span:nth-child(2) {
+  font-weight: normal;
+}
+
+.ipAddressDetails {
+  border-top: 1px;
+  border-bottom: 1px;
+  border-color: var(--cm2);
+  border-style: solid;
+  padding: 15px 0px;
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+.noTopBorder {
+  border-bottom: 1px;
+  border-color: var(--cm2);
+  border-style: solid;
+  padding-bottom: 15px;
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+.noBottomBorder {
+  border-color: var(--cm2);
+  border-style: solid;
+  padding-bottom: 15px;
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.ipAddressDetails1 {
+  border-bottom: 1px;
+  border-color: var(--cm2);
+  border-style: solid;
+  padding: 15px 0px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.ipAddress {
+  color: var(--cm17);
+  font-weight: 600;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  &:nth-child(1) {
+    font-size: 14px;
+  }
+}
+.ipDesc {
+  width: 150px;
+  font-size: 14px !important;
+  margin-top: -45px;
+}
+
+.ipFlieds {
+  width: 284px;
+  margin-bottom: 0;
+  font-weight: 600;
+}
+
+.textarea {
+  height: 80px;
+  width: 284px;
+  margin-bottom: 0;
+  color: var(--cm17) !important;
+  //   font-weight: 600;
+  font-size: 14px;
+}
+
+.greyBtn {
+  display: flex;
+  flex-direction: row;
+  column-gap: 8px;
+  justify-content: center;
+  color: var(--cgy3);
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: 24px;
+  margin-bottom: 32px;
+  // cursor: not-allowed;
+  width: fit-content;
+  line-height: 19px;
+  align-items: center;
+}
+.btnSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .btn {
+    background-color: var(--light-gray);
+  }
+}
+
+.btnSectionBorder {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ipNumber {
+  font-size: 14px;
+  color: var(--cm17);
+  font-weight: normal;
+  display: flex;
+  flex-direction: row;
+  column-gap: 8px;
+  align-items: center;
+}
+
+.AddIco {
+  display: flex;
+  flex-direction: row;
+  column-gap: 8px;
+  justify-content: center;
+  color: var(--cm3);
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: 24px;
+  margin-bottom: 32px;
+  cursor: pointer;
+  width: fit-content;
+  line-height: 19px;
+  align-items: center;
+
+  p:hover {
+    text-decoration: underline;
+    transition: all 0.5s ease;
+    color: var(--cm4);
+  }
+}
+.defaultCursor {
+  display: flex;
+  flex-direction: row;
+  column-gap: 8px;
+  justify-content: center;
+  color: var(--cm3);
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: 24px;
+  margin-bottom: 32px;
+  cursor: default;
+  width: fit-content;
+  line-height: 19px;
+  align-items: center;
+
+  p:hover {
+    transition: all 0.5s ease;
+    color: var(--cm4);
+  }
+}
+
+.sucessBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 32px;
+
+  .sucessContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--cgy4);
+    font-size: 14px;
+    height: 78px;
+    gap: 10px;
+  }
+
+  .sucessContent p {
+    font-weight: normal;
+  }
+
+  .sucessContent:nth-child(2),
+  .sucessContent:nth-child(3) {
+    font-weight: 700;
+  }
+}
+
+.addIpBtn {
+  width: 159px;
+  height: 40px;
+  background-color: var(--cm6);
+  border-radius: 10px;
+  color: var(--cm3);
+  font-weight: bold;
+  font-size: 14px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+  border: 1px solid var(--rbl2);
+
+  &:hover {
+    background-color: var(--rbl4);
+  }
+}
+
+.removeIPModal {
+  width: 428px;
+  height: 300px;
+
+  .removeIPBody {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    .removeTitle {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--cm17);
+      margin-top: 8px;
+      line-height: 33px;
+    }
+    .areuSure {
+      margin-top: 32px;
+      color: var(--cm17);
+      line-height: 19px;
+      font-size: 14px;
+    }
+  }
+  .removeBtn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 32px;
+
+    p {
+      margin-top: 12px;
+      cursor: pointer;
+      font-size: 12px;
+      color: var(--cgy3);
+      line-height: 17px;
+
+      &:hover {
+        text-decoration: underline;
+        color: var(--cm17);
+      }
+    }
+  }
+}
+
+.tooltipContainer {
+  margin-top: -5px;
+}
+
+.desc {
+  word-break: break-all;
+  white-space: normal;
+}
+
+@media (min-width: 1297px) and (max-width: 1640px) {
+  .word {
+    width: 180px;
+  }
+}
+@media (min-width: 1640px) and (max-width: 1920px) {
+  .word {
+    width: 280px;
+  }
+}
+.noEdit {
+  width: 159px;
+  height: 40px;
+  border-radius: 10px;
+  color: var(--cgy3);
+  font-weight: bold;
+  font-size: 14px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+  background-color: var(--cwhitesmoke) !important;
+  cursor: default;
+}
+.inCompleteModal {
+  height: 545px;
+  width: 563px;
+}
+.inComplete {
+  padding: 16px 0px;
+  border-bottom: 1px;
+  border-color: var(--cm2);
+  border-style: solid;
+}
+.incompleteIp {
+  font-style: italic;
+  color: var(--cgy3);
+  cursor: pointer;
+}
+.secondIP {
+  cursor: pointer;
+}
+.mainStatus {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  column-gap: 12px;
+  margin-left: 50px;
+  @media (min-width: 882px) and (max-width: 1300px) {
+    margin-left: 0px;
+  }
+}
+
+.statusDelete {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+
+  &:hover {
+    background-color: var(--cm1);
+    cursor: pointer;
+
+    .trashIcon {
+      color: var(--cm17);
+    }
+  }
+  .trashIcon {
+    color: var(--cgy3);
+  }
+}
+
+.statusDisable {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  &:hover {
+    cursor: default;
+  }
+  .trashIcon {
+    opacity: 0.7;
+  }
+}
+
+.noDefaultEdit {
+  width: 248px;
+  height: 36px;
+  border-radius: 50px;
+  color: var(--cgy3);
+  font-weight: 700;
+  cursor: default;
+  background-color: var(--cwhitesmoke) !important;
+}
+.summary {
+  outline: none;
+  list-style-type: none;
+  cursor: pointer;
+  transition: all ease 0.5s;
+}
+.error {
+  color: red;
+  position: relative;
+  text-align: left;
+  left: 10px;
+  margin-top: 2px;
+  height: 0px;
+  font-size: 10px;
+}
+.desError {
+  color: red;
+  position: relative;
+  text-align: left;
+  left: 10px;
+  margin-top: 3px;
+  height: 0px;
+  font-size: 10px;
+}
+.bar {
+  margin: 15px 0px 15px 0px;
+}
+.ViewIpAddress {
+  color: var(--cm17);
+  font-weight: 600;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px;
+  border-bottom: 1px;
+  border-color: var(--cm2);
+  height: 56px;
+  border-style: solid;
+  cursor: default;
+
+  &:nth-child(1) {
+    font-size: 14px;
+  }
+}
+.noBorderBottom {
+  color: var(--cm17);
+  font-weight: 600;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px;
+  border-color: var(--cm2);
+  height: 56px;
+  border-style: solid;
+  cursor: default;
+
+  &:nth-child(1) {
+    font-size: 14px;
+  }
+}
+
+//to hide default details arrow
+details > summary {
+  list-style: none;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}

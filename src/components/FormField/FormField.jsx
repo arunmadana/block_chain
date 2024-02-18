@@ -1182,3 +1182,109 @@ export function FormPhoneWithCode({
     </div>
   );
 }
+
+export function TextAreaField({
+  id,
+  className,
+  label,
+  value,
+  error,
+  disabled = false,
+  disableNumbers = false,
+  disableAlphabets = false,
+  disableSymbols = false,
+  charLimit = 0,
+  placeHolder = "",
+  textClassName = "",
+  ...rest
+}) {
+  const [isFocused, setIsFocused] = useState(false);
+  const [labelTop, setLabelTop] = useState(false);
+  const [charCount, setCharCount] = useState(0);
+
+  const handleBlur = (e) => {
+    setIsFocused(false);
+    setLabelTop(!!e.target.value);
+    const { onBlur } = rest;
+    if (typeof onBlur === "function") {
+      onBlur(e);
+    }
+  };
+
+  const handleFocus = () => {
+    setIsFocused(true);
+    setLabelTop(true);
+  };
+
+  const handleChange = (e) => {
+    const msgLength = e.target.value.length;
+    if (msgLength > charLimit) return;
+    const { onChange } = rest;
+    if (typeof onChange === "function") {
+      onChange(e);
+    }
+  };
+
+  const handleKeyDown = (e) => {
+    if (disableSymbols) {
+      [...symbols].includes(e.key) && e.preventDefault();
+    }
+    if (disableNumbers) {
+      [...numbers].includes(e.key) && e.preventDefault();
+    }
+    if (disableAlphabets) {
+      [...alphabets].includes(e.key) && e.preventDefault();
+    }
+  };
+
+  useEffect(() => {
+    setLabelTop(isFocused ? isFocused : !!value);
+    if (value) {
+      setCharCount(`${value}`.length);
+    } else if (value == " ") {
+      setCharCount(0);
+    } else {
+      setCharCount(0);
+    }
+    // eslint-disable-next-line
+  }, [value]);
+
+  return (
+    <div className={`${styles.textAreaForm} ${className}`}>
+      {label && (
+        <label
+          className={` ${styles.label}
+            ${labelTop ? styles.isLabelTop : styles.isnotLabelTop}
+             ${disabled && styles.isDisabled}`}
+          htmlFor={id}
+        >
+          {label}
+        </label>
+      )}
+      <textarea
+        {...rest}
+        id={id}
+        value={value}
+        placeholder={
+          labelTop && placeHolder ? placeHolder : labelTop ? label : ""
+        }
+        onFocus={handleFocus}
+        onBlur={handleBlur}
+        onKeyDown={handleKeyDown}
+        onChange={handleChange}
+        maxLength={charLimit}
+        className={`${styles.textArea} 
+        ${textClassName}
+        ${error && !isFocused && styles.textAreaError} 
+        ${disabled && styles.disabled}
+        `}
+      />
+      {charLimit && (
+        <span className={styles.charText}>
+          {charCount} / {charLimit}
+        </span>
+      )}
+      <span className={styles.textError}>{error}</span>
+    </div>
+  );
+}

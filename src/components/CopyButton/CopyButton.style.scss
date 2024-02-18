@@ -1,0 +1,54 @@
+.copy-image {
+  color: var(--rbl1) !important;
+  transition: color 0.1s linear;
+}
+
+.copy-clipboard {
+  position: relative;
+
+  &:hover {
+    .copy-image {
+      color: var(--cm4) !important;
+    }
+  }
+
+  &__content {
+    cursor: pointer;
+    width: fit-content;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    .custom-tooltip {
+      &--copied {
+        margin-left: -50px !important;
+      }
+    }
+
+    .tooltip-click {
+      opacity: 1 !important;
+    }
+
+    .tooltip-hover {
+      opacity: 1 !important;
+      z-index: 10 !important;
+    }
+
+    .__react_component_tooltip {
+      font-weight: 700 !important;
+      border-radius: 6px !important;
+    }
+
+    .place-top {
+      &::before {
+        z-index: -1 !important;
+      }
+    }
+  }
+}
+
+.__react_component_tooltip.place-top::before {
+  position: absolute !important;
+  bottom: -12px !important;
+  background: initial !important;
+}

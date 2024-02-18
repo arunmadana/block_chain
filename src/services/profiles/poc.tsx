@@ -135,3 +135,47 @@ export const addBusiness = (id: any) => {
 export const getActivityLogs = (data: any) => {
   return api.post(`/logs/activity`, data);
 };
+
+export const getNodes = (tenantId: any) =>
+  api.get(`/business/nodes/${tenantId}`);
+
+export const getAllApiKeys = (tenantId: any, payload: any) =>
+  api.post(`/tenant/api-keys/${tenantId}`, payload);
+
+export const generateKey = (tenantId: any) => {
+  return api.post(`/tenant/api-keys/generate?tenantId=${tenantId}`);
+};
+
+export const revealKey = (tenantId: any) =>
+  api.post(`/tenant/api-keys/revealKey/${tenantId}`);
+
+export const otpValidade = (otp: any, actionType: any) => {
+  const payload = {
+    otp: otp,
+    actionType: actionType,
+  };
+
+  return api.post("/admin/step-up/authy", payload);
+};
+
+export const phoneOtpValid = (payload: any) => {
+  return api.post("/otp/phone/validate", payload);
+};
+
+export const getWebhookData = (tenantId: any) => {
+  return api.get(`/webhook?tenantId=${tenantId}`);
+};
+
+export const modifyWebhook = (payload: any) => api.post("/webhook", payload);
+
+export const addIPAddress = (data: any) => {
+  return api.post("/whitelist", data);
+};
+
+export const getIPList = (data: any) => {
+  return api.post("/whitelist/fetch-all", data);
+};
+
+export const deleteIPAddress = (userId: any) => {
+  return api.delete(`/whitelist/${userId}`);
+};

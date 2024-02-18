@@ -1,0 +1,55 @@
+.loadingContainer {
+  height: 177px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  width: 333.83px;
+  height: 121px;
+  border: 1px solid var(--cm2);
+  border-radius: 6px;
+  padding: 16px;
+  margin-top: 32px;
+  margin-left: 27.17px;
+  margin-bottom: 24px;
+  display: flex;
+  gap: 7px;
+}
+.image {
+  width: 29.75px;
+  height: 28.88px;
+}
+.subContainer {
+  width: 100%;
+}
+.currency {
+  display: flex;
+  justify-content: space-between;
+  color: var(--rgy1);
+  height: 27px;
+  align-items: center;
+}
+.property {
+  font-size: 14px;
+  font-weight: 600;
+}
+.currencyValue {
+  font-size: 20px;
+  font-weight: 400;
+}
+.node {
+  display: flex;
+  justify-content: space-between;
+  color: var(--rgy1);
+  height: 19px;
+  align-items: center;
+  margin-top: 12px;
+  font-size: 14px;
+}
+.nodeValue {
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}

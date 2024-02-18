@@ -3,6 +3,12 @@ import { Provider } from "react-redux";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Base from "./Pages/Base";
+import BusinessDetailsActivityLogs from "./Pages/BusinessConfiguration/BusinessDetailsActivityLogs/BusinessDetailsActivityLogs";
+import BusinessDetailsApikeys from "./Pages/BusinessConfiguration/BusinessDetailsApiKeys/BusinessDetailsApikeys";
+import BusinessDetailsConfiguration from "./Pages/BusinessConfiguration/BusinessDetailsConfiguration";
+import BusinessDetailsIPAddress from "./Pages/BusinessConfiguration/BusinessDetailsIPAddress/BusinessDetailsIPAddress";
+import BusinessDetailsNodes from "./Pages/BusinessConfiguration/BusinessDetailsNodes/BusinessDetailsNodes";
+import BusinessDetailsWebhooks from "./Pages/BusinessConfiguration/BusinessDetailsWebhooks/BusinessDetailsWebhooks";
 import { BusinessDetails } from "./Pages/BusinessDetails/BusinessDetails";
 import BusinessDetailsActivityLog from "./Pages/BusinessDetailsActivityLog/BusinessDetailsActivityLog";
 import BusinessDetailsInformation from "./Pages/BusinessDetailsInformation/BusinessDetailsInformation";
@@ -58,37 +64,37 @@ function App() {
                       element={<BusinessDetailsPointOfContact />}
                     />
 
-                    {/*  <Route
-                path="/dashboards/profiles/business-details/:id/configuration"
-                element={<BusinessConfiguration />}
-              >
-                <Route
-                  path="/dashboards/profiles/business-details/:id/configuration/nodes"
-                  element={<Nodes />}
-                />
-                <Route
-                  path="/dashboards/profiles/business-details/:id/configuration/api-keys"
-                  element={<Apikeys />}
-                />
-                <Route
-                  path="/dashboards/profiles/business-details/:id/configuration/webhooks"
-                  element={<Webhooks />}
-                />
-                <Route
-                  path="/dashboards/profiles/business-details/:id/configuration/ip-Addresses"
-                  element={<IPAddress />}
-                />
-                <Route
-                  path="/dashboards/profiles/business-details/:id/configuration/activity-logs"
-                  element={<ActivityLogs />}
-                />
-                <Route
-                  path="/dashboards/profiles/business-details/:id/configuration"
-                  element={
-                    <Navigate to="/dashboards/profiles/business-details/:id/configuration/nodes" />
-                  }
-                />
-              </Route>*/}
+                    <Route
+                      path="/dashboards/profiles/business-details/:id/configuration"
+                      element={<BusinessDetailsConfiguration />}
+                    >
+                      <Route
+                        path="/dashboards/profiles/business-details/:id/configuration/nodes"
+                        element={<BusinessDetailsNodes />}
+                      />
+                      <Route
+                        path="/dashboards/profiles/business-details/:id/configuration/api-keys"
+                        element={<BusinessDetailsApikeys />}
+                      />
+                      <Route
+                        path="/dashboards/profiles/business-details/:id/configuration/webhooks"
+                        element={<BusinessDetailsWebhooks />}
+                      />
+                      <Route
+                        path="/dashboards/profiles/business-details/:id/configuration/ip-Addresses"
+                        element={<BusinessDetailsIPAddress />}
+                      />
+                      <Route
+                        path="/dashboards/profiles/business-details/:id/configuration/activity-logs"
+                        element={<BusinessDetailsActivityLogs />}
+                      />
+                      <Route
+                        path="/dashboards/profiles/business-details/:id/configuration"
+                        element={
+                          <Navigate to="/dashboards/profiles/business-details/:id/configuration/nodes" />
+                        }
+                      />
+                    </Route>
                     <Route
                       path="/dashboards/profiles/business-details/:id/activity-log"
                       element={<BusinessDetailsActivityLog />}
