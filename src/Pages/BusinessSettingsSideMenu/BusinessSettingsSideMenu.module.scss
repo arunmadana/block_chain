@@ -1,0 +1,244 @@
+.container {
+  background-color: #ffff;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px 0 #0000001a;
+  width: 288px;
+}
+
+.Profile {
+  width: 240px !important;
+}
+
+.relativeClass {
+  position: relative;
+}
+.accountStatusAlign {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  line-height: 22px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+
+  &:hover {
+    color: var(--cm3);
+    cursor: pointer;
+    outline: 1px solid var(--cm2);
+    background-color: var(--cm1);
+    .arrow {
+      color: var(--cm3);
+    }
+  }
+}
+
+.arrow {
+  color: var(--cgy3);
+  font-size: 8px;
+  margin-left: 8px;
+  margin-top: 2px;
+  transition: 0.3s ease-in-out;
+}
+
+.dropDownActiveClass {
+  background-color: var(--cm1);
+  .arrow {
+    transform: rotate(180deg);
+    color: var(--cm3);
+  }
+}
+
+.editPermissionClass {
+  &:hover {
+    cursor: default;
+    background-color: var(--cwhite);
+    outline: none;
+  }
+}
+
+.hbarClass {
+  background-color: var(--cm2);
+}
+
+.accountStatusText {
+  color: var(--cgy4);
+  font-weight: 600;
+  font-size: 14px;
+}
+.accountStatus {
+  line-height: 22px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.businessName {
+  color: #0c1e30;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 24px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 240px;
+  margin: 32px auto 8px auto;
+}
+.accountID {
+  color: var(--cgy3);
+  font-size: 14px;
+  text-align: center;
+}
+.navButton {
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 32px;
+  padding-bottom: 22px;
+}
+.active {
+  color: var(--cgy4);
+  background-color: var(--cm1);
+  cursor: default;
+  &:hover {
+    color: var(--cgy4);
+  }
+}
+.caret {
+  visibility: visible;
+}
+
+.statusModalClass {
+  width: 512px;
+}
+
+.statusChangeContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.titleClass {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 33px;
+  color: var(--cgy4);
+  margin-top: 8px;
+  height: 33px;
+  text-align: center;
+}
+
+.messageClass {
+  text-align: center;
+  font-size: 14px;
+  color: var(--cgy4);
+  margin-top: 32px;
+  margin-bottom: 32px;
+  line-height: 20px;
+}
+
+.textFieldContainer {
+  margin-left: 36px;
+  margin-bottom: 32px;
+}
+
+.textAreaClass {
+  width: 392px;
+  height: 110px;
+  margin-bottom: 32px;
+}
+
+.buttonClass {
+  align-self: center;
+  margin-bottom: 8px;
+}
+
+.checkBoxContainer {
+  max-width: fit-content;
+
+  .checkBoxClass {
+    align-items: baseline;
+    margin-bottom: 0px;
+  }
+}
+
+.reasonClass {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 19px;
+  color: var(--cgy4);
+  margin-bottom: 8px;
+}
+
+.statusFontClass {
+  font-weight: 700;
+}
+
+.activeColor {
+  color: var(--cgn5);
+}
+
+.underReviewColor {
+  color: var(--cbl5);
+}
+
+.terminatedColor {
+  color: var(--crd5);
+}
+
+.canceledColor {
+  color: var(--cgy3);
+}
+
+.statusDropDownContainer {
+  position: absolute;
+  width: 176px;
+  z-index: 20;
+  background-color: var(--cwhite);
+  padding: 16px 16px;
+  box-shadow: 0px 4px 10px var(--cgy6);
+  border: 1px solid var(--cm2);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  right: -38px;
+  top: 48px;
+}
+
+.accountStatusClass {
+  line-height: 22px;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 2px 8px;
+}
+
+.statusBackgroundClass {
+  border-radius: 5px;
+  background-color: var(--cm1);
+}
+
+.underReviewClass {
+  padding: 2px 6px;
+}
+
+.optionsContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.disableOptionsContainerClass {
+  cursor: default;
+}
+
+.tickClass {
+  color: var(--cm3);
+  font-size: 11px;
+  margin-left: 4px;
+}
+
+.checkBoxLabel {
+  font-size: 14px;
+  color: var(--cgy4) !important;
+  line-height: 20px;
+  width: 363px;
+  margin-left: 4px;
+}

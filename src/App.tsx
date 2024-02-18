@@ -1,8 +1,10 @@
 import React from "react";
 import { Provider } from "react-redux";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Base from "./Pages/Base";
+import { BusinessDetails } from "./Pages/BusinessDetails/BusinessDetails";
+import BusinessDetailsInformation from "./Pages/BusinessDetailsInformation/BusinessDetailsInformation";
 import BusinessProfiles from "./Pages/BusinessProfiles/BusinessProfiles";
 import BusinessTracker from "./Pages/BusinessTracker/BusinessTracker";
 import Employees from "./Pages/Employees/Employees";
@@ -16,7 +18,6 @@ import { ViewPermissionRole } from "./Pages/ViewPermissionRole/ViewPermissionRol
 import store from "./Store";
 import { PrivateRoute } from "./components/PrivateRoute/PrivateRoute";
 import Loader from "./components/common/loader/loader";
-import { BusinessInformation } from "./Pages/BusinessInformation/BusinessInformation";
 
 function App() {
   return (
@@ -38,13 +39,66 @@ function App() {
                     element={<BusinessProfiles />}
                   />
                   <Route
-                    path="/dashboards/profiles/business-details/:id/business-info"
-                    element={<BusinessInformation />}
-                  />
-                  <Route
                     path="dashboards/profiles/add-business"
                     element={<BusinessTracker />}
                   />
+                  <Route
+                    path="/dashboards/profiles/business-details/:id"
+                    element={<BusinessDetails />}
+                  >
+                    <Route
+                      // index={true}
+                      path="/dashboards/profiles/business-details/:id/business-info"
+                      element={<BusinessDetailsInformation />}
+                    />
+
+                    {/* <Route
+                path="/dashboards/profiles/business-details/:id/points-of-contact"
+                element={<PointOfContact />}
+              />
+
+              <Route
+                path="/dashboards/profiles/business-details/:id/configuration"
+                element={<BusinessConfiguration />}
+              >
+                <Route
+                  path="/dashboards/profiles/business-details/:id/configuration/nodes"
+                  element={<Nodes />}
+                />
+                <Route
+                  path="/dashboards/profiles/business-details/:id/configuration/api-keys"
+                  element={<Apikeys />}
+                />
+                <Route
+                  path="/dashboards/profiles/business-details/:id/configuration/webhooks"
+                  element={<Webhooks />}
+                />
+                <Route
+                  path="/dashboards/profiles/business-details/:id/configuration/ip-Addresses"
+                  element={<IPAddress />}
+                />
+                <Route
+                  path="/dashboards/profiles/business-details/:id/configuration/activity-logs"
+                  element={<ActivityLogs />}
+                />
+                <Route
+                  path="/dashboards/profiles/business-details/:id/configuration"
+                  element={
+                    <Navigate to="/dashboards/profiles/business-details/:id/configuration/nodes" />
+                  }
+                />
+              </Route>
+              <Route
+                path="/dashboards/profiles/business-details/:id/activity-log"
+                element={<ActivityLog />}
+              /> */}
+                    <Route
+                      path="/dashboards/profiles/business-details/:id"
+                      element={
+                        <Navigate to="/dashboards/profiles/business-details/:id/business-info" />
+                      }
+                    />
+                  </Route>
                   <Route
                     path={`/dashboards/employees`}
                     element={<Employees />}

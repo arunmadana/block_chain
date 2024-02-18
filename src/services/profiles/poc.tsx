@@ -115,3 +115,19 @@ export const nodesList = () => {
 export const configureNode = (payload: any) => {
   return api.post("/business/nodes", payload);
 };
+
+export const getCompanyInfo = (id: any) => {
+  return api.get(`/business/business-info/${id}`);
+};
+
+export const getContacts = (id: any) => {
+  return api.get(`/business/contacts/${id}`);
+};
+
+export const getUploadedDocuments = (id: any) => {
+  return api.post(`/business/documents/${id}`, {});
+};
+
+export const addBusiness = (id: any) => {
+  return api.post(`/business/submit/${id}`);
+};

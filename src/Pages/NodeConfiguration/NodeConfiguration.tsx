@@ -8,6 +8,7 @@ import {
   nodesList,
 } from "../../services/profiles/poc";
 import styles from "./NodeConfiguration.module.scss";
+import ExitButton from "../../components/ExitButton/ExitButton";
 
 type NodeConfigurationProps = {
   onBack: () => void;
@@ -39,7 +40,7 @@ export const NodeConfiguration: React.FunctionComponent<
   const getNodesList = () => {
     setIsLoading(true);
     nodesList()
-      .then(() => {
+      .then((res) => {
         const data = res?.data?.data;
         setNodes(data);
         setIsLoading(false);
@@ -108,7 +109,7 @@ export const NodeConfiguration: React.FunctionComponent<
               Back
             </button>
             <div className={styles.exitRow}>
-              {/* <ExitButton /> */}
+              <ExitButton />
               <Button
                 disabled={Object.keys(selectedNode)?.length == 0 || disable}
                 onClick={handleConfigure}

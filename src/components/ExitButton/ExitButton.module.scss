@@ -1,0 +1,20 @@
+.buttonContainer {
+  display: flex;
+  color: var(--cgy3);
+  font-size: 14px;
+  font-style: italic;
+  align-items: center;
+  line-height: 19px;
+  margin-right: 24px;
+}
+
+.button {
+  color: var(--cm3);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 19px;
+  &:hover {
+    text-decoration: underline;
+    color: var(--cm4);
+  }
+}

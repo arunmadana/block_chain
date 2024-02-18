@@ -362,6 +362,12 @@ const BusinessProfiles: FC = () => {
           }}
         >
           <DataGrid
+            sx={{
+              cursor: "pointer",
+              "&.MuiDataGrid-root .MuiDataGrid-cell:focus-within": {
+                outline: "none !important",
+              },
+            }}
             rows={mergedData}
             columns={header}
             loading={isLoading}

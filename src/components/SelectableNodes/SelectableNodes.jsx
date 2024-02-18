@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import styles from "./SelectableNodes.module.scss";
+import tick from "../../assets/tick.svg";
 
-export const SelectableNodes = ({
+export function SelectableNodes({
   className = "",
-  nodeData = [],
-  selectedNodeOption = {},
-  onSelectNode = () => {},
-}) => {
+  nodeData,
+  selectedNodeOption,
+  onSelectNode,
+}) {
   const [selectedNode, setSelectedNode] = useState({});
 
   useEffect(() => {
@@ -24,7 +25,7 @@ export const SelectableNodes = ({
 
   return (
     <>
-      {nodeData?.length > 0 ? (
+      {nodeData?.length ? (
         <>
           {nodeData?.map((nodeConfig, i) => {
             return (
@@ -38,13 +39,13 @@ export const SelectableNodes = ({
                 onClick={() => handleSelect(nodeConfig)}
               >
                 {nodeConfig?.nodeName == selectedNode?.nodeName ? (
-                  <div className={`icon-verification ${styles.checkIcon}`} />
+                  <img src={tick} className={styles.checkIcon} />
                 ) : (
                   <div className={styles.emptyCircle} />
                 )}
 
                 <div className={styles.nodeLabelClass}>
-                  {nodeConfig?.nodeName}aaa
+                  {nodeConfig?.nodeName}
                 </div>
               </div>
             );
@@ -54,10 +55,10 @@ export const SelectableNodes = ({
         <div
           className={`${styles.nodeContainer} ${styles.isSelected} ${className}`}
         >
-          <div className={`icon-verification ${styles.checkIcon}`} />
-          <div className={styles.nodeLabel}>{selectedNode?.nodeName}aaa</div>
+          <img src={tick} className={styles.checkIcon} />
+          <div className={styles.nodeLabel}>{selectedNode?.nodeName}</div>
         </div>
       )}
     </>
   );
-};
+}

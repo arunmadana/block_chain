@@ -9,6 +9,7 @@ import {
   getBusinessTrackerDetails,
   getPhoneCountryList,
 } from "../../services/profiles/poc";
+import { BusinessApplicationSummary } from "../BusinessApplicationSummary/BusinessApplicationSummary";
 import { BusinessDocumentUpload } from "../BusinessDocumentUpload/BusinessDocumentUpload";
 import { BusinessInformation } from "../BusinessInformation/BusinessInformation";
 import NodeConfiguration from "../NodeConfiguration/NodeConfiguration";
@@ -29,8 +30,8 @@ const BusinessTracker: FC = () => {
   const location = useLocation();
 
   useEffect(() => {
-    if (location?.state?.row?.id) {
-      handleBusinessTracker(location?.state?.row?.id);
+    if (location?.state?.id) {
+      handleBusinessTracker(location?.state?.id);
     }
   }, []);
 
@@ -227,9 +228,9 @@ const BusinessTracker: FC = () => {
               <div>
                 <BusinessInformation
                   onSucess={(tentId) =>
-                    handleBusinessTracker(tentId || location?.state?.row?.id)
+                    handleBusinessTracker(tentId || location?.state?.id)
                   }
-                  getTentId={tentId || location?.state?.row?.id}
+                  getTentId={tentId || location?.state?.id}
                   countriesList={countriesList}
                 />
               </div>
@@ -238,10 +239,10 @@ const BusinessTracker: FC = () => {
               <div>
                 <PointOfContact
                   onSubmit={() =>
-                    handleBusinessTracker(tentId || location?.state?.row?.id)
+                    handleBusinessTracker(tentId || location?.state?.id)
                   }
                   onBack={() => setStep(0)}
-                  tenantId={tentId || location?.state?.row?.id}
+                  tenantId={tentId || location?.state?.id}
                   countriesList={countriesList}
                   onDeleteChanges={(value) => setNextButtonDisabled(value)}
                   onUpdateTracker={(value) => setUpdateTracker(value)}
@@ -255,31 +256,31 @@ const BusinessTracker: FC = () => {
                   handlePaymentStepSelect(1);
                 }}
                 onNext={() =>
-                  handleBusinessTracker(tentId || location?.state?.row?.id)
+                  handleBusinessTracker(tentId || location?.state?.id)
                 }
-                tenantId={tentId || location?.state?.row?.id}
+                tenantId={tentId || location?.state?.id}
               />
             )}
             {step === 3 && (
               <NodeConfiguration
                 onBack={() => setStep(2)}
                 onNext={() =>
-                  handleBusinessTracker(tentId || location?.state?.row?.id)
+                  handleBusinessTracker(tentId || location?.state?.id)
                 }
-                tenantId={tentId || location?.state?.row?.id}
+                tenantId={tentId || location?.state?.id}
               />
             )}
-            {/*{step === 4 && (
+            {step === 4 && (
               <BusinessApplicationSummary
                 onBack={() => setStep(3)}
                 onEdit={(step) => {
                   setStep(step);
                   setPrevStep(step);
                 }}
-                tenantId={tentId || location?.state?.row?.id}
+                tenantId={tentId || location?.state?.id}
                 countriesList={countriesList}
               />
-            )} */}
+            )}
           </AnimatePresence>
         </div>
       </div>

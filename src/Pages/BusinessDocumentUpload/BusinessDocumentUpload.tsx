@@ -15,6 +15,7 @@ import {
   updateBusinessTracker,
 } from "../../services/profiles/poc";
 import styles from "./BusinessDocumentUpload.module.scss";
+import ExitButton from "../../components/ExitButton/ExitButton";
 
 type BusinessDocumentUploadProps = {
   onBack: () => void;
@@ -214,7 +215,7 @@ export const BusinessDocumentUpload: React.FunctionComponent<
                   Back
                 </button>
                 <div className={styles.exitRow}>
-                  {/* <ExitButton /> */}
+                  <ExitButton />
                   <Button
                     disable={disable}
                     onClick={handleSubmit}
@@ -248,7 +249,7 @@ export const BusinessDocumentUpload: React.FunctionComponent<
                   disable={disable}
                   className={styles.ModalSkipBtn}
                 >
-                  lSkip
+                  Skip
                 </Button>
                 <button
                   className={styles.cancelBtn}

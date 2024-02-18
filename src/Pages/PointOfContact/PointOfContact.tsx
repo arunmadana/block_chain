@@ -4,9 +4,17 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import * as Yup from "yup";
 import { BusinessContactTypeEnum } from "../../Enums/BusinessContactTypeEnum";
 import { PhoneCountryListEnum } from "../../Enums/PhoneCountryListEnum";
+import { useOutsideClick } from "../../Hooks/useOutsideClick";
 import backArrowIcon from "../../assets/back-arrow.svg";
 import ryvylTickMark from "../../assets/ryvylTickMark.svg";
+import { HBar } from "../../components/Bars/Bars";
+import { AddingButton } from "../../components/Buttons/Buttons";
 import DuplicateContactModal from "../../components/DuplicateContactModal/DuplicateContactModal";
+import ExitButton from "../../components/ExitButton/ExitButton";
+import {
+  FormField,
+  FormPhoneWithCode,
+} from "../../components/FormField/FormField";
 import {
   addNewPointOfContact,
   addPointOfContact,
@@ -17,13 +25,6 @@ import {
   validatePointOfContact,
 } from "../../services/profiles/poc";
 import styles from "./PointOfContact.module.scss";
-import {
-  FormField,
-  FormPhoneWithCode,
-} from "../../components/FormField/FormField";
-import { useOutsideClick } from "../../Hooks/useOutsideClick";
-import { HBar } from "../../components/Bars/Bars";
-import { AddingButton } from "../../components/Buttons/Buttons";
 
 type PointOfContactProps = {
   onBack: () => void;
@@ -567,7 +568,7 @@ export const PointOfContact: React.FunctionComponent<PointOfContactProps> = ({
                     Back
                   </button>
                   <div className={styles.exitButtonContainer}>
-                    {/* <ExitButton /> */}
+                    <ExitButton />
                     <Button
                       disabled={isDisableNextButton || disable}
                       onClick={() => validateContacts(tenantId)}

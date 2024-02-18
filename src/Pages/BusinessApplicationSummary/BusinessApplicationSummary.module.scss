@@ -1,0 +1,330 @@
+.parentContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.summaryHeader {
+  font-size: 24px;
+  color: var(--cgy4);
+  font-weight: bold;
+  line-height: 33px;
+}
+.infoText {
+  font-size: 14px;
+  color: var(--cgy3);
+  margin-top: 16px;
+  line-height: 19px;
+  margin-bottom: 8px;
+}
+.applicationHead {
+  min-width: 100%;
+  height: 44px;
+  background-color: var(--cm1);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-weight: 700;
+  justify-content: flex-start;
+  gap: 8px;
+  margin-top: 24px;
+}
+.companyInfoContainer {
+  margin-left: 16px;
+}
+.companyInfo {
+  line-height: 22px;
+  margin-left: 16px;
+  color: var(--cgy4);
+  font-weight: bold;
+}
+.infoEditBtn {
+  font-size: 12px;
+  color: var(--cm3);
+  font-weight: 600;
+  margin-top: 4px;
+  &:hover {
+    text-decoration: underline;
+    color: var(--cm4);
+  }
+}
+.einNumberContainer {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.ssnNumber {
+  font-size: 14px;
+  color: var(--cgy4);
+}
+.eyeIconStyles {
+  font-size: 19px;
+  color: var(--cgray);
+}
+.dataInfo {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+}
+.dataInfoColumn {
+  margin-top: 8px;
+  width: 100%;
+  display: flex;
+}
+.contactsDataInfoColumn {
+  margin-top: 16px;
+  width: 100%;
+  display: flex;
+}
+.leftTitle {
+  width: 292px;
+  line-height: 17px;
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--cm5);
+  flex-shrink: 0;
+}
+.horiBar {
+  background-color: var(--cm2);
+  margin-top: 11px;
+  max-width: 584px;
+}
+.rightTitle {
+  min-width: 232px;
+  max-width: 288px;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--cgy4);
+  word-break: break-all;
+}
+.rightTitleEmail {
+  min-width: 232px;
+  max-width: 400px;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--cgy4);
+}
+.contactNameEllipsis {
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.contactInfoRow {
+  margin-top: 24px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.contactsContainer {
+  margin-left: 16px;
+  margin-top: 24px;
+}
+.contactsHBar {
+  background-color: var(--cm2);
+  margin-top: 16px;
+  max-width: 584px;
+}
+.yesDba {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+.addressContainer {
+  display: flex;
+  flex-direction: column;
+  line-height: 20px;
+}
+.rightDisclaimerTitle {
+  min-width: 233px;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--cgy4);
+  word-break: break-all;
+}
+.mainContainer {
+  width: 100%;
+}
+.posMainContainer {
+  width: 100%;
+  margin-top: 40px;
+}
+.summaryDocumentsContainer {
+  width: 100%;
+  margin-top: 40px;
+}
+.documentList {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+.docsDataContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 12px;
+}
+.docsData {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+}
+.docTitle {
+  max-width: 500px;
+  word-break: break-all;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--cm3);
+  text-align: left;
+  line-height: 17px;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.docSize {
+  font-size: 12px;
+  margin-left: 4px;
+  font-weight: normal;
+  color: var(--cgy3);
+}
+.documentName {
+  font-size: 14px;
+  line-height: 19px;
+  margin-top: 4px;
+  color: var(--cgy3);
+}
+.viewModalContainer {
+  width: 682px;
+}
+.documentsContainer {
+  margin-left: 16px;
+  margin-top: 24px;
+}
+.docsHBar {
+  background-color: var(--cm2);
+  margin-top: 12px;
+  max-width: 584px;
+}
+.nodesContainer {
+  margin-top: 24px;
+  margin-left: 16px;
+  width: 100px;
+  height: 54px;
+  border: 1px solid var(--cm2);
+  border-radius: 6px;
+  padding: 15px 0px 15px 15px;
+}
+.inBlock {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+.nodeCurrency {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--cgy4);
+}
+.navigationButtons {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 64px;
+  margin-bottom: 25px;
+}
+
+.backButton {
+  font-size: 14px;
+  color: var(--cgy3);
+  font-weight: bold;
+  &:hover {
+    color: var(--cgy4);
+  }
+}
+.attachPaperClipIcon {
+  font-size: 16px;
+  color: var(--cgy3);
+}
+.ryvylBlockIcon {
+  font-size: 22px;
+}
+
+// View document modal styles ...
+.viewSize {
+  margin-left: 8px;
+  font-weight: normal;
+  color: var(--cgy3);
+}
+
+.viewDocContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.viewDoc {
+  width: 634px;
+  height: 630px;
+  border: 1px solid var(--cm2);
+  border-radius: 10px;
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  margin-bottom: 8px;
+}
+.viewImageClass {
+  width: 584px;
+  height: 756px;
+}
+.viewBox {
+  overflow-y: auto;
+  height: 100%;
+  width: 100%;
+  padding: 0px 12px 0px 0px;
+}
+.viewBox::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  background-color: var(--cwhitesmoke);
+  margin-bottom: 6px;
+}
+
+.viewBox::-webkit-scrollbar-thumb {
+  background: var(--cgy2);
+  border-radius: 12px;
+}
+.loadingClass {
+  height: 658px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.noDocsText {
+  font-size: 14px;
+  color: var(--cgy4);
+  line-height: 19px;
+}
+.docLoaderClass {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modalHeader {
+  font-size: 24px;
+  color: var(--cgy4);
+  font-weight: bold;
+  margin-top: 8px;
+  line-height: 33px;
+  text-align: center;
+  word-break: break-all;
+}
+.exitRow {
+  display: flex;
+  align-items: center;
+}

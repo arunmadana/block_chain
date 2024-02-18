@@ -1,10 +1,10 @@
-import api from '..';
+import api from "..";
 
 //get all customers
 export const getCustomers = (
   searchKey: any,
   { pageSize = 10, currentPage = 1 },
-  { column = '', order = '' },
+  { column = "", order = "" },
   data: any
 ) => {
   const standardParams = {
@@ -12,20 +12,20 @@ export const getCustomers = (
     pageSize: pageSize,
     pageNo: currentPage === 0 ? currentPage : currentPage - 1,
     accountType: [1],
-    sortColumnName: column !== '' ? column : undefined,
-    sortDirection: order !== '' ? order : undefined
+    sortColumnName: column !== "" ? column : undefined,
+    sortDirection: order !== "" ? order : undefined,
   };
   let finalParams = standardParams;
   if (data?.accountStatus?.length) {
     finalParams = Object.assign(standardParams, data);
   }
-  return api.post('/view/customers', finalParams);
+  return api.post("/view/customers", finalParams);
 };
 // get Business profiles
 export const getBusiness = (
   searchKey: any,
   { pageSize = 10, currentPage = 1 },
-  { column = '', order = '' },
+  { column = "", order = "" },
   data: any
 ) => {
   const standardParams = {
@@ -33,40 +33,40 @@ export const getBusiness = (
     pageSize: pageSize,
     pageNo: currentPage == 0 ? currentPage : currentPage - 1,
     accountType: [2],
-    sortColumnName: column !== '' ? column : undefined,
-    sortDirection: order !== '' ? order : undefined
+    sortColumnName: column !== "" ? column : undefined,
+    sortDirection: order !== "" ? order : undefined,
   };
   const finalParams = Object.assign(standardParams, data);
-  return api.post('/view/customers', finalParams);
+  return api.post("/view/customers", finalParams);
 };
 
 //Added to Filter Users based on Status
 export const getFiltered = (data: any) => {
   const payload = {
     accountStatus: data.Status,
-    accountType: '2'
+    accountType: "2",
   };
-  return api.post('/view/customers', payload);
+  return api.post("/view/customers", payload);
 };
 
 // Business Profile API
 export const businessProfiles = (data: any) => {
-  return api.post('/tenant/list', data);
+  return api.post("/tenant/list", data);
 };
 
 // Business Profile List count
 export const profileListCount = (data: any) => {
-  return api.post('/tenant/count', data);
+  return api.post("/tenant/count", data);
 };
 
 // Export Get API
 export const exportsList = () => {
-  return api.get('/exports/ADMIN_TENANTS_PROFILES_EXPORT');
+  return api.get("/exports/ADMIN_TENANTS_PROFILES_EXPORT");
 };
 
 // Export Post API
 export const sendExport = (data: any) => {
-  return api.post('/exports/tenant', data);
+  return api.post("/exports/tenant", data);
 };
 
 //get customer by ID
@@ -102,45 +102,45 @@ export const getBusinessWallets = (id: any) => {
 
 //update Account status
 export const changeStatus = (data: any) => {
-  return api.patch('/business/update-status', data);
+  return api.patch("/business/update-status", data);
 };
 
 // Update Business Status
 export const changeBusinessStatus = (arr: any, status: any, reason: any) => {
   const id = arr.apiBusinessId;
   let archiveArray;
-  if (status === 'Active') {
+  if (status === "Active") {
     archiveArray = [
       {
         userId: id,
-        status: status
-      }
+        status: status,
+      },
     ];
-  } else if (status === 'Terminated') {
+  } else if (status === "Terminated") {
     archiveArray = [
       {
         reason: reason,
         userId: id,
-        status: status
-      }
+        status: status,
+      },
     ];
-  } else if (status === 'Under Review') {
+  } else if (status === "Under Review") {
     archiveArray = [
       {
         reason: reason,
         userId: id,
-        status: status
-      }
+        status: status,
+      },
     ];
-  } else if (status === 'DeActivated') {
+  } else if (status === "DeActivated") {
     archiveArray = [
       {
         userId: id,
-        status: status
-      }
+        status: status,
+      },
     ];
   }
-  return api.patch('admin/updatestatus', archiveArray); //admin/updatestatus
+  return api.patch("admin/updatestatus", archiveArray); //admin/updatestatus
 };
 
 //Edit Status
@@ -150,17 +150,17 @@ export const EditStatus = (id: any, status: any, reason: any) => {
     {
       userId: id,
       status: status,
-      reason: reason
-    }
+      reason: reason,
+    },
   ];
-  return api.patch('admin/updatestatus', archiveArray);
+  return api.patch("admin/updatestatus", archiveArray);
 };
 
 //Check LastLogin
 export const LastLogin = (logType: any, referenceId: any) => {
   let payload = {
     logType: logType,
-    referenceId: referenceId
+    referenceId: referenceId,
   };
   return api.post(`/logs/user-activity`, payload);
 };
@@ -190,7 +190,7 @@ export const updateCustomer = (id: any, data: any) => {
     lastName: data.lastName,
     country: data.country.value,
     state: data.state.value,
-    zipCode: data.zipCode
+    zipCode: data.zipCode,
   };
   return api.patch(`/admin/customer/${id}/update`, payload);
 };
@@ -218,7 +218,15 @@ export const einInfo = (id: any) => {
 //get New Merchant Details
 export const getNewBusinessDetails = (id: any) => {
   const params = {
-    id: id
+    id: id,
   };
-  return api.get('register/buiness-invitation', { params });
+  return api.get("register/buiness-invitation", { params });
+};
+
+export const getBusinessInfo = (businessId: any) => {
+  return api.get(`business/business-profile/${businessId}`);
+};
+
+export const getBusinessDocuments = (businessId: any) => {
+  return api.post(`business/documents/${businessId}`, {});
 };
