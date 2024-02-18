@@ -1,0 +1,503 @@
+.pocCardContainer {
+  width: 100%;
+  min-height: 462px;
+}
+
+.spinnerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+}
+
+.pocTitle {
+  line-height: 24px;
+  font-size: 16px;
+  color: var(--cgy4);
+  width: fit-content;
+  height: 33px;
+  border-radius: 10px;
+  background-color: var(--cm1);
+  padding: 6px 12px;
+  margin-bottom: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contactContainer {
+  max-width: 755px;
+  border: 1px solid var(--cm2);
+  border-radius: 5px;
+  padding: 29px 24px 24px 24px;
+  position: relative;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 24px;
+}
+
+.chipContainer {
+  padding: 0px 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: absolute;
+  top: -14px;
+  left: 12px;
+  background-color: var(--cwhite);
+}
+
+.contactHeader {
+  height: 25px;
+  border: 1px solid var(--cm2);
+  border-radius: 5px;
+  padding: 4px 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+.contactType {
+  font-size: 12px;
+  color: var(--cgy4);
+  font-weight: 700;
+  line-height: 17px;
+  text-transform: capitalize;
+}
+
+.contactSize {
+  font-size: 12px;
+  line-height: 20px;
+  color: var(--cgy3);
+}
+
+.plusButton {
+  width: 22px;
+  height: 22px;
+  border-radius: 100%;
+  font-size: 10px;
+  font-weight: 900 !important;
+}
+
+.plusButtonInactive {
+  border: 1px solid var(--gray-200);
+  background-color: var(--cwhite);
+  color: var(--gray-200);
+  cursor: default;
+}
+
+.plusButtonActive {
+  border: 1px solid var(--rbl2);
+  background-color: var(--cm6) !important;
+  color: var(--cm3);
+
+  &:hover {
+    background-color: var(--rbl4) !important;
+  }
+}
+
+.plusButtonContainer {
+  position: relative;
+  border-radius: 100%;
+}
+
+.newButtonContainer {
+  text-align: center;
+}
+
+.addContactDropdown {
+  position: absolute;
+  width: 235px;
+  background: var(--cwhite) 0% 0% no-repeat padding-box;
+  box-shadow: 0px 4px 10px var(--cgy21);
+  border: 1px solid var(--cm2);
+  border-radius: 10px;
+  top: 32px;
+  z-index: 9;
+  left: 0;
+  padding: 16px;
+  padding-right: 8px;
+}
+
+.sideLine {
+  border: 1px solid var(--cm2);
+  width: 100%;
+  margin: 16px 0px;
+}
+
+.addPlusButton {
+  color: var(--cm3);
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 700 !important;
+}
+
+.buttonText {
+  margin-left: 8px;
+
+  &:hover {
+    text-decoration: underline;
+    color: var(--cm4);
+  }
+}
+
+.extraContactsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow: auto;
+  max-height: 140px;
+  padding-right: 8px;
+  /*width*/
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: var(--light-gray);
+    border-radius: 10px;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: var(--cgy2);
+    border-radius: 10px;
+  }
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.checkMark {
+  font-size: 11px;
+  font-weight: 900 !important;
+  color: var(--cm3);
+}
+
+.selectedContact {
+  color: var(--cgy3);
+  cursor: default;
+}
+
+.notSelectedContact {
+  color: var(--cgy4);
+}
+
+.contactHead {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 19px;
+  width: 159px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: left;
+  text-overflow: ellipsis;
+}
+
+.contactDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.details {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  min-height: 32px;
+  width: 100%;
+  gap: 24px;
+}
+
+.contactName {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  color: var(--cgy4);
+  display: flex;
+  align-items: center;
+  width: 202px;
+  white-space: nowrap;
+}
+
+.contactImage {
+  margin-right: 18px;
+  width: 14px;
+  height: 14px;
+  color: var(--cm5);
+}
+
+.contactInfo {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--cgy4);
+  word-break: break-all;
+}
+
+.emailContactInfo {
+  font-size: 14px;
+  line-height: 20px;
+  max-width: 220px;
+  color: var(--cgy4);
+}
+
+.dotsButton {
+  width: 32px;
+  height: 32px;
+  border-radius: 5px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+
+.dotsButtonColor {
+  color: var(--cgy26);
+
+  &:hover {
+    background-color: var(--cm1) !important;
+    color: var(--cm3);
+  }
+}
+
+.dotsButtonActive {
+  color: var(--cm3);
+  background-color: var(--cm1) !important;
+}
+
+.infoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contactNumber {
+  flex-shrink: 0;
+}
+
+.editDropdown {
+  width: 82px;
+  height: 70px;
+  box-shadow: 0px 4px 10px var(--cgy21);
+  border: 1px solid var(--cm2);
+  border-radius: 10px;
+  background-color: var(--cwhite);
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: absolute;
+  top: 42px;
+  left: 0px;
+  z-index: 1;
+}
+
+.dropDownButton {
+  text-align: left;
+  width: fit-content;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 19px;
+  color: var(--cgy3);
+
+  &:hover {
+    color: var(--cm4);
+  }
+}
+
+.dropdownContainer {
+  position: relative;
+}
+
+.warningModal {
+  width: 440px;
+  padding-bottom: 32px;
+}
+
+.warningContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8px;
+  gap: 32px;
+}
+
+.warningHeader {
+  font-size: 24px;
+  line-height: 33px;
+  font-weight: 700;
+  color: var(--cgy4);
+}
+
+.warningDescription {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--cgy4);
+  text-align: center;
+}
+
+.failedIcon {
+  font-size: 110px;
+}
+
+.editContactContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.backButton {
+  margin-bottom: 32px;
+  font-size: 18px;
+}
+
+.editContactHeader {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 33px;
+  color: var(--cgy4);
+  margin-bottom: 48px;
+  text-align: center;
+}
+
+.editFieldsContainer {
+  width: 516px;
+}
+
+.fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 16px;
+}
+
+.editButtonContainer {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.editCancelButton {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 20px;
+  color: var(--cgy3);
+
+  &:hover {
+    color: var(--cgy4);
+    text-decoration: underline;
+  }
+}
+
+.editSaveButton {
+  width: 68px;
+  height: 24px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  line-height: 17px;
+  font-weight: 700;
+}
+
+.editSaveButtonInactive {
+  background-color: var(--cwhitesmoke) !important;
+  color: var(--gray-200);
+}
+
+.editSaveButtonActive {
+  background-color: var(--cm3) !important;
+  color: var(--cwhite);
+
+  &:hover {
+    background-color: var(--cm4) !important;
+  }
+}
+
+.contactContainerHeight {
+  height: 666px;
+}
+
+.contactNameEllipsis {
+  width: 170px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: default;
+}
+
+.labelName {
+  word-break: break-all;
+  max-width: 280px;
+  white-space: normal;
+}
+
+.removeModal {
+  width: 428px;
+}
+
+.contactNameEllipsis {
+  max-width: 240px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.disableDotsContainer {
+  color: var(--gray-200);
+}
+
+.removeContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.removeDescription {
+  color: var(--cgy4);
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: 32px;
+  margin-bottom: 12px;
+  text-align: center;
+  padding: 0px 13px;
+}
+
+.specialDescription {
+  font-weight: 700;
+}
+
+.cancelRemove {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 17px;
+  color: var(--cgy3);
+  margin-top: 12px;
+  margin-bottom: 8px;
+
+  &:hover {
+    color: var(--cgy4);
+    text-decoration: underline;
+  }
+}
+.addPocContainer {
+  margin: 8px 8px 0px 8px;
+}

@@ -1,0 +1,546 @@
+.cardContainer {
+  width: 100%;
+}
+
+.spinnerStyle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+}
+
+.businessTitleContainer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.businessTitle {
+  line-height: 24px;
+  font-size: 16px;
+  color: var(--cgy4);
+  width: 183px;
+  height: 33px;
+  border-radius: 10px;
+  background-color: var(--cm1);
+  padding: 6px 12px;
+}
+
+.editButton {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  color: var(--cm3);
+
+  &:hover {
+    color: var(--cm4);
+    text-decoration: underline;
+  }
+}
+
+.cancelButton {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 20px;
+  color: var(--cgy3);
+
+  &:hover {
+    text-decoration: underline;
+    color: var(--cgy4);
+  }
+}
+
+.details {
+  max-width: 584px;
+}
+
+.detailsContainer {
+  display: flex;
+}
+
+.sideHeading {
+  width: 232px;
+  flex-shrink: 0;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--cgy4);
+}
+
+.bar {
+  margin: 24px 0px;
+}
+
+.editBar {
+  margin-bottom: 24px;
+}
+
+.lastBar {
+  margin-top: 24px;
+}
+
+.name {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  color: var(--cgy4);
+  margin-bottom: 4px;
+  word-break: break-all;
+}
+
+.description {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--cgy4);
+  word-break: break-all;
+}
+
+.contactNameEllipsis {
+  max-width: 240px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.compareClassName {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--cgy4);
+}
+
+.moreDescription {
+  color: var(--cgy3);
+  font-size: 14px;
+  line-height: 20px;
+  word-break: break-all;
+}
+
+.bottomMargin {
+  margin-bottom: 4px;
+}
+
+.informationGap {
+  margin-bottom: 8px;
+}
+
+.docContainer {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.buttonContainer {
+  display: flex;
+}
+
+.docSize {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--cgy3);
+  margin-left: 4px;
+  flex-shrink: 0;
+}
+
+.docButton {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  color: var(--cm3);
+  text-align: left;
+  word-break: break-all;
+
+  &:hover {
+    text-decoration: underline;
+    color: var(--cm4);
+  }
+}
+
+.paperClip {
+  width: 17px;
+  height: 16px;
+  margin-right: 8px;
+  margin-top: 3px;
+}
+
+.docName {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--cgy3);
+  margin-top: 4px;
+  word-break: break-all;
+}
+
+.closeButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 8px;
+  width: 14px;
+  height: 14px;
+  border-radius: 100%;
+  font-size: 8px;
+  font-weight: bolder !important;
+  color: var(--cgy3);
+  flex-shrink: 0;
+  margin-top: 4px;
+
+  &:hover {
+    background-color: var(--cm2);
+    color: var(--cgy4);
+  }
+}
+
+.docBar {
+  margin-top: 4px;
+}
+
+.addButton {
+  width: 158px;
+  height: 40px;
+  border: 1px solid var(--rbl2);
+  border-radius: 10px;
+  background-color: var(--rbl8) !important;
+  line-height: 19px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--cm3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    background-color: var(--rbl9) !important;
+  }
+}
+
+.plusIcon {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.saveButtonContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 32px;
+}
+
+.saveButton {
+  display: flex;
+  padding: 5px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.saveButtonInactive {
+  background-color: var(--cwhitesmoke) !important;
+  color: var(--gray-200);
+}
+
+.saveButtonActive {
+  background-color: var(--cm3) !important;
+  color: var(--cwhite);
+
+  &:hover {
+    background-color: var(--cm4) !important;
+  }
+}
+
+.cancelEditButton {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 20px;
+  color: var(--cgy3);
+
+  &:hover {
+    text-decoration: underline;
+    color: var(--cgy4);
+  }
+}
+
+.saveModal {
+  width: 538px;
+  height: 421px;
+}
+
+.saveModalContainer {
+  padding: 0px 34px;
+}
+
+.saveModalHeader {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  margin-top: 8px;
+  margin-bottom: 32px;
+  color: var(--cgy4);
+  text-align: center;
+}
+
+.saveModalDescription {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--cgy4);
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.saveModalReason {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  color: var(--cgy4);
+  margin-bottom: 8px;
+}
+
+.saveModalTextInput {
+  height: 110px;
+}
+
+.saveModalButton {
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+}
+
+.inputFields {
+  width: 330px;
+}
+
+.cityStateContainer {
+  display: flex;
+  gap: 16px;
+}
+
+.smallInputFields {
+  width: 157px;
+  flex-shrink: 0;
+}
+
+.addDocumentStep {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 120px;
+}
+
+.addDocumentContainer {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 415px;
+}
+
+.addDocumentHeader {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  color: var(--cgy4);
+  margin-bottom: 48px;
+}
+
+.addDocumentName {
+  margin-top: 6px;
+  margin-bottom: 32px;
+}
+
+.addButtonContainer {
+  margin-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.addDocumentCancel {
+  margin-top: 16px;
+  font-size: 12px;
+  line-height: 20px;
+  color: var(--cgy3);
+  font-weight: 600;
+
+  &:hover {
+    text-decoration: underline;
+    color: var(--cgy4);
+  }
+}
+
+.addDocumentAdd {
+  width: 68px;
+  height: 24px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.addDocumentActive {
+  background-color: var(--cm3) !important;
+  color: var(--cwhite);
+
+  &:hover {
+    background-color: var(--cm4) !important;
+  }
+}
+
+.addDocumentInactive {
+  background-color: var(--cwhitesmoke) !important;
+  color: var(--gray-200);
+}
+
+.addDocumentUpload {
+  width: 100% !important;
+  height: 86px;
+}
+
+.noDoc {
+  margin-bottom: 24px;
+}
+
+.documentModal {
+  width: 682px;
+}
+
+.documentModalContainer {
+  height: 630px;
+  border: 1px solid var(--cm2);
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.documentModalHeader {
+  margin-top: 8px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: var(--cgy4);
+  margin-bottom: 24px;
+  text-align: center;
+  word-break: break-all;
+}
+
+.documentSize {
+  font-size: 24px;
+  margin-left: 8px;
+  line-height: 40px;
+  color: var(--cgy3);
+  font-weight: normal;
+}
+
+.documentDownload {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  color: var(--cm3);
+  margin-bottom: 16px;
+  width: fit-content;
+  display: flex;
+  align-self: flex-end;
+}
+
+.documentDownloadActive:hover {
+  color: var(--cm4);
+  text-decoration: underline;
+}
+
+.previewContainer {
+  height: 100%;
+  width: 100%;
+  padding-right: 12px;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    background-color: var(--cwhitesmoke);
+    margin-bottom: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--cgy2);
+    border-radius: 12px;
+  }
+}
+
+.preview {
+  width: 100%;
+  height: 756px;
+}
+
+.removeModal {
+  width: 440px;
+}
+
+.paperContainer {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  min-height: 32px;
+  margin-bottom: 32px;
+}
+
+.documentFileName {
+  color: var(--cgy4);
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 600;
+  word-break: break-all;
+}
+
+.clip {
+  width: 17px;
+  height: 16px;
+}
+
+.documentFileSize {
+  font-size: 16px;
+  line-height: 16px;
+  color: var(--cgy3);
+  flex-shrink: 0;
+}
+
+.buttonsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.noPermission {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  color: var(--gray-200);
+  cursor: default;
+}
+
+.spinnerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.stateFieldLabel {
+  font-size: 12px !important;
+}
+
+.addDocumentModal {
+  width: 538px;
+  padding-bottom: 32px;
+}
+
+.addContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 415px;
+  margin: 8px 38px 0px 38px;
+}

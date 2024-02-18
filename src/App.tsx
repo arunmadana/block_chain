@@ -4,7 +4,9 @@ import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Base from "./Pages/Base";
 import { BusinessDetails } from "./Pages/BusinessDetails/BusinessDetails";
+import BusinessDetailsActivityLog from "./Pages/BusinessDetailsActivityLog/BusinessDetailsActivityLog";
 import BusinessDetailsInformation from "./Pages/BusinessDetailsInformation/BusinessDetailsInformation";
+import BusinessDetailsPointOfContact from "./Pages/BusinessDetailsPointofContact/BusinessDetailsPointofContact";
 import BusinessProfiles from "./Pages/BusinessProfiles/BusinessProfiles";
 import BusinessTracker from "./Pages/BusinessTracker/BusinessTracker";
 import Employees from "./Pages/Employees/Employees";
@@ -47,17 +49,16 @@ function App() {
                     element={<BusinessDetails />}
                   >
                     <Route
-                      // index={true}
                       path="/dashboards/profiles/business-details/:id/business-info"
                       element={<BusinessDetailsInformation />}
                     />
 
-                    {/* <Route
-                path="/dashboards/profiles/business-details/:id/points-of-contact"
-                element={<PointOfContact />}
-              />
+                    <Route
+                      path="/dashboards/profiles/business-details/:id/points-of-contact"
+                      element={<BusinessDetailsPointOfContact />}
+                    />
 
-              <Route
+                    {/*  <Route
                 path="/dashboards/profiles/business-details/:id/configuration"
                 element={<BusinessConfiguration />}
               >
@@ -87,11 +88,11 @@ function App() {
                     <Navigate to="/dashboards/profiles/business-details/:id/configuration/nodes" />
                   }
                 />
-              </Route>
-              <Route
-                path="/dashboards/profiles/business-details/:id/activity-log"
-                element={<ActivityLog />}
-              /> */}
+              </Route>*/}
+                    <Route
+                      path="/dashboards/profiles/business-details/:id/activity-log"
+                      element={<BusinessDetailsActivityLog />}
+                    />
                     <Route
                       path="/dashboards/profiles/business-details/:id"
                       element={

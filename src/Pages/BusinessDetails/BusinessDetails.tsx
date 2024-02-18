@@ -1,5 +1,6 @@
 import { Outlet, useLocation } from "react-router-dom";
 import "../BusinessProfiles/BusinessProfiles.styles.scss";
+import styles from "./BusinessDetails.module.scss";
 import { Fragment, useEffect, useState } from "react";
 import { Breadcrumbs, Link, Typography } from "@mui/material";
 import BusinessSettingsSideMenu from "../BusinessSettingsSideMenu/BusinessSettingsSideMenu";
@@ -35,8 +36,10 @@ export const BusinessDetails: React.FunctionComponent<
       <div>
         <p className="fw-semibold text-black fs-30 mt-3">{rowData?.name}</p>
       </div>
-      <BusinessSettingsSideMenu rowDatas={rowData} />
-      <Outlet />
+      <div className={styles.container}>
+        <BusinessSettingsSideMenu rowDatas={rowData} />
+        <Outlet />
+      </div>
     </Fragment>
   );
 };

@@ -1,5 +1,6 @@
 import { useFormik } from "formik";
 import React, { useEffect, useState } from "react";
+import tick from "../../assets/tick.svg";
 import { useLocation, useParams } from "react-router-dom";
 import * as Yup from "yup";
 import { APIKeyEnum } from "../../Enums/APIKeyEnum";
@@ -164,29 +165,29 @@ const BusinessSettingsSideMenu = ({ getInfo = () => {} }) => {
     {
       id: "business-info",
       label: "Business Information",
-      url: `/business-profiles/business-details/${id}/business-info`,
+      url: `/dashboards/profiles/business-details/${id}/business-info`,
     },
     {
       id: "points-of-contact",
       label: "Points of Contact",
-      url: `/business-profiles/business-details/${id}/points-of-contact`,
+      url: `/dashboards/profiles/business-details/${id}/points-of-contact`,
     },
     {
       id: "configuration",
       label: "Configuration",
-      url: `/business-profiles/business-details/${id}/configuration/nodes`,
+      url: `/dashboards/profiles/business-details/${id}/configuration/nodes`,
       configPaths: {
-        nodes: `/business-profiles/business-details/${id}/configuration/nodes`,
-        keys: `/business-profiles/business-details/${id}/configuration/api-keys`,
-        webHooks: `/business-profiles/business-details/${id}/configuration/webhooks`,
-        ip: `/business-profiles/business-details/${id}/configuration/ip-addresses`,
-        activity: `/business-profiles/business-details/${id}/configuration/activity-logs`,
+        nodes: `/dashboards/profiles/business-details/${id}/configuration/nodes`,
+        keys: `/dashboards/profiles/business-details/${id}/configuration/api-keys`,
+        webHooks: `/dashboards/profiles/business-details/${id}/configuration/webhooks`,
+        ip: `/dashboards/profiles/business-details/${id}/configuration/ip-addresses`,
+        activity: `/dashboards/profiles/business-details/${id}/configuration/activity-logs`,
       },
     },
     {
       id: "activity-log",
       label: "Activity Log",
-      url: `/business-profiles/business-details/${id}/activity-log`,
+      url: `/dashboards/profiles/business-details/${id}/activity-log`,
     },
   ];
 
@@ -240,9 +241,7 @@ const BusinessSettingsSideMenu = ({ getInfo = () => {} }) => {
                 >
                   {changeStatusColor(each?.value)}
                 </span>
-                {index === 0 && (
-                  <span className={`icon-tick ${styles.tickClass}`} />
-                )}
+                {index === 0 && <img src={tick} className={styles.tickClass} />}
               </div>
             ))}
           </div>

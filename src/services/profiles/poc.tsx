@@ -131,3 +131,7 @@ export const getUploadedDocuments = (id: any) => {
 export const addBusiness = (id: any) => {
   return api.post(`/business/submit/${id}`);
 };
+
+export const getActivityLogs = (data: any) => {
+  return api.post(`/logs/activity`, data);
+};

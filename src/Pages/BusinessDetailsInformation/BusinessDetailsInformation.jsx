@@ -1,5 +1,4 @@
 import { Button } from "@mui/joy";
-import { Box } from "@mui/material";
 import { saveAs } from "file-saver";
 import { useFormik } from "formik";
 import { useEffect, useMemo, useState } from "react";
@@ -10,6 +9,7 @@ import { LocalStorageKeysEnum } from "../../Enums/LocalStorageKeysEnum";
 import { PermissionTypeEnum } from "../../Enums/PermissionTypeEnum";
 import { PhoneCountryListEnum } from "../../Enums/PhoneCountryListEnum";
 import { HBar } from "../../components/Bars/Bars";
+import Card from "../../components/Card/Card";
 import EmailWidthCalculatorWithTooltip from "../../components/EmailWidthCalculatorWithTooltip/EmailWidthCalculatorWithTooltip";
 import {
   FormField,
@@ -192,7 +192,7 @@ export default function BusinessDetailsInformation() {
           localStorage?.setItem("businessDetails", JSON?.stringify(storedData));
         }
         navigateTo(
-          `/business-profiles/business-details/${tenantId}/business-info`
+          `/dashboards/profiles/business-details/${tenantId}/business-info`
         );
         setIsLoading(false);
       })
@@ -483,7 +483,6 @@ export default function BusinessDetailsInformation() {
       const payload = {
         url: document?.documentRefPath,
       };
-
       getUrl(payload)
         .then((res) => {
           const data = res?.data?.data?.url;
@@ -496,7 +495,7 @@ export default function BusinessDetailsInformation() {
   };
 
   return (
-    <Box className={styles.cardContainer}>
+    <Card isHeader={false} className={styles.cardContainer}>
       {isLoading ? (
         <div className={styles.spinnerStyle}>
           <Spinner />
@@ -569,22 +568,22 @@ export default function BusinessDetailsInformation() {
                 ) : (
                   <>
                     <h1 className={styles.name}>{businessInfo?.name}</h1>
-                    <p
+                    <span
                       className={`${styles.description} ${styles.bottomMargin}`}
                     >
                       {businessInfo?.businessEntity}
-                    </p>
+                    </span>
                   </>
                 )}
-                <p className={styles.moreDescription}>BID-{tenantId}</p>
+                <span className={styles.moreDescription}>BID-{tenantId}</span>
               </div>
             </div>
             <HBar className={styles.bar} />
             <div className={styles.detailsContainer}>
               <h1 className={styles.sideHeading}>Business Start Date</h1>
-              <p className={styles.description}>
+              <span className={styles.description}>
                 {businessInfo?.businessStartDate}
-              </p>
+              </span>
             </div>
             <HBar className={styles.bar} />
             <div className={styles.detailsContainer}>
@@ -628,7 +627,7 @@ export default function BusinessDetailsInformation() {
                   </>
                 ) : (
                   <>
-                    <p
+                    <span
                       className={`${styles.description} ${styles.informationGap}`}
                     >
                       {findCountryCode(
@@ -639,7 +638,7 @@ export default function BusinessDetailsInformation() {
                         : internationalPhoneFormat(
                             businessInfo?.phoneNumberDto?.phoneNumber
                           )}
-                    </p>
+                    </span>
 
                     <EmailWidthCalculatorWithTooltip
                       id={businessInfo?.email}
@@ -751,17 +750,19 @@ export default function BusinessDetailsInformation() {
                   </>
                 ) : (
                   <>
-                    <p className={styles.description}>
+                    <span className={styles.description}>
                       {businessInfo?.addressLine1}
-                    </p>
-                    <p className={styles.description}>
+                    </span>
+                    <span className={styles.description}>
                       {businessInfo?.addressLine2}
-                    </p>
-                    <p className={styles.description}>
+                    </span>
+                    <span className={styles.description}>
                       {businessInfo?.city}, {businessInfo?.state}{" "}
                       {businessInfo.zipCode}
-                    </p>
-                    <p className={styles.description}>{businessInfo.country}</p>
+                    </span>
+                    <span className={styles.description}>
+                      {businessInfo.country}
+                    </span>
                   </>
                 )}
               </div>
@@ -771,18 +772,17 @@ export default function BusinessDetailsInformation() {
               <h1 className={styles.sideHeading}>Documents</h1>
               <div>
                 {newDocumentList?.length === 0 ? (
-                  <p
+                  <span
                     className={`${styles.description} ${
                       newDocumentList?.length === 0 && styles.noDoc
                     }`}
                   >
                     No Documents Added
-                  </p>
+                  </span>
                 ) : (
                   newDocumentList?.map((doc, index) => {
                     return (
                       <div key={index} className={styles.docContainer}>
-                        <span className={`icon-attach ${styles.paperClip}`} />
                         <div>
                           <div className={styles.buttonContainer}>
                             <button
@@ -792,9 +792,9 @@ export default function BusinessDetailsInformation() {
                             >
                               {doc?.fileName}
                             </button>
-                            <p className={styles.docSize}>
+                            <span className={styles.docSize}>
                               ({doc?.documentSize} KB)
-                            </p>
+                            </span>
                             {isEdit && (
                               <>
                                 <button
@@ -810,7 +810,9 @@ export default function BusinessDetailsInformation() {
                               </>
                             )}
                           </div>
-                          <p className={styles.docName}>{doc?.documentName}</p>
+                          <span className={styles.docName}>
+                            {doc?.documentName}
+                          </span>
                         </div>
                       </div>
                     );
@@ -890,7 +892,7 @@ export default function BusinessDetailsInformation() {
           </div>
         </>
       )}
-    </Box>
+    </Card>
   );
 }
 
@@ -1016,11 +1018,11 @@ const SaveModal = ({ show = false, closeModal, isSaved, textFormik }) => {
     >
       <div className={styles.saveModalContainer}>
         <h1 className={styles.saveModalHeader}>Change Business Information</h1>
-        <p className={styles.saveModalDescription}>
+        <span className={styles.saveModalDescription}>
           Are you sure you want to change this business’ information? This will
           be reflected immediately in their business settings.
-        </p>
-        <p className={styles.saveModalReason}>Reason for change:</p>
+        </span>
+        <span className={styles.saveModalReason}>Reason for change:</span>
         <FormTextArea
           id="reason"
           name="reason"
@@ -1089,7 +1091,9 @@ const RemoveModal = ({
       <div className={styles.paperContainer}>
         <span className={`icon-attach ${styles.clip}`} />
         <h1 className={styles.documentFileName}>{document?.fileName}</h1>
-        <p className={styles.documentFileSize}>({document?.documentSize} KB)</p>
+        <span className={styles.documentFileSize}>
+          ({document?.documentSize} KB)
+        </span>
       </div>
       <div className={styles.buttonsContainer}>
         <Button disabled={isDisabled} onClick={removeDocument}>
