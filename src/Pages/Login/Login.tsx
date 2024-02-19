@@ -2,7 +2,7 @@ import { Button, FormControl, FormLabel, Input } from "@mui/joy";
 import { useFormik } from "formik";
 import { Fragment, useState } from "react";
 import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import * as Yup from "yup";
 import { LocalStorageKeysEnum } from "../../Enums/LocalStorageKeysEnum";
 import styles from "./Login.module.scss";
@@ -18,6 +18,9 @@ export const Login: React.FunctionComponent<LoginProps> = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [isLoading, setIsLoading] = useState(false);
+  const location = useLocation();
+  const dataMail = location?.state?.email;
+  const dataPass = location?.state?.password;
 
   const handleNext = (values: any) => {
     setIsLoading(true);
@@ -66,8 +69,14 @@ export const Login: React.FunctionComponent<LoginProps> = () => {
   };
 
   const initialValues = {
-    email: "",
-    password: "",
+    email:
+      dataMail === null || dataMail === undefined || dataMail === ""
+        ? ""
+        : dataMail,
+    password:
+      dataPass === null || dataPass === undefined || dataPass === ""
+        ? ""
+        : dataPass,
   };
 
   const formik = useFormik({
@@ -118,7 +127,11 @@ export const Login: React.FunctionComponent<LoginProps> = () => {
             </FormControl>
             <div style={{ display: "flex", justifyContent: "center" }}>
               <Button
-                disabled={!(formik.dirty && formik.isValid) || isLoading}
+                disabled={
+                  !formik.isValid ||
+                  Object.keys(formik.touched).length === 0 ||
+                  isLoading
+                }
                 style={{ width: "80px", height: "40px" }}
                 onClick={formik.handleSubmit}
               >

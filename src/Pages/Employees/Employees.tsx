@@ -221,7 +221,7 @@ const Employees: FC<EmployeesProps> = () => {
       renderCell: (params: any) => {
         return (
           <div
-            className={`${"chip"} chip--${
+            className={`${"chips"} chips--${
               params.row.status === 2
                 ? "green"
                 : params.row.status === 1
@@ -232,7 +232,7 @@ const Employees: FC<EmployeesProps> = () => {
             }`}
           >
             <div
-              className={`chip__text--${
+              className={`chips__text--${
                 params.row.status === 2
                   ? "green"
                   : params.row.status === 1

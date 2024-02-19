@@ -1,7 +1,12 @@
 import * as React from "react";
 import { Fragment } from "react";
-import { OTPInput } from "../../components/OTPInput/OTPInput";
-import { resendSmsOtp } from "../../services/Login/Login";
+import { useLocation, useNavigate } from "react-router";
+import backArrow from "../../assets/back-arrow.svg";
+import { LocalStorageKeysEnum } from "../../Enums/LocalStorageKeysEnum";
+import { PermissionTypeEnum } from "../../Enums/PermissionTypeEnum";
+import VerificationInput from "../../components/VerificationInput/VerificationInput";
+import { phoneOtpStepup, resendSmsOtp } from "../../services/Login/Login";
+import { getStorage, setStorage } from "../../services/Storage";
 import styles from "./PhoneVerification.module.scss";
 
 type PhoneVerificationProps = {};
@@ -9,9 +14,18 @@ type PhoneVerificationProps = {};
 export const PhoneVerification: React.FunctionComponent<
   PhoneVerificationProps
 > = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const blankCode = ["", "", "", "", "", ""];
   const [newOTP, setNewOTP] = React.useState(false);
   const [errorOTP, setErrorOTP] = React.useState(false);
   const [loader, setLoader] = React.useState(false);
+  const [code, setCode] = React.useState(blankCode);
+  const [codeError, setCodeError] = React.useState(false);
+  const [codeSuccess, setCodeSuccess] = React.useState(false);
+  const [isLoading, setIsLoading] = React.useState(false);
+  const [userAuthorities, setUserAuthorities] = React.useState({});
+  const authorities = getStorage(LocalStorageKeysEnum?.authorities);
   const [data, setData] = React.useState({
     phoneNumberDto: {
       countryCode: "",
@@ -80,65 +94,166 @@ export const PhoneVerification: React.FunctionComponent<
       });
   }, []);
 
+  React.useEffect(() => {
+    if (authorities) {
+      setUserAuthorities(JSON.parse(authorities));
+    }
+  }, []);
+
+  const wait = (time) =>
+    new Promise((resolve) => {
+      setTimeout(() => {
+        resolve();
+      }, time);
+    });
+
+  const onComplete = async () => {
+    setIsLoading(true);
+    setCodeError(false);
+    setCodeSuccess(false);
+    setLoader(true);
+    const payload = code.join("");
+
+    try {
+      const res = await phoneOtpStepup(payload);
+      const { jwtToken } = res.data.data;
+      // commented for reference
+      // dispatch(fetchUserDetailsAction());
+      setStorage(LocalStorageKeysEnum.jwtToken, jwtToken);
+      // dispatch(
+      //   storeUserDetails({
+      //     ...res?.data?.data
+      //   })
+      // );
+      setStorage(LocalStorageKeysEnum.stepupToken, jwtToken);
+      setIsLoading(false);
+      setCodeSuccess(true);
+      await wait(1000);
+      // dispatch(setAuth());
+      // dispatch(storeAuthInfo({ stepupToken: jwtToken }));
+      // Here we are finding the Business profiles permission from authorities
+      const businessProfilesPermission = Object?.values(userAuthorities)?.find(
+        (each) => each == PermissionTypeEnum?.BusinessProfiles
+      );
+      navigate("/dashboards/profiles");
+
+      // if (isPwdExpired === true) {
+      //   navigateTo('/login/update-password');
+      // } else if (businessProfilesPermission) {
+      //   navigateTo('/business-profiles');
+      // } else {
+      //   navigateTo('/admin-profile/user-details');
+      // }
+    } catch (error) {
+      setIsLoading(false);
+      setCodeError(true);
+      setCode(blankCode);
+      const errCode = error?.response?.data?.error?.errorCode;
+      if (errCode === "G100068" || errCode === "G100008") {
+        setErrorOTP(true);
+      }
+    }
+  };
+
+  const onPaste = (value) => {
+    setCode(value);
+  };
+
+  const handleBack = () => {
+    navigate("/login/verify-identity", {
+      state: location?.state,
+    });
+  };
+
   return (
     <Fragment>
       <div className={styles.loginContainer}>
         <div className={styles.loginBox}>
-          <span className={styles.twoStepText}>Phone Verification</span>
-          <span className={styles.twoStepVerificationText}>
-            A 6-digit verification code was sent to{" "}
-            {phoneNumber && (
-              <>
-                <span className={styles.phoneNumber}>
-                  +{data?.phoneNumberDto?.countryCodeNumber}
-                </span>
-                &nbsp;
-                <span className={styles.phoneNumber}>
-                  {data?.phoneNumberDto?.countryCode === "US"
-                    ? formatPhoneNumber(phoneNumber)
-                    : internationalPhoneFormat(phoneNumber)}
-                  .
-                </span>
-              </>
-            )}
-          </span>
-          {errorOTP === false ? (
-            <>
-              <OTPInput />
-              {newOTP === false ? (
-                <button
-                  type="button"
-                  className={styles.resend_sms}
-                  onClick={reSendOTP}
-                >
-                  Resend Code
-                </button>
-              ) : (
-                <div>
-                  {loader === true ? (
-                    <div className={styles.sending_code}>
-                      <p className={`icon-loading ${styles.loader_icon}`}></p>
-                      <span>Sending Code... </span>
-                    </div>
-                  ) : (
-                    <button
-                      type="button"
-                      className={styles.new_code}
-                      onClick={reSendOTP}
-                    >
-                      New Verification Code Sent
-                    </button>
-                  )}
-                </div>
+          <button
+            style={{
+              display: "flex",
+              justifyContent: "start",
+              marginTop: "25px",
+              marginLeft: "20px",
+            }}
+            onClick={handleBack}
+          >
+            <img src={backArrow} />
+          </button>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              marginTop: "75px",
+              justiftContent: "center",
+            }}
+          >
+            <span className={styles.twoStepText}>Phone Verification</span>
+            <span className={styles.twoStepVerificationText}>
+              A 6-digit verification code was sent to{" "}
+              {phoneNumber && (
+                <>
+                  <span className={styles.phoneNumber}>
+                    +{data?.phoneNumberDto?.countryCodeNumber}
+                  </span>
+                  &nbsp;
+                  <span className={styles.phoneNumber}>
+                    {data?.phoneNumberDto?.countryCode === "US"
+                      ? formatPhoneNumber(phoneNumber)
+                      : internationalPhoneFormat(phoneNumber)}
+                    .
+                  </span>
+                </>
               )}
-            </>
-          ) : (
-            <div className={styles.error_container}>
-              <span className={styles.error_msg}>
-                Looks like something went wrong. Please try again later.
-              </span>
-            </div>
-          )}
+            </span>
+            {errorOTP === false ? (
+              <>
+                <div className={styles.verification_input}>
+                  <VerificationInput
+                    value={code}
+                    onChange={(value) => setCode(value)}
+                    onPaste={onPaste}
+                    onComplete={onComplete}
+                    error={codeError}
+                    success={codeSuccess}
+                    isLoading={isLoading}
+                  />
+                </div>
+                {newOTP === false ? (
+                  <button
+                    type="button"
+                    className={styles.resend_sms}
+                    onClick={reSendOTP}
+                  >
+                    Resend Code
+                  </button>
+                ) : (
+                  <div>
+                    {loader === true ? (
+                      <div className={styles.sending_code}>
+                        <p className={`icon-loading ${styles.loader_icon}`}></p>
+                        <span>Sending Code... </span>
+                      </div>
+                    ) : (
+                      <button
+                        type="button"
+                        className={styles.new_code}
+                        onClick={reSendOTP}
+                      >
+                        New Verification Code Sent
+                      </button>
+                    )}
+                  </div>
+                )}
+              </>
+            ) : (
+              <div className={styles.error_container}>
+                <span className={styles.error_msg}>
+                  Looks like something went wrong. Please try again later.
+                </span>
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </Fragment>

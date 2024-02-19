@@ -245,12 +245,14 @@ const BusinessProfiles: FC = () => {
       renderCell: (params) => {
         return (
           <div
-            className={`${"chip"} chip--${
+            className={`${"chips"} chips--${
               statusList[params.row.status]?.color
             }`}
           >
             <div
-              className={`chip__text--${statusList[params.row.status]?.color} `}
+              className={`chips__text--${
+                statusList[params.row.status]?.color
+              } `}
             >
               {statusList[params.row.status]?.label}
             </div>

@@ -13,3 +13,10 @@ export const resendSmsOtp = () => {
 };
 
 export const logoutUser = () => api.post("/admin/sign-out");
+
+export const phoneOtpStepup = (otp: any) => {
+  const payload = {
+    otp: otp,
+  };
+  return api.post("/admin/step-up/phone", payload);
+};
