@@ -1,0 +1,50 @@
+.checkbox {
+  input[type="checkbox"] {
+    &:checked {
+      border-color: var(--rbl1);
+      box-shadow: 0 0 0 1px var(--rbl1);
+      background-color: var(--rbl1);
+    }
+    &:checked::before {
+      content: "\ea92";
+      position: absolute;
+      left: 14px;
+      font-weight: bold;
+      font-size: 10px;
+      font-family: "icomoon";
+      color: var(--cwhite);
+    }
+  }
+}
+.hover {
+  &:hover {
+    border: 1px solid var(--cm16);
+    box-shadow: 0px 1px 3px var(--cgy7);
+  }
+}
+
+.openstate {
+  border: 1px solid var(--cgy6);
+  box-shadow: 0px 1px 3px var(--cgy6);
+  &:hover {
+    border: 1px solid var(--cgy6);
+  }
+}
+
+.openMultiSelect {
+  font-size: 8px;
+  font-weight: bold;
+  color: var(--rbl1);
+  transform: rotate(180deg);
+}
+
+.closedDropdown {
+  font-size: 8px;
+  font-weight: bold;
+  transition: ease-in;
+  transition-delay: 300;
+  color: #767676;
+  :hover {
+    color: var(--rbl1);
+  }
+}

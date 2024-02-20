@@ -1288,3 +1288,148 @@ export function TextAreaField({
     </div>
   );
 }
+
+export function FormSelectWithAddButton({
+  topLabel = "",
+  label = "",
+  dropdownClassName,
+  buttonName = "",
+  isPermissionDropdown = false,
+  options = [
+    { value: "Option 1", label: "Option 1" },
+    { value: "Option 2", label: "Option 2" },
+    { value: "Option 3", label: "Option 3" },
+  ],
+  value = {},
+  onChange = () => {},
+  onBlur = () => {},
+  error,
+  openDropdown = false,
+  onAddButtonClick = () => {},
+}) {
+  const addButtonRef = useRef(null);
+
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  useOutsideClick(addButtonRef, () => {
+    if (!openDropdown && isDropdownOpen) {
+      setIsDropdownOpen(false);
+    }
+  });
+
+  const handleBlur = () => {
+    onBlur();
+  };
+
+  const handleSelectOption = (option) => {
+    onChange(option);
+    setIsDropdownOpen(false);
+  };
+
+  useEffect(() => {
+    setIsDropdownOpen(false);
+  }, [value]);
+
+  return (
+    <div className="relative h-10 mb-[26px]" ref={addButtonRef}>
+      <div
+        className={`${
+          error && !isDropdownOpen && "border-crd5"
+        } min-h-[40px] rounded-[10px] border bg-cwhite border-solid w-full absolute group ${
+          isDropdownOpen
+            ? `z-10 border-cbl11 ${styles.formSelectWithAddButton}`
+            : `border-cgy1 ${!error && "hover:border-cbl11"}  ${
+                styles.formSelectWithAddButtonClose
+              }`
+        }`}
+        tabIndex="0"
+        onBlur={handleBlur}
+      >
+        {value !== "" && (
+          <p className={styles.formAddButtonTopLabel}>{topLabel}</p>
+        )}
+        <button
+          type="button"
+          onClick={() => {
+            setIsDropdownOpen(!isDropdownOpen);
+          }}
+          className="flex h-[38px] justify-between items-center w-full px-3.5"
+        >
+          <span
+            className={`text-sm truncate ${
+              value ? "text-cgy4 font-semibold" : "text-cgy3"
+            }`}
+          >
+            {value ? value?.label : label}
+          </span>
+          <span
+            className={`icon-small-arrow1 text-[7px] transition-all ${
+              isDropdownOpen
+                ? "!text-cgy26 rotate-180"
+                : "!text-cgy3 group-hover:!text-cm4"
+            }`}
+          />
+        </button>
+        {isDropdownOpen && (
+          <div className={styles.formAddButtonMainOptionsList}>
+            <div className={`${dropdownClassName} ${styles.optionsSelector}`}>
+              {options.map((item, index) => {
+                return (
+                  <button
+                    type="button"
+                    key={index}
+                    onClick={() => handleSelectOption(item)}
+                    className={`${styles.formAddButtonMainDropdownButton} w-full `}
+                  >
+                    <span
+                      className={`${styles.formAddButtonValueLabel} ${
+                        item?.value === value?.value &&
+                        styles.formAddButtonSelectedValue
+                      } w-full ${
+                        item?.value === value?.value && "flex justify-between"
+                      }`}
+                    >
+                      <div className="flex items-center w-[85%]">
+                        <span className="break-all text-start">
+                          {item?.label}
+                        </span>
+                        {item?.isStar == true && (
+                          <span
+                            className={`${styles.formAddButtonStarIcon} icon-star`}
+                          />
+                        )}
+                      </div>
+                      {item?.value === value?.value && (
+                        <span
+                          className={`${styles.formAddButtonSuccessIcon} icon-tick`}
+                        />
+                      )}
+                    </span>
+                    {isPermissionDropdown && (
+                      <span className={`${styles.formAddButtonDescription}`}>
+                        {item?.description}
+                      </span>
+                    )}
+                  </button>
+                );
+              })}
+            </div>
+            <div className={styles.formButtonDiv}>
+              <button
+                type="button"
+                onClick={onAddButtonClick}
+                className={styles.formTextAddButtonSubmit}
+              >
+                <span className={`icon-plus ${styles.formTextAddButtonIcon}`} />
+                <span className={styles.formTextAddMainButton}>
+                  {buttonName}
+                </span>
+              </button>
+            </div>
+          </div>
+        )}
+      </div>
+      <p className={styles.formTextAddButtonError}>{error}</p>
+    </div>
+  );
+}

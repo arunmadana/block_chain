@@ -48,7 +48,7 @@ a.active {
   &__primary {
     color: var(--gray-500);
     border: none;
-    @include shadow-light;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
 
     &--blue {
       background: #35bab6;
@@ -141,7 +141,7 @@ a.active {
     }
 
     &:hover {
-      @include shadow-light;
+      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
       background: #fef9e2;
     }
   }
@@ -296,46 +296,6 @@ a.active {
   }
 }
 
-.bigButton {
-  @include shadow-light;
-  min-width: 100px;
-  max-width: 600px;
-  width: 100%;
-  color: #fff;
-  padding: 47px;
-  font-weight: 700;
-  font-size: 16px;
-  border-radius: 4px;
-  outline: none;
-  border: none;
-  transition: all 0.3s linear;
-  cursor: pointer;
-
-  @include media("width<=1160px") {
-    padding: 32px;
-  }
-
-  &:focus {
-    outline: none;
-  }
-
-  &--green {
-    background-color: #35bab6;
-
-    &:hover {
-      background-color: #249d99;
-    }
-  }
-
-  &--yellow {
-    background-color: #ffd95a;
-
-    &:hover {
-      background-color: #ffca37;
-    }
-  }
-}
-
 .btn--giant {
   background-color: #fff;
   min-width: 320px;
@@ -432,26 +392,26 @@ $assetPath: "/Assets/Images";
   box-shadow: 0px 1px 3px var(--cgy6);
 }
 
-.filterIcon {
-  background: url(#{$assetPath}/filter-icon.svg);
-  background-repeat: no-repeat;
-}
+// .filterIcon {
+//   background: url(#{$assetPath}/filter-icon.svg);
+//   background-repeat: no-repeat;
+// }
 
-.group:hover .filterIcon {
-  background-image: url(#{$assetPath}/filter-icon-blue.svg);
-  background-repeat: no-repeat;
-}
+// .group:hover .filterIcon {
+//   background-image: url(#{$assetPath}/filter-icon-blue.svg);
+//   background-repeat: no-repeat;
+// }
 
-.exportIcon {
-  background: url(#{$assetPath}/export-icon.svg);
-  background-repeat: no-repeat;
-  padding: 1px;
-}
+// .exportIcon {
+//   background: url(#{$assetPath}/export-icon.svg);
+//   background-repeat: no-repeat;
+//   padding: 1px;
+// }
 
-.group:hover .exportIcon {
-  background-image: url(#{$assetPath}/export-icon-blue.svg);
-  background-repeat: no-repeat;
-}
+// .group:hover .exportIcon {
+//   background-image: url(#{$assetPath}/export-icon-blue.svg);
+//   background-repeat: no-repeat;
+// }
 
 .Active {
   background-color: var(--rbl1);
@@ -466,54 +426,6 @@ $assetPath: "/Assets/Images";
 }
 
 .mainMenuButtonContainer {
-  @include media("width<=1440px") {
-    width: 220px;
-  }
-  @media (min-width: 1297px) and (max-width: 1417px) {
-    height: 54px;
-    width: 221px;
-    // margin-left: -8px;
-    margin-bottom: 10px;
-    color: #767676;
-    &:hover {
-      background-color: #f2f5f8;
-      border-radius: 10px;
-      opacity: 1;
-      cursor: pointer;
-      color: var(--cm3);
-    }
-    &.buttonActive {
-      background-color: #f2f5f8;
-      border-radius: 10px;
-      opacity: 1;
-      cursor: pointer;
-      .activeLabel {
-        color: var(--cgy4);
-        font-weight: 600;
-      }
-      .divArrowSelected {
-        color: var(--cm3);
-      }
-      .buttonLabel {
-        width: 162px;
-        height: 16px;
-        text-align: left;
-        font-size: 16px;
-        font-weight: 600;
-        letter-spacing: 0.48px;
-        opacity: 1;
-      }
-      .arrowSelected {
-        color: var(--cm3);
-        @media (max-width: 1441px) {
-          margin-left: -22px;
-        }
-        @media (max-width: 1416px) {
-          color: var(--cm3);
-        }
-      }
-    }
-  }
   height: 54px;
   width: 256px;
   margin-bottom: 10px;

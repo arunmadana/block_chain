@@ -21,7 +21,7 @@ import {
   activateEmployee,
   deActivateEmployee,
   deletePermissionsList,
-  getEmployeesList,
+  getEmployeeList,
   getPermissionsList,
   resendEmployeeList,
 } from "../../services/Employees/Employees";
@@ -61,7 +61,7 @@ const Employees: FC<EmployeesProps> = () => {
       pageSize: 10000,
     };
     setIsLoading(true);
-    getEmployeesList(employeesPayload)
+    getEmployeeList(employeesPayload)
       .then((res) => {
         setIsLoading(false);
         setEmployeesListData(res?.data?.data?.items);

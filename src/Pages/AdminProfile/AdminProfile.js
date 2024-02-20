@@ -1,52 +1,50 @@
-import successIcon from "../../assets/successIcon.svg";
-import handheldDevice from "../../assets/HandheldDevice.png";
-import { ReconfigureTwoStepAuthentication } from "./ReconfigureTwoStepAuthentication/ReconfigureTwoStepAuthentication";
-import ENV from "../../EnvironmentVariables.json";
+import { Button } from "@mui/joy";
+import axios from "axios";
 import { useFormik } from "formik";
-import React, { useCallback, useEffect, useState } from "react";
+import PropTypes from "prop-types";
+import { useCallback, useEffect, useState } from "react";
 import { useDropzone } from "react-dropzone";
 import Cropper from "react-easy-crop";
 import "react-image-crop/dist/ReactCrop.css";
 import { useDispatch, useSelector } from "react-redux";
-import { Tooltip as ReactTooltip } from "react-tooltip";
 import uuid from "react-uuid";
 import * as Yup from "yup";
-import styles from "./AdminProfile.module.scss";
-import getCroppedImg from "./cropImage";
-import { base64StringtoFile } from "./ImageCrop";
-import PropTypes from "prop-types";
-import userDateTime from "../../helpers/userDateTime";
-import { textEllipsis } from "../../helpers/textEllipsis";
-import axios from "axios";
+import { ActionTypeEnums } from "../../Enums/ActionTypeEnums";
+import { LocalStorageKeysEnum } from "../../Enums/LocalStorageKeysEnum";
+import ENV from "../../EnvironmentVariables.json";
+import { fetchUserDetailsAction } from "../../Store/ducks/adminUserDetails";
+import { logout } from "../../Store/ducks/auth";
+import handheldDevice from "../../assets/HandheldDevice.png";
+import successIcon from "../../assets/successIcon.svg";
+import { HBar } from "../../components/Bars/Bars";
 import Card from "../../components/Card/Card";
+import { ChipTitle } from "../../components/ChipTitle/ChipTitle";
+import { H1, H2 } from "../../components/Heading/Heading";
+import Modal from "../../components/Modal/Modal";
 import PasswordInput from "../../components/PasswordInput/PasswordInput";
-import { otpValidade } from "../../services/transactions/transactions";
+import PasswordStrength from "../../components/PasswordStrength/PasswordStrength";
+import { PhoneOtpVerification } from "../../components/PhoneOtpVerification/PhoneOtpVerification";
+import Spinner from "../../components/Spinner/Spinner";
+import VerificationInput from "../../components/VerificationInput/VerificationInput";
+import codeToString from "../../helpers/codeToString";
+import nameToInitials from "../../helpers/initials";
+import { internationalPhoneFormat } from "../../helpers/internationalPhoneFormat";
+import { textEllipsis } from "../../helpers/textEllipsis";
+import userDateTime from "../../helpers/userDateTime";
+import { getStorage } from "../../services/Storage";
 import {
   RemoveImageAPI,
   changeAdminPassword,
 } from "../../services/greenboxUsers/greenboxUsers";
-import { getStorage } from "../../services/Storage";
-import { fetchUserDetailsAction } from "../../Store/ducks/adminUserDetails";
-import { logout } from "../../Store/ducks/auth";
-import { ActionTypeEnums } from "../../Enums/ActionTypeEnums";
-import { internationalPhoneFormat } from "../../helpers/internationalPhoneFormat";
-import { H1, H2 } from "../../components/Heading/Heading";
-import VerificationInput from "../../components/VerificationInput/VerificationInput";
-import { PhoneOtpVerification } from "../../components/PhoneOtpVerification/PhoneOtpVerification";
-import { PrimaryButtonSmall } from "../../components/Buttons/Buttons";
-import nameToInitials from "../../helpers/initials";
-import { HBar } from "../../components/Bars/Bars";
-import PasswordStrength from "../../components/PasswordStrength/PasswordStrength";
-import Modal from "../../components/Modal/Modal";
-import { ChipTitle } from "../../components/ChipTitle/ChipTitle";
-import { LocalStorageKeysEnum } from "../../Enums/LocalStorageKeysEnum";
-import Spinner from "../../components/Spinner/Spinner";
-import codeToString from "../../helpers/codeToString";
+import { otpValidade } from "../../services/transactions/transactions";
+import styles from "./AdminProfile.module.scss";
+import { base64StringtoFile } from "./ImageCrop";
+import { ReconfigureTwoStepAuthentication } from "./ReconfigureTwoStepAuthentication/ReconfigureTwoStepAuthentication";
+import getCroppedImg from "./cropImage";
 
 export default function AdminProfile() {
   const dispatch = useDispatch();
   const userDetailsData = useSelector((store) => store.adminUserDetails?.data);
-  console.log(userDetailsData,'DETAILS')
 
   const [profileEdit, setProfileEdit] = useState(false);
   const [profileStep, setProfileStep] = useState(0);
@@ -226,12 +224,12 @@ export default function AdminProfile() {
                 </div>
               )}
               {!showPassCode && (
-                <PrimaryButtonSmall
+                <Button
                   onClick={handleChangePassword}
                   className={styles.buttonClass}
                 >
                   Change Password
-                </PrimaryButtonSmall>
+                </Button>
               )}
             </div>
           </div>
@@ -317,11 +315,6 @@ export default function AdminProfile() {
                   data-tooltip-id={"tooltip"}
                 />
               </p>
-              <ReactTooltip
-                id="tooltip"
-                isCapture={true}
-                className={styles.tooltipHovers}
-              />
             </div>
           </div>
         </div>
@@ -413,15 +406,15 @@ export default function AdminProfile() {
                     >
                       Cancel
                     </button>
-                    <PrimaryButtonSmall
+                    <Button
                       onClick={formik.handleSubmit}
                       type="submit"
-                      disable={
+                      disabled={
                         !(formik.dirty && formik.isValid) || isProcessing
                       }
                     >
                       Save
-                    </PrimaryButtonSmall>
+                    </Button>
                   </div>
                 </div>
               </>
@@ -704,24 +697,18 @@ const ProfilePopUp = ({
     setCroppedAreaPixels(croppedAreaPixels);
   }, []);
 
-  const handleSave = useCallback(
-    async () => {
-      setBtnLoading(true);
-      try {
-        const croppedImage = await getCroppedImg(imgSrc, croppedAreaPixels, 0);
-        const newCropped = await base64StringtoFile(
-          croppedImage,
-          newImage?.name
-        );
-        setTimeout(() => {
-          handleAPI(newCropped);
-        }, 1000);
-      } catch (e) {
-        console.error(e);
-      }
-    },
-    [croppedAreaPixels]
-  );
+  const handleSave = useCallback(async () => {
+    setBtnLoading(true);
+    try {
+      const croppedImage = await getCroppedImg(imgSrc, croppedAreaPixels, 0);
+      const newCropped = await base64StringtoFile(croppedImage, newImage?.name);
+      setTimeout(() => {
+        handleAPI(newCropped);
+      }, 1000);
+    } catch (e) {
+      console.error(e);
+    }
+  }, [croppedAreaPixels]);
 
   const handleAPI = (newCropped) => {
     //API
@@ -872,18 +859,17 @@ const ProfilePopUp = ({
             <Spinner size={36} />
           </div>
         ) : (
-          <PrimaryButtonSmall
-            label={
-              profileStep === 1
-                ? "Remove"
-                : profileStep === 2
-                ? "Save"
-                : "Upload New Image"
-            }
+          <Button
             className={styles.submitButton}
-            disable={(profileStep === 2 && imgSrc === null) || isBtnDisable}
+            disabled={(profileStep === 2 && imgSrc === null) || isBtnDisable}
             onClick={profileStep === 2 ? handleSave : handleStepClick}
-          />
+          >
+            {profileStep === 1
+              ? "Remove"
+              : profileStep === 2
+              ? "Save"
+              : "Upload New Image"}
+          </Button>
         )}
       </div>
     </Modal>
@@ -1006,7 +992,7 @@ const PhoneVerification = ({ setShowConfigureModal, show }) => {
               : "Configured"}
           </h1>
           <img src={successIcon} className={styles.successImage} />
-          <PrimaryButtonSmall label="Done" onClick={handleClose} />
+          <Button onClick={handleClose}>Done</Button>
         </div>
       )}
     </Modal>

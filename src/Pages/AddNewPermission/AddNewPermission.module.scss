@@ -1,0 +1,134 @@
+.addNewPermissionModal {
+  width: 628px;
+}
+.mainAddPermissions {
+  padding: 0 20px 8px 20px;
+}
+.permissionsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid var(--cm2);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.addEmployeeHeader {
+  color: var(--cgy4);
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 32px;
+  margin-top: 8px;
+}
+.cancelSaveButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 32px;
+}
+.cancelButton {
+  font-size: 12px;
+  font-weight: semibold;
+  color: var(--cgy3);
+  &:hover {
+    color: var(--cgy4);
+    text-decoration: underline;
+  }
+}
+.featuresHeading {
+  height: 35px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--rgy1);
+  background-color: var(--cm1);
+  border-top-left-radius: 10px;
+  border-bottom: 1px solid var(--cm2);
+  border-right: 1px solid var(--cm2);
+}
+.permissionsHeading {
+  height: 35px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--rgy1);
+  border-top-right-radius: 10px;
+  border-bottom: 1px solid var(--cm2);
+  background-color: var(--cm1);
+}
+.CustomToggle {
+  height: 35px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--rgy1);
+  border-bottom: 1px solid var(--cm2);
+  background-color: var(--cm9);
+}
+.editCustomToggle {
+  height: 35px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--rgy1);
+  border-bottom: 1px solid var(--cm2);
+  background-color: var(--cwhite);
+}
+.lastCustomToggle {
+  height: 35px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--rgy1);
+  background-color: var(--cm9);
+}
+.businessesTableData {
+  height: 35px;
+  padding-left: 25px;
+  justify-content: start;
+  align-items: center;
+  display: flex;
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--rgy1);
+  background-color: var(--cm9);
+  border-right: 1px solid var(--cm2);
+  border-bottom: 1px solid var(--cm2);
+}
+.exportsTableData {
+  height: 35px;
+  padding-left: 25px;
+  justify-content: start;
+  align-items: center;
+  display: flex;
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--rgy1);
+  background-color: var(--cm9);
+  border-right: 1px solid var(--cm2);
+}
+.editTableData {
+  height: 35px;
+  padding-left: 48px;
+  justify-content: start;
+  align-items: center;
+  display: flex;
+  font-size: 14px;
+  color: var(--rgy1);
+  background-color: var(--cwhite);
+  border-right: 1px solid var(--cm2);
+  border-bottom: 1px solid var(--cm2);
+}
+.textArea {
+  height: 72px;
+  margin-bottom: 24px;
+}

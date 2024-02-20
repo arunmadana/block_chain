@@ -1,0 +1,15 @@
+.title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  max-height: 20px;
+  .text {
+    display: block;
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--rgy1);
+    line-height: 43px;
+    flex: 1;
+  }
+}

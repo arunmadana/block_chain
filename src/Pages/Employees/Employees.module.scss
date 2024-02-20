@@ -18,3 +18,54 @@
   text-align: center;
   justify-content: center;
 }
+
+.addEmployeeButton {
+  height: 40px;
+  width: 153px;
+  font-size: 14px;
+  border: 1px solid var(--cm3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--cm3) !important;
+}
+
+.ryvylEmployeesCard {
+  min-height: 700px;
+}
+
+.dropDownFilterAndSearch {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filterAndSearch {
+  display: flex;
+  gap: 12px;
+}
+
+.trash {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  border-radius: 100px;
+  background-color: white;
+  &:hover {
+    background-color: var(--cm4);
+    color: white;
+  }
+}
+.trash_disabled {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 100px;
+  cursor: default;
+  color: var(--cgy2);
+  background-color: white;
+}

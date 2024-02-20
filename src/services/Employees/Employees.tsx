@@ -24,7 +24,7 @@ export const getDefaultRoles = (data: any) => {
   return api.get(`/system-roles/default`, data);
 };
 
-export const getEmployeesList = (data: any) => {
+export const getEmployeeList = (data: any) => {
   return api.post(`/profile/admin/list `, data);
 };
 
@@ -58,4 +58,12 @@ export const activateEmployee = (data: any) => {
 
 export const deActivateEmployee = (data: any) => {
   return api.patch(`/profile/admin/update-status`, data);
+};
+
+export const getEmployeesCount = (data: any) => {
+  return api.post(`/profile/admin/count`, data);
+};
+
+export const countryList = () => {
+  return api.get("/country/list");
 };

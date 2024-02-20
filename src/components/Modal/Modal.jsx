@@ -108,6 +108,7 @@ const Modal = ({
                     smallModal ? "self-end" : "self-end mb-4 -mr-5"
                   }`}
                 >
+                  <img src={backArrowIcon} width="20" height="20" />
                   <div
                     className={`${
                       smallModal

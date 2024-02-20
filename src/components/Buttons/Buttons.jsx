@@ -1,4 +1,5 @@
 import "./Buttons.style.scss";
+import styles from "./Buttons.module.scss";
 
 export const AddingButton = ({
   id = "",
@@ -29,46 +30,62 @@ export const AddingButton = ({
   );
 };
 
-export const PrimaryButtonSmall = ({
-  id = '',
-  children,
+export const CustomButton = ({
+  id = "",
   className,
-  label = '',
+  children,
+  icon,
   disable,
-  type = 'button',
-  leftImage,
-  rightImage,
-  isActionButton = false,
-  onClick = () => {}
+  isSelected = false,
+  small = false,
+  onClick,
+  onBlur,
+  border = false,
+  "ui-auto": ui_auto = "",
+  ...props
+}) => {
+  return (
+    <button
+      data-testid="customButton"
+      className={` text-sm
+      ${styles.btn} ${styles.btn__custom_button}  ${
+        small ? `${styles.btn__icon__small}` : ""
+      } ${isSelected ? `${styles.Active}` : ""} ${className} ${
+        border && `${styles.buttonBorder}`
+      }`}
+      onClick={onClick}
+      onBlur={onBlur}
+      id={id}
+      disabled={disable}
+      ui-auto={ui_auto}
+      {...props}
+    >
+      {children}
+    </button>
+  );
+};
+
+export const PrimaryButton = ({
+  id = "",
+  label = "",
+  children,
+  className = "",
+  disable = false,
+  type = "button",
+  onClick = () => {},
 }) => {
   return (
     <button
       id={id}
+      disabled={disable}
       data-testid={id}
-      type={type}
-      className={`h-9 w-[170px] rounded-full font-bold text-center transition-all ease text-base
-      ${
-        !disable
-          ? 'hover:bg-cm4 bg-cm3 text-cwhite'
-          : `bg-cwhitesmoke pointer-events-none ${
-              isActionButton ? 'text-cgy1' : 'text-cgy2 '
-            }`
+      className={`${styles.primaryButton} ${
+        !disable ? styles.notDisable : styles.isDisable
       } ${className}`}
       onClick={onClick}
+      type={type}
     >
-      {leftImage && (
-        <span
-          className={`icon-${leftImage} text-xs mr-2`}
-          data-testid="leftImage"
-        />
-      )}
       {children || label}
-      {rightImage && (
-        <span
-          className={`icon-${rightImage} text-xs ml-3`}
-          data-testid="rightImage"
-        />
-      )}
     </button>
   );
 };

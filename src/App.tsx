@@ -111,23 +111,25 @@ function App() {
                       }
                     />
                   </Route>
-                  <Route
+
+                  <Route path="/dashboards/:type" element={<Employees />} />
+                  {/* <Route
                     path={`/dashboards/employees`}
                     element={<Employees />}
-                  />
+                  /> */}
                   <Route
                     path={`/dashboards/employees/details`}
                     element={<EmployeesDetails />}
                   />
                   <Route
-                    path={`/dashboards/employees/new`}
+                    path={`/dashboards/permission-roles/add-roles`}
                     element={<NewPermissionRole />}
                   />
                   <Route
-                    path={`/dashboards/employees/view`}
+                    path={`/dashboards/permission-roles/view-roles`}
                     element={<ViewPermissionRole />}
                   />
-                  <Route path={`/dashboards/roles`} element={<Employees />} />
+                  {/* <Route path={`/dashboards/roles`} element={<Employees />} /> */}
                   <Route path={`/dashboards/exports`} element={<Exports />} />
                 </Route>
               </Route>
