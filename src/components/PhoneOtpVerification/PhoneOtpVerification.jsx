@@ -10,9 +10,7 @@ import VerificationInput from "../VerificationInput/VerificationInput";
 import styles from "./PhoneOtpVerification.module.scss";
 
 export function PhoneOtpVerification({
-  email,
   actionType,
-  onVerifySmsCode = () => {},
   afterVerification = () => {},
 }) {
   const blankCode = ["", "", "", "", "", ""];

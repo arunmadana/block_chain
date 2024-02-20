@@ -41,7 +41,7 @@ export const {
   storeUserDetails,
 } = userDetailsSlice.actions;
 
-export const fetchUserDetailsAction = () => (dispatch) => {
+export const fetchUserDetailsAction = () => (dispatch: any) => {
   // const userId = getStorage('userIdLogin');
   dispatch(fetchUserDetailLoading());
   profileInformation()

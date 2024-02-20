@@ -1,0 +1,21 @@
+// @import 'Styles/_mixins.scss';
+
+.chip {
+  // @include rounded;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 33px;
+  max-width: max-content;
+  padding: 6px 12px;
+  background-color: var(--cm1);
+  color: var(--rgy1);
+  font-size: 16px;
+  font-weight: 400;
+}
+.pointerCursor {
+  cursor: pointer;
+}
+.defaultCursor {
+  cursor: default;
+}

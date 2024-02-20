@@ -26,6 +26,7 @@ import { ViewPermissionRole } from "./Pages/ViewPermissionRole/ViewPermissionRol
 import store from "./Store";
 import { PrivateRoute } from "./components/PrivateRoute/PrivateRoute";
 import Loader from "./components/common/loader/loader";
+import AdminProfile from "./Pages/AdminProfile/AdminProfile";
 
 function App() {
   return (
@@ -42,6 +43,10 @@ function App() {
               <Route path={`/login/sms-otp`} element={<PhoneVerification />} />
               <Route path="/" element={<PrivateRoute />}>
                 <Route path={`/`} element={<Base />}>
+                  <Route
+                    path="/dashboards/user-details"
+                    element={<AdminProfile />}
+                  />
                   <Route
                     path={`/dashboards/profiles`}
                     element={<BusinessProfiles />}

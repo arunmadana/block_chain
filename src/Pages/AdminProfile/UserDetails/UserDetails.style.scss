@@ -1,0 +1,53 @@
+@import 'Styles/_include-media';
+
+#admin-profile-user-details {
+  position: relative;
+  margin-bottom: 20px;
+
+  .labeled-toggle {
+    width: 70px;
+    max-width: 70px;
+    min-width: 70px;
+
+    position: absolute;
+    right: -8px;
+    top: -48px;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: column;
+
+    .form-field {
+      &:first-child {
+        margin-right: 0;
+      }
+    }
+
+    &:last-child {
+      .form-field {
+        margin-bottom: 24px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    @include media('width>1266px') {
+      flex-direction: row;
+
+      &:last-child {
+        .form-field {
+          margin-bottom: 0;
+        }
+      }
+
+      .form-field {
+        &:first-child {
+          margin-right: 24px;
+        }
+      }
+    }
+  }
+}

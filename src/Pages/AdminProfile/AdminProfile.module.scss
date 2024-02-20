@@ -1,0 +1,606 @@
+// @import 'Styles/_mixins.scss';
+// @import 'Styles/_include-media';
+
+.container {
+  width: 519px;
+  height: 435.99px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .initials {
+    font-size: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    letter-spacing: 8.4px;
+    margin-left: 15px;
+    margin-top: 60px;
+  }
+
+  .image-resize {
+    background-size: contain;
+  }
+
+  .imageUpload {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 90px;
+  }
+
+  .cropImage {
+    min-width: 300px;
+    min-height: 350px;
+  }
+}
+
+.verification_Modal {
+  width: 512px;
+  display: flex;
+  flex-direction: column;
+}
+
+.verificationModalContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 24px;
+}
+
+.titleClass {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  color: var(--cgy4);
+  margin-top: 8px;
+  height: 33px;
+}
+
+.twostepTitleClass {
+  height: 61px;
+}
+
+.titleSubLabelClass {
+  font-size: 14px;
+  text-align: center;
+  line-height: 19px;
+  color: var(--cgy4);
+  margin-bottom: 48px;
+  margin-top: 48px;
+}
+
+.verificationCodeTitle {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 19px;
+  color: var(--cgy4);
+  margin-bottom: 16px;
+}
+
+.issueLabelClass {
+  font-size: 14px;
+  color: var(--cgy3);
+
+  line-height: 19px;
+  margin-top: 24px;
+}
+
+.getSmsClass {
+  font-weight: 600;
+  color: var(--cm3);
+  margin-left: 4px;
+
+  &:hover {
+    cursor: pointer;
+    color: var(--cm4);
+    text-decoration: underline;
+  }
+}
+
+.fontMini {
+  font-size: 10px;
+  margin-bottom: -6px;
+}
+
+.placement {
+  width: 348px;
+  height: 44px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.animatePassword {
+  display: flex;
+  flex-direction: column;
+  transition: 1s ease-out;
+  margin-top: 44px;
+}
+
+.container_col {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.reconfigure_modal {
+  width: 696px;
+  height: 730px;
+}
+
+.password_modal {
+  width: 512px;
+}
+
+.success_modal {
+  width: 512px;
+}
+
+.successModalContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 24px;
+}
+
+.successImage {
+  height: 172px;
+  width: 172px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  align-self: center;
+}
+
+.download_auth {
+  width: 696px;
+}
+
+.cardClass {
+  min-height: 289px;
+}
+
+.tooltipHovers {
+  opacity: 1;
+  z-index: 10;
+}
+
+.userDetailsTitle {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--cgy4);
+  margin-bottom: 16px;
+}
+
+.detailsPasswordContainer {
+  display: grid;
+  grid-template-columns: 1.4fr 1.8fr;
+}
+
+.userDetailsContainer {
+  display: flex;
+  margin-right: 65px;
+}
+
+.profileInfo {
+  position: relative;
+  margin-right: 32px;
+}
+.profileContainer {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  background-color: var(--cm5);
+  width: 112px;
+  height: 112px;
+}
+
+.profileName {
+  font-weight: 700;
+  color: var(--cwhite);
+  font-size: 60px;
+}
+
+.profileImage {
+  width: 112px;
+  height: 112px;
+  border-radius: 100%;
+}
+
+.editIconClass {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  right: 0px;
+  bottom: 0px;
+  top: 86px;
+  height: 24px;
+  border-radius: 100%;
+  color: var(--cm3);
+  font-size: 12px;
+  cursor: pointer;
+  background-color: var(
+    --cm1
+  ) !important; // added important to override background color of button which is transperent by default.
+}
+
+.userName {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 33px;
+  color: var(--cgy4);
+  margin-bottom: 4px;
+}
+
+.imgContainer {
+  width: 112px;
+  height: 112px;
+  border-radius: 100%;
+}
+.userIdDiv {
+  font-size: 14px;
+  color: var(--cgy3);
+  line-height: 19px;
+  margin-bottom: 24px;
+}
+
+.configurationClass {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--cgy4);
+  margin-bottom: 24px;
+  .dateClass {
+    font-weight: 600;
+    color: var(--cgy4);
+  }
+  .reconfigureClass {
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--cm3);
+    &:hover {
+      color: var(--cm4);
+      text-decoration: underline;
+    }
+  }
+}
+
+.permissionContaine {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  height: fit-content;
+  column-gap: 12px;
+  row-gap: 24px;
+}
+
+.roleClass {
+  padding-left: 24px;
+  font-size: 10px;
+  color: var(--cm5);
+  line-height: 14px;
+  margin-bottom: 4px;
+}
+
+.logo {
+  color: var(--cm5);
+  width: 16px;
+}
+
+.phoneLogo {
+  font-size: 14px;
+}
+
+.departmentLogo {
+  font-size: 18px;
+}
+
+.emailLogo {
+  font-size: 13px;
+}
+
+.permissionLogo {
+  font-size: 16px;
+}
+
+.lockClass {
+  font-size: 15px;
+  color: var(--cgy3);
+  &:hover {
+    color: var(--cgy4);
+  }
+}
+
+.infoClass {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--cgy4);
+  font-weight: 600;
+}
+
+.securityInfoClass {
+  margin-top: 24px;
+  font-size: 16px;
+  color: var(--cgy4);
+  line-height: 24px;
+  margin-bottom: 18px;
+}
+
+.fieldsContainer {
+  width: 273px;
+}
+
+.newPasswordClass {
+  margin-bottom: 0px;
+}
+
+.cancelButtonContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 48px;
+  margin-bottom: 24px;
+}
+
+.cancelButtonClass {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cgy3);
+  &:hover {
+    text-decoration: underline;
+    color: var(--cgy4);
+  }
+}
+
+.hBarClass {
+  border-color: #ecf3fd;
+  margin-bottom: 24px;
+}
+
+.passwordUpdateText {
+  margin-top: 24px;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--cgy4);
+  line-height: 24px;
+  margin-bottom: 55px;
+}
+
+.redirectClass {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 19px;
+  color: var(--cm3);
+  gap: 4px;
+  margin-bottom: 36px;
+}
+
+.spinnerClass {
+  color: var(
+    --cm3
+  ) !important; // added important to overide the color of the spinner.
+}
+
+.downloadAuthClass {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pointsContainer {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 600;
+  width: 433px;
+  gap: 16px;
+  color: var(--cgy4);
+}
+
+.recomendedClass {
+  color: var(--cgy3);
+  margin-left: 16px;
+  text-align: left;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.handleDeviceClass {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 48px;
+  gap: 32px;
+  margin-bottom: 40px;
+  height: 160px;
+  font-size: 14px;
+  color: var(--cgy3);
+}
+
+// commented for further refernce
+// .tooltip-click {
+//   opacity: 1 !important;
+// }
+
+// .__react_component_tooltip {
+//   font-weight: 700 !important;
+//   border-radius: 6px !important;
+//   color: red !important;
+// }
+
+// .place-top {
+//   &::before {
+//     z-index: -1 !important;
+//   }
+// }
+
+.imageContainer {
+  width: 448px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .modalTitle {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 33px;
+    color: var(--cgy4);
+    margin: 8px 0 31px 0;
+  }
+
+  .imagePosition {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .initialPosition {
+    margin-bottom: 81.5px;
+  }
+
+  .submitButton {
+    margin-bottom: 8px;
+    font-size: 14px;
+    &:disabled {
+      background: var(--cwhitesmoke);
+      color: var(--cm15);
+      cursor: default;
+      transition: 0.3 all linear;
+      border: none;
+      box-shadow: none;
+    }
+  }
+
+  .removeImgTitle {
+    font-size: 12px;
+    line-height: 17px;
+    color: var(--cgy3);
+    font-weight: 600;
+    text-align: center;
+    margin-top: 17px;
+    margin-bottom: 48px;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--cgy4);
+      text-decoration: underline;
+    }
+  }
+
+  .imageSize {
+    width: 200px;
+    height: 200px;
+    border-radius: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cm5);
+  }
+
+  .initialsSize {
+    font-weight: 600;
+    z-index: 999;
+    color: var(--cwhite);
+    font-size: 100px;
+  }
+
+  .uploadImg {
+    margin-bottom: 81px;
+  }
+
+  .imgPlacement {
+    display: flex;
+    justify-content: center;
+  }
+
+  .profileCropImage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 268.64px;
+    height: 200px;
+    margin-bottom: 32px !important;
+  }
+
+  .uploadSize {
+    width: 200px;
+    height: 200px !important;
+  }
+
+  .removeImageTitle {
+    font-size: 12px;
+    color: var(--cgy3);
+    font-weight: 600;
+    cursor: pointer;
+    line-height: 17px;
+    margin-top: 16px;
+
+    &:hover {
+      color: var(--cgy4);
+      text-decoration: underline;
+    }
+  }
+
+  .removeImage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 32px;
+  }
+
+  .removeImgDesc {
+    font-size: 14px;
+    text-align: center;
+    color: var(--cgy4);
+    margin-bottom: 16px;
+    line-height: 20px;
+    height: 39px;
+  }
+
+  .selectImage {
+    font-weight: 700;
+    color: var(--cwhite);
+  }
+
+  .initialsSizeSmall {
+    font-weight: 600;
+    z-index: 999;
+    color: var(--cwhite);
+    font-size: 90px;
+  }
+}
+
+.handImageClass {
+  width: 81px;
+}
+
+.buttonClass {
+  font-size: 14px !important; // added important to overide the tailwind style text-base.
+}
+
+.inputStyles {
+  width: 90%;
+}
+
+.spinnerStyle {
+  margin-bottom: 8px;
+}
+.contactNameEllipsis {
+  max-width: 223px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
