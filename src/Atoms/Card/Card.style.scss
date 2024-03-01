@@ -1,0 +1,112 @@
+.card {
+  position: relative;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 10px;
+  margin-bottom: 24px;
+  padding: 24px;
+  box-shadow: 2px rgba(0, 0, 0, 0.1);
+  .headers {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: #303453;
+    font-weight: bold;
+
+    .title {
+      display: flex;
+      cursor: default;
+      align-items: center;
+      font-size: 14px;
+      font-weight: bold;
+      color: #303453;
+      width: 100%;
+
+      &__multi {
+        width: 100%;
+        display: flex;
+
+        &__item {
+          flex: 1;
+        }
+      }
+
+      &__sub {
+        margin-left: 8px;
+        color: #828282;
+        font-size: 12px;
+        letter-spacing: 0.18px;
+        line-height: 20px;
+        font-weight: normal;
+      }
+
+      .title-icon {
+        font-size: 24px;
+        margin-right: 8px;
+      }
+    }
+    .edit-class {
+      display: flex;
+      flex-direction: row;
+      gap: 5px;
+      margin-left: 5px;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      .edit-text {
+        color: #828282;
+      }
+      .edit-icon {
+        font-size: 10px;
+        margin-top: 5px;
+      }
+    }
+    .icon-button {
+      transition: all 0.1s ease;
+      height: auto;
+      width: auto;
+      font-size: 14px;
+      &:hover {
+        background-color: transparent;
+        color: #828282;
+      }
+      &.expanded {
+        transform: rotate(180deg);
+      }
+    }
+    .header-controls {
+      display: flex;
+      align-items: center;
+    }
+  }
+  .body {
+    position: relative;
+    // margin-top: 24px;
+    // padding-top: 24px;
+    // border-top: 1px solid #efefef;
+    color: var(--cgy3);
+    .loading-overlay {
+      position: absolute;
+      top: -12px;
+      bottom: -12px;
+      left: -12px;
+      right: -12px;
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      border-radius: 4px;
+      z-index: 2;
+      .processing-label {
+        font-size: 16px;
+        font-weight: bold;
+        color: #303453;
+        margin-top: 24px;
+      }
+    }
+  }
+}

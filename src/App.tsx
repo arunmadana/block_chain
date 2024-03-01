@@ -16,7 +16,6 @@ import BusinessDetailsPointOfContact from "./Pages/BusinessDetailsPointofContact
 import BusinessProfiles from "./Pages/BusinessProfiles/BusinessProfiles";
 import BusinessTracker from "./Pages/BusinessTracker/BusinessTracker";
 import Employees from "./Pages/Employees/Employees";
-import EmployeesDetails from "./Pages/EmployeesDetails/EmployeesDetails";
 import Exports from "./Pages/Exports/Exports";
 import { Login } from "./Pages/Login/Login";
 import NewPermissionRole from "./Pages/NewPermissionRole/NewPermissionRole";
@@ -27,6 +26,7 @@ import store from "./Store";
 import { PrivateRoute } from "./components/PrivateRoute/PrivateRoute";
 import Loader from "./components/common/loader/loader";
 import AdminProfile from "./Pages/AdminProfile/AdminProfile";
+import { RyvylEmployeesDetails } from "./Pages/EmployeesDetails/EmployeesDetails";
 
 function App() {
   return (
@@ -119,7 +119,7 @@ function App() {
                   /> */}
                   <Route
                     path={`/dashboards/employees/details`}
-                    element={<EmployeesDetails />}
+                    element={<RyvylEmployeesDetails />}
                   />
                   <Route
                     path={`/dashboards/permission-roles/add-roles`}

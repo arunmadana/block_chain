@@ -1,0 +1,39 @@
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 16px;
+
+  &--past {
+    color: var(--cgy3);
+    transition: color 0.1s ease-in-out;
+    &:hover {
+      color: var(--cm4);
+      text-decoration: underline;
+    }
+  }
+
+  &--current {
+    color: #0c1e30;
+    font-weight: 600;
+  }
+
+  &--arrow {
+    transform: rotate(270deg);
+    font-size: 6px;
+    color: var(--cm5) !important;
+    margin: 0 14px;
+    font-weight: 700 !important;
+  }
+
+  &__icon {
+    display: inline-block;
+    color: var(--ccy1);
+    margin-right: 4px;
+    font-size: 16px;
+    &.past {
+      color: var(--gray-200);
+    }
+  }
+}

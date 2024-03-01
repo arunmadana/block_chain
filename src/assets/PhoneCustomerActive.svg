@@ -1,0 +1,18 @@
+<svg id="Group_18521" data-name="Group 18521" xmlns="http://www.w3.org/2000/svg" width="58.403" height="58.403" viewBox="0 0 58.403 58.403">
+  <circle id="Ellipse_1365" data-name="Ellipse 1365" cx="29.202" cy="29.202" r="29.202" fill="#e5f6f6"/>
+  <g id="mobile-phone_2_" data-name="mobile-phone (2)" transform="translate(18.62 10.419)">
+    <path id="Path_34927" data-name="Path 34927" d="M342.949,33.173V59.4l-4.535,2.268V30.905Z" transform="translate(-321.785 -28.637)" fill="#d6edd6"/>
+    <path id="Path_34928" data-name="Path 34928" d="M130.672,30.905V61.669l-18.9-2.268V33.173Z" transform="translate(-111.775 -28.637)" fill="#e5f3e5"/>
+    <g id="Group_17838" data-name="Group 17838" transform="translate(16.629)">
+      <path id="Path_34929" data-name="Path 34929" d="M340.682,419.284l-2.268,6.8h2.268a2.274,2.274,0,0,0,2.268-2.268v-4.535Z" transform="translate(-338.414 -388.52)" fill="#00908c"/>
+      <path id="Path_34930" data-name="Path 34930" d="M340.683,0h-2.268l2.268,4.535h2.268V2.268A2.274,2.274,0,0,0,340.683,0Z" transform="translate(-338.415)" fill="#00908c"/>
+    </g>
+    <g id="Group_17839" data-name="Group 17839" transform="translate(0)">
+      <path id="Path_34931" data-name="Path 34931" d="M130.672,419.284v4.535a2.274,2.274,0,0,1-2.268,2.268H114.043a2.274,2.274,0,0,1-2.268-2.268v-4.535Z" transform="translate(-111.775 -388.52)" fill="#00a6a2"/>
+      <path id="Path_34932" data-name="Path 34932" d="M130.672,2.268V4.535h-18.9V2.268A2.274,2.274,0,0,1,114.043,0H128.4A2.274,2.274,0,0,1,130.672,2.268Z" transform="translate(-111.775)" fill="#00a6a2"/>
+    </g>
+    <path id="Path_34933" data-name="Path 34933" d="M251.108,24.314h-2.268a.567.567,0,1,1,0-1.134h2.268a.567.567,0,0,1,0,1.134Z" transform="translate(-238.259 -21.479)" fill="#e5f3e5"/>
+    <circle id="Ellipse_1367" data-name="Ellipse 1367" cx="1.134" cy="1.134" r="1.134" transform="translate(9.448 33.031)" fill="#e5f3e5"/>
+    <circle id="Ellipse_1368" data-name="Ellipse 1368" cx="0.567" cy="0.567" r="0.567" transform="translate(7.748 1.701)" fill="#e5f3e5"/>
+  </g>
+</svg>

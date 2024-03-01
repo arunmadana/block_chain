@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="173.972" height="173.971" viewBox="0 0 173.972 173.971">
+  <g id="failed_X_icon" data-name="failed X icon" transform="translate(0)">
+    <rect id="Rectangle_4745" data-name="Rectangle 4745" width="99.664" height="99.664" rx="10" transform="translate(89.711 33.025) rotate(45)" fill="#fce9e8"/>
+    <g id="Success" transform="translate(0)">
+      <rect id="Rectangle_4734" data-name="Rectangle 4734" width="7.91" height="7.91" rx="1" transform="translate(18.334 73.309) rotate(30)" fill="#fce9e8"/>
+      <rect id="Rectangle_4735" data-name="Rectangle 4735" width="11.074" height="11.074" rx="1" transform="matrix(0.978, -0.208, 0.208, 0.978, 26.981, 40.768)" fill="#fce9e8"/>
+      <rect id="Rectangle_4744" data-name="Rectangle 4744" width="7.91" height="7.91" rx="1" transform="matrix(0.978, -0.208, 0.208, 0.978, 160.566, 70.974)" fill="#fce9e8"/>
+      <rect id="Rectangle_4736" data-name="Rectangle 4736" width="12.177" height="12.177" rx="1" transform="translate(61.156 28.028) rotate(-31)" fill="#fce9e8"/>
+      <rect id="Rectangle_4737" data-name="Rectangle 4737" width="7.431" height="7.431" rx="1" transform="translate(0.648 34.959) rotate(5)" fill="#fce9e8"/>
+      <rect id="Rectangle_4743" data-name="Rectangle 4743" width="7.431" height="7.431" rx="1" transform="translate(166.57 22.367) rotate(5)" fill="#fce9e8"/>
+      <rect id="Rectangle_4738" data-name="Rectangle 4738" width="7.431" height="7.431" rx="1" transform="translate(61.804) rotate(5)" fill="#fce9e8"/>
+      <rect id="Rectangle_4739" data-name="Rectangle 4739" width="7.431" height="7.431" rx="1" transform="translate(110.48 30.417) rotate(5)" fill="#fce9e8"/>
+      <rect id="Rectangle_4740" data-name="Rectangle 4740" width="10.595" height="10.595" rx="1" transform="matrix(0.891, 0.454, -0.454, 0.891, 140.538, 32.949)" fill="#fce9e8"/>
+      <rect id="Rectangle_4741" data-name="Rectangle 4741" width="6.402" height="6.402" rx="1" transform="translate(142.138 9.391) rotate(-15)" fill="#fce9e8"/>
+      <rect id="Rectangle_4746" data-name="Rectangle 4746" width="6.402" height="6.402" rx="1" transform="translate(25.184 10.576) rotate(-15)" fill="#fce9e8"/>
+      <rect id="Rectangle_4742" data-name="Rectangle 4742" width="6.402" height="6.402" rx="1" transform="translate(101.994 5.473) rotate(-15)" fill="#fce9e8"/>
+    </g>
+    <g id="noun_Check_1635228" transform="translate(34.812 39.145)">
+      <g id="Group_11138" data-name="Group 11138" transform="translate(0)">
+        <path id="Path_11146" data-name="Path 11146" d="M5.25,9.275S44.068,0,78.628,0,143.4,11.873,143.4,11.873a7.21,7.21,0,0,1,4.278,6.959l.332,3.062c-.145,2.558-2.777,2.2-5.039,1.645,0,0-31.893-8.768-66.453-8.768S5.652,30.7,5.652,30.7A5.25,5.25,0,0,1,.4,25.45L0,14.525A5.25,5.25,0,0,1,5.25,9.275Z" transform="translate(1.495 104.662) rotate(-45)" fill="#e32b25"/>
+        <path id="Path_11147" data-name="Path 11147" d="M10.809,0C40.565,0,52.754,1.819,69.99,3.88c15.564,1.815,42.88,7.049,58.884,14.816,1.869.906,8.965,3.33,11.5,5.723s.241,4.052-1.373,3.85a408.094,408.094,0,0,0-86.936-6.737C19.233,21.134,7.821,23.6,7.821,23.6c-4.368,0-6.632-.874-6.632-5.243L0,7.853C.081.694,6.441,0,10.809,0Z" transform="matrix(0.809, 0.588, -0.588, 0.809, 16.626, 11.073)" fill="#e32b25"/>
+      </g>
+    </g>
+  </g>
+</svg>

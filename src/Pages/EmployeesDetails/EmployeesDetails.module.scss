@@ -1,29 +1,69 @@
-.card {
-  border-radius: 10px;
-  background-color: #fff;
-  min-height: 250px;
-  width: 100%;
-  padding: 24px;
-  margin-top: 24px;
+
+.detailsContainer {
+  display: grid;
+  grid-template-columns: 46% 54%;
+  gap: 24px;
+  margin-bottom: 8px;
+
+  // @include media('width<1810px') {
+  //   grid-template-columns: 47% 53%;
+  // }
+  // @include media('width<1260px') {
+  //   display: inherit;
+  //   grid-template-columns: none;
+  // }
 }
 
-.nameAndDeptGrid {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: 1fr;
-  @media (min-width: "1360px") {
-    gap: 0px;
-    grid-template-columns: 1fr 1fr;
-  }
+.imageSection {
+  display: flex;
+  justify-content: space-between;
+}
+
+.line {
+  color: var(--cm2);
+  // @include media('width<1260px') {
+  //   display: none;
+  // }
 }
 
 .image {
   width: 137px;
   height: 137px;
   border-radius: 100px;
+  background-color: var(--rbl5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.initialName {
+  font-size: 72px;
+  font-weight: bold;
+  color: white;
+}
+
+.smallName {
+  font-size: 68px !important;
+}
+
+.imageAndName {
+  display: flex;
+  gap: 32px;
 }
 
 .name {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  // @include media('width<1610px') {
+  //   width: 65%;
+  // }
+  // @include media('width<1260px') {
+  //   width: 73%;
+  // }
+}
+
+.userName {
   font-size: 32px;
   font-weight: bold;
   line-height: 43px;
@@ -31,61 +71,187 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  // @include media('width<1440px') {
+  //   font-size: 30px;
+  // }
+  // @include media('width<1260px') {
+  //   font-size: 32px;
+  // }
 }
 
 .userId {
   font-size: 14px;
-  color: #767676;
+  color: var(--cgy3);
   margin-top: 8px;
   line-height: 19px;
 }
 
-.nameId {
-  display: flex;
-  flex-direction: column;
+.chip {
+  margin-top: 16px;
+  height: 25px !important;
 }
 
-.imageAndName {
+.leftSection {
   display: flex;
-  gap: 30px;
+  flex-direction: column;
+  width: 96%;
+}
+
+.date {
+  color: var(--rgy1);
+  font-size: 14px;
+}
+
+.dateAndStatus {
+  display: flex;
+  align-items: center;
+  line-height: 19px;
+  gap: 8px;
+  margin-top: 40px;
 }
 
 .status {
-  color: #0460e3;
+  color: var(--cm3);
   font-weight: 600;
   font-size: 14px;
-  border: none;
-  outline: none;
-  background-color: transparent;
   &:hover {
+    color: var(--cm4);
     text-decoration: underline;
   }
 }
 
-.formInputs {
+.phoneAndEmailContainer {
   display: grid;
-  gap: 10px;
   grid-template-columns: 1fr 1fr;
+  gap: 32px;
 }
 
-.viewPermissionButton {
-  outline: none;
-  border: none;
-  background-color: transparent;
+.phoneAndEmailInactive {
+  margin-bottom: 34px;
+}
+
+.phoneAndEmailActive {
+  margin-bottom: 32px;
+}
+
+.phoneAndEmailContainerActiveAndInactive {
+  margin-top: -4px;
+}
+
+.phone {
+  display: flex;
+  gap: 14px;
+}
+
+.emailAndRole {
+  display: flex;
+  gap: 12px;
+}
+
+.deptAndPermissionImgActive {
+  color: var(--rbl5);
+  font-size: 18px;
+  height: 19px;
   margin-top: 10px;
+}
+
+.phoneIconPending {
+  color: var(--rbl5);
+  font-size: 15.5px;
+  height: 15px;
+  margin-top: 11px;
+}
+
+.emailPending {
+  color: var(--rbl5);
+  font-size: 15px;
+  width: 18px;
+  margin-top: 11px;
+}
+
+.deptAndPermissionImg {
+  color: var(--rbl5);
+  font-size: 18px;
+  height: 19px;
+  margin-top: 8px;
+}
+
+.emailImg {
+  color: var(--rbl5);
+  font-size: 15px;
+  width: 18px;
+  margin-top: 1.5px;
+}
+
+.phoneImg {
+  color: var(--rbl5);
+  font-size: 15.5px;
+  height: 15px;
+  margin-top: 1.5px;
+  margin-left: 1.5px;
+}
+
+.phoneText {
+  color: var(--rgy1);
   font-size: 14px;
   line-height: 19px;
   font-weight: 600;
-  color: #0460e3;
+  width: fit-content;
+}
+
+.phoneTextTooltip {
+  cursor: pointer !important;
+}
+
+.formField {
+  margin-bottom: 0px !important;
+}
+
+.rightContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-right: 24px;
+  margin-top: 9px;
+}
+
+.rightContainerActiveAndInactive {
+  margin-top: 20px;
+}
+
+.roleAndDeptText {
+  font-size: 10px;
+  color: var(--rgy1);
+  margin-bottom: 2px;
+  line-height: 14px;
+}
+
+.permissionRole {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.viewPermission {
+  font-size: 14px;
+  line-height: 19px;
+  width: max-content;
+  font-weight: 600;
+  color: var(--cm3);
   cursor: pointer;
+  margin-top: -17px;
+  &:hover {
+    color: var(--cm4);
+    text-decoration: underline;
+  }
 }
 
 .activityLogContainer {
   height: 302px;
   overflow-y: auto;
-  border: 1px solid #d8e2f0;
+  border: 1px solid var(--cm2);
   border-radius: 10px;
-  margin-top: 15px;
+  margin-top: 32px;
   padding: 24px 24px 32px 22px;
 }
 
@@ -114,13 +280,82 @@
   color: #0c1e30;
   line-height: 17px;
 }
-
+.logContainer {
+  display: flex;
+  align-items: center;
+}
+.activityLogsData {
+  box-shadow: 0px 3px 8px var(--cgy7) !important;
+  border-radius: 10px;
+}
 .dot {
   margin-top: 5px;
-  width: 5px;
-  height: 5px;
-  border-radius: 100px;
-  background-color: black;
+}
+
+.saveButton {
+  display: flex;
+  justify-content: end;
+}
+
+.buttonStyles {
+  font-size: 14px !important;
+  line-height: 19px;
+}
+
+.modal {
+  width: 440px;
+}
+
+.modalDescription {
+  font-size: 14px;
+}
+
+.modalUserName {
+  font-weight: bold;
+}
+
+.modalUserNameTruncate {
+  cursor: pointer;
+}
+
+.modalCancel {
+  margin: 12px 0px 8px;
+  font-size: 12px;
+  line-height: 17px;
+  color: var(--cgy3);
+  cursor: pointer;
+  &:hover {
+    font-weight: 600;
+    text-decoration: underline;
+    color: var(--cgy4);
+  }
+}
+
+.invitationModal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.invitationModal_title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 33px;
+  color: var(--cgy4);
+  margin: 8px 0 32px;
+}
+
+.invitationModal_description {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--cgy4);
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.errorClassName {
+  top: 42px;
 }
 
 .noActivityLogs {
@@ -130,12 +365,5 @@
   margin-top: 120px;
   font-size: 16px;
   font-weight: 500;
-  color: #767676;
-}
-
-.activityLogName {
-  font-size: 18px;
-  text-decoration: underline;
-  font-weight: 600;
-  color: #0c1e30;
+  color: var(--cgy3);
 }

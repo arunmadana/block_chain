@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="39.221" height="37.245" viewBox="0 0 39.221 37.245">
+  <g id="small_check_icon" data-name="small check icon" transform="translate(-10.112 -7.727)">
+    <rect id="Rectangle_4745" data-name="Rectangle 4745" width="26.336" height="26.336" rx="5" transform="translate(28.734 7.727) rotate(45)" fill="#ccf5e2"/>
+    <g id="noun_Check_1635228" transform="translate(18.412 11.057)">
+      <g id="Group_11138" data-name="Group 11138">
+        <path id="Path_11145" data-name="Path 11145" d="M0,13.7c.637-1.275,1.912-2.868,4.142-2.23,1.912.637,3.186,2.549,4.142,5.1C15.932,7.966,22.3,1.912,29.952,0c.956,0,1.275,0,.637.637C22.3,6.373,14.339,14.976,7.966,26.128a.6.6,0,0,1-.956,0c-1.275-3.186-2.23-6.373-3.824-9.559C2.549,14.976,1.593,13.7,0,13.7Z" fill="#008a05"/>
+      </g>
+    </g>
+  </g>
+</svg>

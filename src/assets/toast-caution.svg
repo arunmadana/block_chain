@@ -1,0 +1,20 @@
+
+<svg id="Caution_exclaimation_mark_Icon" data-name="Caution exclaimation mark  Icon" xmlns="http://www.w3.org/2000/svg" width="112.942" height="112.941" viewBox="0 0 112.942 112.941">
+  <rect id="Rectangle_4745" data-name="Rectangle 4745" width="64.702" height="64.702" rx="10" transform="translate(58.24 21.439) rotate(45)" fill="#ffefd8"/>
+  <g id="Success" transform="translate(0 0)">
+    <rect id="Rectangle_4734" data-name="Rectangle 4734" width="5.135" height="5.135" rx="1" transform="translate(11.903 47.592) rotate(30)" fill="#ffefd8"/>
+    <rect id="Rectangle_4735" data-name="Rectangle 4735" width="7.189" height="7.189" rx="1" transform="matrix(0.978, -0.208, 0.208, 0.978, 17.516, 26.467)" fill="#ffefd8"/>
+    <rect id="Rectangle_4744" data-name="Rectangle 4744" width="5.135" height="5.135" rx="1" transform="matrix(0.978, -0.208, 0.208, 0.978, 104.239, 46.076)" fill="#ffefd8"/>
+    <rect id="Rectangle_4736" data-name="Rectangle 4736" width="7.905" height="7.905" rx="1" transform="translate(39.702 18.196) rotate(-31)" fill="#ffefd8"/>
+    <rect id="Rectangle_4737" data-name="Rectangle 4737" width="4.824" height="4.824" rx="1" transform="translate(0.42 22.695) rotate(5)" fill="#ffefd8"/>
+    <rect id="Rectangle_4743" data-name="Rectangle 4743" width="4.824" height="4.824" rx="1" transform="translate(108.136 14.521) rotate(5)" fill="#ffefd8"/>
+    <rect id="Rectangle_4738" data-name="Rectangle 4738" width="4.824" height="4.824" rx="1" transform="translate(40.123 0) rotate(5)" fill="#ffefd8"/>
+    <rect id="Rectangle_4739" data-name="Rectangle 4739" width="4.824" height="4.824" rx="1" transform="translate(71.723 19.747) rotate(5)" fill="#ffefd8"/>
+    <rect id="Rectangle_4740" data-name="Rectangle 4740" width="6.878" height="6.878" rx="1" transform="matrix(0.891, 0.454, -0.454, 0.891, 91.237, 21.391)" fill="#ffefd8"/>
+    <rect id="Rectangle_4741" data-name="Rectangle 4741" width="4.156" height="4.156" rx="1" transform="translate(92.275 6.096) rotate(-15)" fill="#ffefd8"/>
+    <rect id="Rectangle_4746" data-name="Rectangle 4746" width="4.156" height="4.156" rx="1" transform="translate(16.349 6.866) rotate(-15)" fill="#ffefd8"/>
+    <rect id="Rectangle_4742" data-name="Rectangle 4742" width="4.156" height="4.156" rx="1" transform="translate(66.214 3.553) rotate(-15)" fill="#ffefd8"/>
+  </g>
+  <ellipse id="Ellipse_965" data-name="Ellipse 965" cx="9.137" cy="7.548" rx="9.137" ry="7.548" transform="translate(48.089 87.445) rotate(-22)" fill="#ffa70f"/>
+  <path id="Path_11305" data-name="Path 11305" d="M17.269.587H26.8c2.194,0,5.774,1.5,3.94,5.294a245.651,245.651,0,0,0-9.286,25.054,241.8,241.8,0,0,0-6.373,27.188C14.785,59.9,13.568,62.1,11.374,62.1H9C6.8,62.1,5.918,61.13,5.8,58.123a225.391,225.391,0,0,1,1.284-28.2A169.752,169.752,0,0,1,12.363,4.56C13.259,2.153,14.281.587,17.269.587Z" transform="translate(49.065 15.052)" fill="#ffa70f"/>
+</svg>

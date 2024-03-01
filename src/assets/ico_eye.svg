@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="14" viewBox="0 0 18 14">
+    <defs>
+        <style>
+            .cls-1{fill:none;stroke:#828282;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px}
+        </style>
+    </defs>
+    <g id="Componente_244_1" transform="translate(1 1)">
+        <circle id="Elipse_563" cx="3" cy="3" r="3" class="cls-1" transform="translate(5 3)"/>
+        <path id="Caminho_5185" d="M4 12s2 6 8 6 8-6 8-6-2-6-8-6-8 6-8 6z" class="cls-1" transform="translate(-4 -6)"/>
+    </g>
+</svg>

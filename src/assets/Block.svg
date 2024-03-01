@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="29.486" height="28.571" viewBox="0 0 29.486 28.571">
+  <g id="Group_24290" data-name="Group 24290" transform="translate(25.343 -21.856) rotate(60)">
+    <path id="Icon_simple-node-dot-js" data-name="Icon simple-node-dot-js" d="M11.715.143,2.789,5.234a1.058,1.058,0,0,0-.536.922V16.341a1.062,1.062,0,0,0,.537.921l8.926,5.1a1.086,1.086,0,0,0,1.076,0l8.922-5.094a1.066,1.066,0,0,0,.538-.921V6.156a1.067,1.067,0,0,0-.539-.923L12.794.142a1.086,1.086,0,0,0-1.076,0" transform="translate(13.746 16)" fill="#55749a"/>
+    <path id="Line_930" data-name="Line 930" d="M.75,11.567h-1V0h1Z" transform="translate(25.744 15.852)" fill="#fff"/>
+    <path id="Line_930-2" data-name="Line 930" d="M.75,11.711h-1V0h1Z" transform="translate(16.197 33.255) rotate(-120)" fill="#fff"/>
+    <path id="Line_930-3" data-name="Line 930" d="M.75,11.711h-1V0h1Z" transform="translate(35.97 32.716) rotate(120)" fill="#fff"/>
+  </g>
+</svg>

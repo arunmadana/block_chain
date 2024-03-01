@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="247" height="52" viewBox="0 0 247 52">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_4824" data-name="Rectangle 4824" width="247" height="52" rx="10" transform="translate(704 36)" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <g id="container_background_graphic_masked" data-name="container background graphic masked" transform="translate(-704 -36)" opacity="0.2" clip-path="url(#clip-path)">
+    <g id="BG_bars" data-name="BG bars" transform="translate(792.656 150.201) rotate(-45)">
+      <g id="Rectangle_4818" data-name="Rectangle 4818" transform="translate(64.818 39.991)" fill="#fff" stroke="#00a6a2" stroke-width="1">
+        <rect width="103.782" height="15.908" rx="7.954" stroke="none"/>
+        <rect x="0.5" y="0.5" width="102.782" height="14.908" rx="7.454" fill="none"/>
+      </g>
+      <g id="Rectangle_4819" data-name="Rectangle 4819" transform="translate(27.32 64.611)" fill="#fff" stroke="#00a6a2" stroke-width="1">
+        <rect width="228.775" height="18.938" rx="9.469" stroke="none"/>
+        <rect x="0.5" y="0.5" width="227.775" height="17.938" rx="8.969" fill="none"/>
+      </g>
+      <g id="Rectangle_4820" data-name="Rectangle 4820" transform="translate(36.435 22.467)" fill="#fff" stroke="#00a6a2" stroke-width="1">
+        <rect width="142.038" height="10.227" rx="5.113" stroke="none"/>
+        <rect x="0.5" y="0.5" width="141.038" height="9.227" rx="4.613" fill="none"/>
+      </g>
+      <g id="Rectangle_4821" data-name="Rectangle 4821" transform="translate(109.891 92.261)" fill="#fff" stroke="#00a6a2" stroke-width="1">
+        <rect width="57.951" height="10.227" rx="5.113" stroke="none"/>
+        <rect x="0.5" y="0.5" width="56.951" height="9.227" rx="4.613" fill="none"/>
+      </g>
+      <g id="Rectangle_4822" data-name="Rectangle 4822" transform="translate(175.001 36.164)" fill="#fff" stroke="#00a6a2" stroke-width="1">
+        <rect width="23.105" height="10.227" rx="5.113" stroke="none"/>
+        <rect x="0.5" y="0.5" width="22.105" height="9.227" rx="4.613" fill="none"/>
+      </g>
+      <g id="Rectangle_4823" data-name="Rectangle 4823" transform="translate(212.159 92.261)" fill="#fff" stroke="#00a6a2" stroke-width="1">
+        <rect width="23.105" height="10.227" rx="5.113" stroke="none"/>
+        <rect x="0.5" y="0.5" width="22.105" height="9.227" rx="4.613" fill="none"/>
+      </g>
+    </g>
+    <g id="square" transform="translate(850.041 1.45)">
+      <ellipse id="Ellipse_993" data-name="Ellipse 993" cx="0.5" cy="1" rx="0.5" ry="1" transform="translate(7.959 6.607)" fill="#00a6a2"/>
+      <ellipse id="Ellipse_994" data-name="Ellipse 994" cx="0.5" cy="1" rx="0.5" ry="1" transform="translate(7.959 -0.393)" fill="#00a6a2"/>
+      <ellipse id="Ellipse_995" data-name="Ellipse 995" cx="0.5" cy="1" rx="0.5" ry="1" transform="translate(10.959 9.607)" fill="#00a6a2"/>
+      <ellipse id="Ellipse_996" data-name="Ellipse 996" cx="0.5" cy="1" rx="0.5" ry="1" transform="translate(10.959 2.607)" fill="#00a6a2"/>
+      <circle id="Ellipse_997" data-name="Ellipse 997" cx="1" cy="1" r="1" transform="translate(-0.041 9.607)" fill="#00a6a2"/>
+      <circle id="Ellipse_998" data-name="Ellipse 998" cx="1" cy="1" r="1" transform="translate(-0.041 2.607)" fill="#00a6a2"/>
+      <ellipse id="Ellipse_999" data-name="Ellipse 999" cx="0.5" cy="1" rx="0.5" ry="1" transform="translate(10.959 6.607)" fill="#00a6a2"/>
+      <ellipse id="Ellipse_1000" data-name="Ellipse 1000" cx="0.5" cy="1" rx="0.5" ry="1" transform="translate(10.959 -0.393)" fill="#00a6a2"/>
+      <ellipse id="Ellipse_1001" data-name="Ellipse 1001" cx="0.5" cy="1" rx="0.5" ry="1" transform="translate(14.959 6.607)" fill="#00a6a2"/>
+      <ellipse id="Ellipse_1002" data-name="Ellipse 1002" cx="0.5" cy="1" rx="0.5" ry="1" transform="translate(14.959 -0.393)" fill="#00a6a2"/>
+      <ellipse id="Ellipse_1003" data-name="Ellipse 1003" cx="0.5" cy="1" rx="0.5" ry="1" transform="translate(14.959 9.607)" fill="#00a6a2"/>
+      <ellipse id="Ellipse_1004" data-name="Ellipse 1004" cx="0.5" cy="1" rx="0.5" ry="1" transform="translate(14.959 2.607)" fill="#00a6a2"/>
+      <ellipse id="Ellipse_1005" data-name="Ellipse 1005" cx="0.5" cy="1" rx="0.5" ry="1" transform="translate(3.959 9.607)" fill="#00a6a2"/>
+      <ellipse id="Ellipse_1006" data-name="Ellipse 1006" cx="0.5" cy="1" rx="0.5" ry="1" transform="translate(3.959 2.607)" fill="#00a6a2"/>
+      <ellipse id="Ellipse_1007" data-name="Ellipse 1007" cx="0.5" cy="1" rx="0.5" ry="1" transform="translate(3.959 6.607)" fill="#00a6a2"/>
+      <ellipse id="Ellipse_1008" data-name="Ellipse 1008" cx="0.5" cy="1" rx="0.5" ry="1" transform="translate(3.959 -0.393)" fill="#00a6a2"/>
+      <circle id="Ellipse_1009" data-name="Ellipse 1009" cx="1" cy="1" r="1" transform="translate(-0.041 6.607)" fill="#00a6a2"/>
+      <circle id="Ellipse_1010" data-name="Ellipse 1010" cx="1" cy="1" r="1" transform="translate(-0.041 -0.393)" fill="#00a6a2"/>
+      <ellipse id="Ellipse_1011" data-name="Ellipse 1011" cx="0.5" cy="1" rx="0.5" ry="1" transform="translate(7.959 9.607)" fill="#00a6a2"/>
+      <ellipse id="Ellipse_1012" data-name="Ellipse 1012" cx="0.5" cy="1" rx="0.5" ry="1" transform="translate(7.959 2.607)" fill="#00a6a2"/>
+    </g>
+    <path id="Path_11434" data-name="Path 11434" d="M969.228-70.367l-51.61,51.611" transform="translate(-48.616 66.424)" fill="none" stroke="#00a6a2" stroke-linecap="round" stroke-width="1"/>
+    <g id="Ellipse_1013" data-name="Ellipse 1013" transform="translate(861 76.057)" fill="none" stroke="#00a6a2" stroke-width="1">
+      <circle cx="3" cy="3" r="3" stroke="none"/>
+      <circle cx="3" cy="3" r="2.5" fill="none"/>
+    </g>
+    <g id="Ellipse_1014" data-name="Ellipse 1014" transform="translate(897 43.582)" fill="#fff" stroke="#00a6a2" stroke-width="1">
+      <circle cx="3" cy="3" r="3" stroke="none"/>
+      <circle cx="3" cy="3" r="2.5" fill="none"/>
+    </g>
+    <g id="Ellipse_1015" data-name="Ellipse 1015" transform="translate(972 20.057)" fill="#fff" stroke="#00a6a2" stroke-width="1">
+      <ellipse cx="2.5" cy="3" rx="2.5" ry="3" stroke="none"/>
+      <ellipse cx="2.5" cy="3" rx="2" ry="2.5" fill="none"/>
+    </g>
+    <g id="Ellipse_1016" data-name="Ellipse 1016" transform="translate(936 -3.943)" fill="#fff" stroke="#00a6a2" stroke-width="1">
+      <circle cx="6" cy="6" r="6" stroke="none"/>
+      <circle cx="6" cy="6" r="5.5" fill="none"/>
+    </g>
+    <g id="Ellipse_1017" data-name="Ellipse 1017" transform="translate(768 27.057)" fill="#fff" stroke="#00a6a2" stroke-width="1">
+      <ellipse cx="1.5" cy="2" rx="1.5" ry="2" stroke="none"/>
+      <ellipse cx="1.5" cy="2" rx="1" ry="1.5" fill="none"/>
+    </g>
+  </g>
+</svg>

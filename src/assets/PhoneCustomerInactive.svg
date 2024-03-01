@@ -1,0 +1,25 @@
+<svg id="Group_18520" data-name="Group 18520" xmlns="http://www.w3.org/2000/svg" width="58.403" height="58.403" viewBox="0 0 58.403 58.403">
+  <circle id="Ellipse_1365" data-name="Ellipse 1365" cx="29.202" cy="29.202" r="29.202" fill="#e5f6f6"/>
+  <g id="mobile-phone" transform="translate(-89.88 10.419)">
+    <g id="Group_17754" data-name="Group 17754" transform="translate(108.5)">
+      <g id="Group_17753" data-name="Group 17753">
+        <path id="Path_34870" data-name="Path 34870" d="M127.393,0H111.251A2.755,2.755,0,0,0,108.5,2.751V34.815a2.755,2.755,0,0,0,2.751,2.751h16.142a2.755,2.755,0,0,0,2.751-2.751V2.751A2.755,2.755,0,0,0,127.393,0Zm1.651,29.862H113.453a.55.55,0,1,0,0,1.1h15.592v3.852a1.653,1.653,0,0,1-1.651,1.651H111.251a1.653,1.653,0,0,1-1.651-1.651V30.963h1.651a.55.55,0,1,0,0-1.1H109.6V5.5h19.444Zm0-25.46H109.6V2.751A1.653,1.653,0,0,1,111.251,1.1h16.142a1.653,1.653,0,0,1,1.651,1.651Z" transform="translate(-108.5)" fill="rgba(0,166,162,0.33)"/>
+      </g>
+    </g>
+    <g id="Group_17756" data-name="Group 17756" transform="translate(119.179 1.717)">
+      <g id="Group_17755" data-name="Group 17755">
+        <path id="Path_34871" data-name="Path 34871" d="M250.646,30h-1.717a.429.429,0,0,0,0,.859h1.717a.429.429,0,1,0,0-.859Z" transform="translate(-248.5 -30)" fill="rgba(0,166,162,0.33)"/>
+      </g>
+    </g>
+    <g id="Group_17758" data-name="Group 17758" transform="translate(118.035 33.274)">
+      <g id="Group_17757" data-name="Group 17757">
+        <path id="Path_34872" data-name="Path 34872" d="M234.788,437a1.288,1.288,0,1,0,1.288,1.288A1.289,1.289,0,0,0,234.788,437Zm0,1.717a.429.429,0,1,1,.429-.429A.43.43,0,0,1,234.788,438.717Z" transform="translate(-233.5 -437)" fill="rgba(0,166,162,0.33)"/>
+      </g>
+    </g>
+    <g id="Group_17760" data-name="Group 17760" transform="translate(116.435 2.045)">
+      <g id="Group_17759" data-name="Group 17759" transform="translate(0 0)">
+        <circle id="Ellipse_1335" data-name="Ellipse 1335" cx="0.341" cy="0.341" r="0.341" fill="rgba(0,166,162,0.33)"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="109.227" height="46.954" viewBox="0 0 109.227 46.954">
+  <g id="coyni_admin_logo" data-name="coyni admin logo" transform="translate(-59 -22)">
+    <g id="coyni_logo_full" data-name="coyni logo full" transform="translate(59 22)">
+      <rect id="Rectangle_4870" data-name="Rectangle 4870" width="3.849" height="25.275" transform="translate(104.248 8.789)" fill="#1d1e2e"/>
+      <path id="Path_11508" data-name="Path 11508" d="M525.74,289.908a2.957,2.957,0,1,1,.87,2.085,2.96,2.96,0,0,1-.87-2.085" transform="translate(-422.539 -286.96)" fill="#35bab6"/>
+      <path id="Path_11509" data-name="Path 11509" d="M445.439,318.747a9.889,9.889,0,0,1,7.881-3.387c6.211,0,10.049,4.179,10.049,10.253v15.543h-3.9V325.613c0-4-2.233-6.53-6.343-6.53-5.281,0-7.69,3.836-7.69,8.771v13.3H441.59V315.884h3.849Z" transform="translate(-363.079 -307.095)" fill="#1d1e2e"/>
+      <path id="Path_11510" data-name="Path 11510" d="M357.57,342.161l-11.39-25h4.181l9.2,20.08,7.922-20.08h4.152l-10.771,27.018c-1.675,4.2-5.322,8.192-10.248,7.793l-.663-.055v-3.687l.786.07c3.207.291,5.308-2.523,6.428-5.136Z" transform="translate(-295.662 -308.371)" fill="#1d1e2e"/>
+      <path id="Path_11511" data-name="Path 11511" d="M232.766,319.184a9.339,9.339,0,1,1-9.412,9.337,9.377,9.377,0,0,1,9.412-9.337m0-3.824A13.255,13.255,0,0,0,219.872,325.4a2.326,2.326,0,0,1-2.286,1.785h-3.568a2.29,2.29,0,0,1-1.992-1.094,4.633,4.633,0,0,0-5.186-1.97,4.568,4.568,0,0,0,0,8.8,4.633,4.633,0,0,0,5.186-1.97,2.293,2.293,0,0,1,1.992-1.091h3.568a2.323,2.323,0,0,1,2.286,1.781,13.26,13.26,0,1,0,12.9-16.279Z" transform="translate(-194.844 -307.095)" fill="#35bab6"/>
+      <path id="Path_11512" data-name="Path 11512" d="M177.855,328.528c0-8.268,9.993-12.342,15.9-6.763l2.729-2.706c-8.306-7.953-22.486-2.232-22.486,9.47s14.18,17.423,22.486,9.47l-2.729-2.7c-5.909,5.576-15.9,1.5-15.9-6.766" transform="translate(-174 -307.104)" fill="#1d1e2e"/>
+    </g>
+    <text id="Admin" transform="translate(131.227 65.954)" fill="#1d1e2e" font-size="9" font-family="OpenSans-Semibold, Open Sans" font-weight="600" letter-spacing="0.16em"><tspan x="0" y="0">ADMIN</tspan></text>
+  </g>
+</svg>

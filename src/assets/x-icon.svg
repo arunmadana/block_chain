@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+    <defs>
+        <style>
+            .cls-2{fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px}
+        </style>
+    </defs>
+    <g id="Grupo_6316" transform="translate(-336 -452)">
+        <path id="Back_circle" fill="#d45858" d="M10 0A10 10 0 1 1 0 10 10 10 0 0 1 10 0z" transform="translate(336 452)"/>
+        <g id="Grupo_5475" transform="rotate(45 -375.169 644.718)">
+            <path id="Linha_356" d="M0 0L11.024 0" class="cls-2" transform="translate(0 5.573)"/>
+            <path id="Linha_357" d="M0 0L11.024 0" class="cls-2" transform="rotate(90 2.787 2.787)"/>
+        </g>
+    </g>
+</svg>

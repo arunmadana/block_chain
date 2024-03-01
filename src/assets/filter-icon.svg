@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="styled-element" width="22" height="21.314" viewBox="0 0 22 21.314">
+    <defs>
+        <style>.a{fill:none;}.b{fill:#404040;stroke-width:0.2px;}.b,.c{stroke:#404040;}.c{fill:#fff;}.d{stroke:none;}</style>
+    </defs>
+    <g transform="translate(4 1.657)">
+        <path class="a" d="M0,0H18V18H0Z" id="styled-element" />
+        <g transform="translate(-3 -1.457)">
+            <g class="b" transform="translate(14.814)">
+                <rect class="d" width="1.743" height="20.914" rx="0.871" />
+                <rect class="a" x="-0.1" y="-0.1" width="1.943" height="21.114" rx="0.971" />
+            </g>
+            <g class="b" transform="translate(7.843)">
+                <rect class="d" width="1.743" height="20.914" rx="0.871" />
+                <rect class="a" x="-0.1" y="-0.1" width="1.943" height="21.114" rx="0.971" />
+            </g>
+            <g class="b" transform="translate(0.871)">
+                <rect class="d" width="1.743" height="20.914" rx="0.871" />
+                <rect class="a" x="-0.1" y="-0.1" width="1.943" height="21.114" rx="0.971" />
+            </g>
+            <g class="c" transform="translate(13.943 12.814)">
+                <circle class="d" cx="1.743" cy="1.743" r="1.743" />
+                <circle class="a" cx="1.743" cy="1.743" r="2.243" />
+            </g>
+            <g class="c" transform="translate(0 10.328)">
+                <circle class="d" cx="1.743" cy="1.743" r="1.743" />
+                <circle class="a" cx="1.743" cy="1.743" r="2.243" />
+            </g>
+            <g class="c" transform="translate(7.002 3)">
+                <circle class="d" cx="1.5" cy="1.5" r="1.5" />
+                <circle class="a" cx="1.5" cy="1.5" r="2" />
+            </g>
+        </g>
+    </g>
+</svg>

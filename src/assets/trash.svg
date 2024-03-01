@@ -1,0 +1,11 @@
+<svg id="delete_ico" xmlns="http://www.w3.org/2000/svg" width="15" height="15.33" viewBox="0 0 15 15.33">
+  <g id="noun_Trash_3549664" transform="translate(-19 -18)">
+    <g id="Group_11065" data-name="Group 11065" transform="translate(19 18)">
+      <rect id="Rectangle_4703" data-name="Rectangle 4703" width="15" height="2" transform="translate(0 3)" fill="#767676"/>
+      <path id="Path_11099" data-name="Path 11099" d="M33.7,45.292H26.343a1.677,1.677,0,0,1-1.677-1.519l-.937-9.907,1.437-.137.944,9.909a.24.24,0,0,0,.24.218H33.7a.24.24,0,0,0,.24-.216l.944-9.911,1.437.137-.951,9.907A1.677,1.677,0,0,1,33.7,45.292Z" transform="translate(-22.597 -29.962)" fill="#767676"/>
+      <rect id="Rectangle_4704" data-name="Rectangle 4704" width="2" height="6" transform="translate(5 6)" fill="#767676"/>
+      <rect id="Rectangle_4705" data-name="Rectangle 4705" width="2" height="6" transform="translate(8 6)" fill="#767676"/>
+      <path id="Path_11100" data-name="Path 11100" d="M42.707,22.311H36V19.677A1.677,1.677,0,0,1,37.677,18H41.03a1.677,1.677,0,0,1,1.677,1.677Zm-5.27-1.437H41.27v-1.2a.24.24,0,0,0-.24-.24H37.677a.24.24,0,0,0-.24.24Z" transform="translate(-31.928 -18)" fill="#767676"/>
+    </g>
+  </g>
+</svg>
